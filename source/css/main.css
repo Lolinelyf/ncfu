@@ -1046,7 +1046,7 @@ input[type=radio].visually-hidden {
   text-decoration: none;
   display: block;
   padding: 0.75rem 2rem 0.75rem 3.5rem;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   font-weight: 500;
   color: #3a3f4a;
@@ -1359,7 +1359,7 @@ input[type=radio].visually-hidden {
 .modal-search__container {
   display: flex;
   justify-content: space-between;
-  height: 30px;
+  height: 40px;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -1376,11 +1376,11 @@ input[type=radio].visually-hidden {
   padding: 0;
 }
 .modal-search__input {
-  flex: 0 0 87%;
+  flex: 0 0 85%;
   width: 100%;
   border-radius: 0.5rem;
   background-color: #ebeefb;
-  font-size: 14px;
+  font-size: 15px;
   color: #3a3f4a;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
@@ -1392,6 +1392,8 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 576px) {
   .modal-search__input {
+    flex: 0 0 87%;
+    width: 100%;
     font-size: 16px;
     padding: 0.75rem 1rem;
   }
@@ -1400,8 +1402,8 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 0.5rem;
   background-color: #0128d2;
 }
@@ -1415,7 +1417,7 @@ input[type=radio].visually-hidden {
   filter: grayscale(100%) invert(100%) contrast(200%);
 }
 .modal-search__text {
-  font-size: 14px;
+  font-size: 15px;
   color: #8b8e96;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -1829,16 +1831,17 @@ input[type=radio].visually-hidden {
   }
 }
 .features-icon__label {
-  font-size: 14px;
+  font-size: 15px;
   color: #3a3f4a;
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 400;
   transition: opacity 0.15s;
   line-height: 1.2;
 }
 @media (min-width: 576px) {
   .features-icon__label {
-    color: #3a3f4a;
+    font-size: 14px;
+    font-weight: 500;
   }
 }
 
@@ -1850,7 +1853,7 @@ input[type=radio].visually-hidden {
   outline: none;
   cursor: pointer;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -1998,26 +2001,27 @@ input[type=radio].visually-hidden {
   filter: grayscale(30%);
 }
 .news__title {
-  font-size: 15px;
+  font-size: 1rem;
   color: #3a3f4a;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 @media (min-width: 576px) {
   .news__title {
-    font-size: 1rem;
     margin-bottom: 1rem;
   }
 }
 .news__text {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: #8b8e96;
   margin-bottom: 0;
+  line-height: 1.2;
 }
 @media (min-width: 576px) {
   .news__text {
-    font-size: 14px;
+    line-height: 1.3;
   }
 }
 .news__date {
@@ -2104,7 +2108,7 @@ input[type=radio].visually-hidden {
 }
 .card-icon__icon-image {
   display: block;
-  max-width: 28px;
+  max-width: 32px;
   height: auto;
 }
 @media (min-width: 576px) {
@@ -2118,17 +2122,12 @@ input[type=radio].visually-hidden {
   }
 }
 .card-icon__text {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   flex: 1;
   padding-left: 1rem;
   margin-bottom: 0;
   line-height: 1.2;
-}
-@media (min-width: 576px) {
-  .card-icon__text {
-    font-size: 16px;
-  }
 }
 
 .abit {
@@ -2278,8 +2277,9 @@ input[type=radio].visually-hidden {
   margin: 0;
   color: #ffffff;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   transition: opacity linear 0.25s;
+  line-height: 1.2;
 }
 @media (min-width: 576px) {
   .card-image__detail {
@@ -2378,7 +2378,7 @@ input[type=radio].visually-hidden {
   }
 }
 .unity__title {
-  font-size: 1rem;
+  font-size: 18px;
   color: #0128d2;
   margin-bottom: 1rem;
 }
@@ -2748,7 +2748,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
   text-align: center;
   width: 50px;
-  height: 28px;
+  height: 32px;
   padding: 0;
   border: 1px solid #ebeefb;
   font-weight: 500;
@@ -2864,9 +2864,9 @@ input[type=radio].visually-hidden {
   margin-bottom: 0;
   -webkit-line-clamp: 5;
   display: -webkit-box;
-  line-height: 1.3;
+  line-height: 1.2;
   color: #3a3f4a;
-  font-size: 13px;
+  font-size: 14px;
 }
 @media (min-width: 1024px) {
   .card-notice__text {
@@ -2883,13 +2883,8 @@ input[type=radio].visually-hidden {
   line-height: 1.3;
   margin: 0;
 }
-.card-notice__month {
-  text-align: center;
-  margin-bottom: 0.4rem;
-  font-size: 0.8rem;
-}
 .card-notice__day-konkurs, .card-notice__month-konkurs {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   margin: 0;
   line-height: 22px;
@@ -2937,7 +2932,7 @@ input[type=radio].visually-hidden {
 .card-sticker__title {
   font-weight: 500;
   color: #3a3f4a;
-  font-size: 13px;
+  font-size: 15px;
   border-bottom: 1px solid rgba(235, 235, 235, 0.5294117647);
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2946,23 +2941,21 @@ input[type=radio].visually-hidden {
   .card-sticker__title {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    font-size: 15px;
   }
 }
 .card-sticker__text {
   overflow: hidden;
-  -webkit-line-clamp: 10;
+  -webkit-line-clamp: 9;
   /* autoprefixer: ignore next */
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  line-height: 1.4;
+  line-height: 1.3;
   color: #8b8e96;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (min-width: 576px) {
   .card-sticker__text {
     -webkit-line-clamp: 11;
-    font-size: 14px;
   }
 }
 .card-sticker:hover {

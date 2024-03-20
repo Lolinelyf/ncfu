@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('click', (event) => {
-    event.stopPropagation();
     if (event.target === overlay) {
       toggleMenu();
     }

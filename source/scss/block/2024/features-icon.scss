@@ -96,15 +96,16 @@
   }
 
   &__label {
-    font-size: 14px;
+    font-size: 15px;
     color: $color-black;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
     transition: opacity 0.15s;
     line-height: 1.2;
 
     @media (min-width: $mobile-size-land) {
-      color: $color-black;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }
