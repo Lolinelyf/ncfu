@@ -1,0 +1,101 @@
+.card-text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  padding: 0.5rem 1.3rem;
+
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+
+    @media (min-width: $tablet-size-land) {
+      line-height: 1.1;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      font-size: 2rem;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  &__link {
+    display: block;
+    margin-top: auto;
+    text-align: right;
+    padding: 0.5rem;
+    color: #dddbdb;
+    line-height: 1;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $white-color;
+    }
+
+    &_animated {
+      animation-name: flyOut;
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__link-icon {
+    font-size: 1.5rem;
+    display: inline-block;
+    transform: translateY(2px);
+
+    &_animated {
+      animation: iconAnim 0.8s ease 0.4s 1 normal backwards;
+    }
+  }
+}
+
+@keyframes flyOut {
+  from {
+    transform: translateY(500px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-5px) translateY(2px);
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(4px) translateY(2px);
+  }
+
+  50% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(-2px) translateY(2px);
+  }
+
+  75% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(2px) translateY(2px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0) translateY(2px);
+  }
+}

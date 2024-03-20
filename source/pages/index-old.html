@@ -1,0 +1,3082 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="css/bvi.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="css/odometer-theme-default.css"
+      rel="stylesheet"
+      type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/single/bvi.js"></script>
+    <script src="js/single/swiper.min.js"></script>
+    <script src="js/single/wow.min.js"></script>
+    <script src="js/single/odometer.min.js"></script>
+
+    <script src="js/single/jquery-3.3.1.min.js"></script>
+    <script src="js/single/snowfall.jquery.min.js"></script>
+
+    <title>Северо-Кавказский федеральный университет - главная</title>
+  </head>
+
+  <body class="page">
+    @@include('partials/header.html') @@include('partials/navigation.html')
+
+    <main class="page__main page__main_home">
+      <h1 class="visually-hidden">Северо-Кавказский федеральный университет</h1>
+      <div
+        class="slider swiper js-main-slider wow fadeIn"
+        data-wow-duration="1s">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              class="slider__image"
+              src="img/slide1.jpg"
+              width="1920"
+              height="700"
+              alt="Заголовок слайда"
+              title="Заголовок слайда" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="slider__image"
+              src="img/slide2.jpg"
+              width="1920"
+              height="700"
+              alt="Заголовок слайда"
+              title="Заголовок слайда" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="slider__image"
+              src="img/slide3.jpg"
+              width="1920"
+              height="700"
+              alt="Заголовок слайда"
+              title="Заголовок слайда" />
+          </div>
+        </div>
+        <div class="swiper-button-next slider__next-btn js-main-slider-next">
+          <img src="img/icons/right-arrow-blue.png" alt="" />
+        </div>
+        <div class="swiper-button-prev slider__prev-btn js-main-slider-prev">
+          <img src="img/icons/left-arrow-blue.png" alt="" />
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const swiper = new Swiper('.js-main-slider', {
+            autoplay: {
+              delay: 5000,
+            },
+            navigation: {
+              nextEl: '.js-main-slider-next',
+              prevEl: '.js-main-slider-prev',
+            },
+          });
+        });
+      </script>
+
+      <section class="features-icon">
+        <div class="container">
+          <div class="features-icon__row">
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-duration="0.8s"
+              data-wow-offset="200">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f1.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Сайт для школьников и их родителей</span
+                >
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.2s"
+              data-wow-duration="0.8s"
+              data-wow-offset="200">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f2.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Дополнительное образование и повышение квалификации в
+                  СКФУ</span
+                >
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.4s"
+              data-wow-duration="0.8s"
+              data-wow-offset="200">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f3.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Специализированный учебный научный центр</span
+                >
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.6s"
+              data-wow-duration="0.8s"
+              data-wow-offset="200">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f4.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Консорциум вузов Северного Кавказа</span
+                >
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.8s"
+              data-wow-duration="0.8s"
+              data-wow-offset="200">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f5.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Меры предупреждения распространения коронавируса</span
+                >
+              </a>
+            </div>
+
+            <div class="features-icon__block wow fadeInUp">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f6.png"
+                  alt="Иконка" />
+                <span class="features-icon__label">еКампус</span>
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.2s">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f7.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Интерактивная карта корпусов</span
+                >
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.4s">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f8.png"
+                  alt="Иконка" />
+                <span class="features-icon__label">Студенческий офис</span>
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.6s">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f9.png"
+                  alt="Иконка" />
+                <span class="features-icon__label"
+                  >Часто задаваемые вопросы</span
+                >
+              </a>
+            </div>
+
+            <div
+              class="features-icon__block wow fadeInUp"
+              data-wow-delay="0.8s">
+              <a href="#" class="features-icon__link">
+                <img
+                  class="features-icon__image"
+                  width="100"
+                  height="100"
+                  src="img/f10.png"
+                  alt="Иконка" />
+                <span class="features-icon__label">Военный учебный центр</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-2">
+        <div class="heading23 mb-1">
+          <div class="container">
+            <div class="heading23__inner">
+              <h2 class="heading23__title">Новости</h2>
+              <a class="heading23__link" href="news.html">Все новости</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="news">
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news1.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                В России продолжается реализация программы «Пушкинская карта»
+              </h2>
+              <p class="news__text">
+                Продолжается реализация программы «Пушкинская карта». По ней
+                студенты могут потратить 5 тысяч рублей на посещение учреждений
+                культуры. Участниками программы могут стать молодые люди от 14
+                до 22 лет.
+              </p>
+              <p class="news__date">18 января 2023 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news2.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                Представители СКФУ помогут в развитии нового Центра гуманитарной
+                помощи «Преображение»
+              </h2>
+              <p class="news__text">
+                Студентки Северо-Кавказского федерального университета кафедры
+                рекламы и связей с общественностью посетили открытие нового
+                Центра гуманитарной помощи «Преображение».
+              </p>
+              <p class="news__date">18 января 2023 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news3.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                Будущих докторов наук готовят в СУНЦ СКФУ
+              </h2>
+              <p class="news__text">
+                Специализированный учебный научный центр Северо-Кавказского
+                федерального университета вошел в топ лучших образовательных
+                организаций по подготовке будущих математиков.
+              </p>
+              <p class="news__date">18 января 2023 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news4.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                Ректор СКФУ вошел в ТОП-5 руководителей университетов России по
+                упоминаемости в СМИ
+              </h2>
+              <p class="news__text">
+                Телеграм-канал «Научно-образовательная политика» опубликовал
+                данные о медиаактивности за декабрь 2022 года. Согласно
+                рейтингу, по количеству публикаций с упоминанием своего имени
+                ректор СКФУ Дмитрий Беспалов занял пятое место, обойдя многих
+                руководителей крупных российских вузов.
+              </p>
+              <p class="news__date">18 января 2023 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news5.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                Представители СКФУ – участники «Студенческого десанта»
+              </h2>
+              <p class="news__text">
+                В канун Дня российского студенчества МВД России проводит акцию
+                «Студенческий десант». Помощь в организации мероприятия оказала
+                заместитель председателя Общественного совета при ведомстве,
+                директор Пятигорского института (филиала) Северо-Кавказского
+                федерального университета Татьяна Шебзухова.
+              </p>
+              <p class="news__date">18 января 2023 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news6.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                Представители СКФУ стали призерами и победителями конкурса на
+                знание русской и абхазской словесности
+              </h2>
+              <p class="news__text">
+                В Северо-Кавказском федеральном университете прошло
+                торжественное награждение победителей конкурса на знание русской
+                и абхазской словесности. Участие в нем принимали школьники и
+                студенты вузов Республики Абхазия и России.
+              </p>
+              <p class="news__date">18 января 2021 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news7.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">
+                Лечебное дело, информационные технологии, нефтегазовое дело:
+                СКФУ запустит партнерские проекты в Ливии
+              </h2>
+              <p class="news__text">
+                В Москве ректор Северо-Кавказского федерального университета
+                Дмитрий Беспалов провел рабочую встречу с Чрезвычайным и
+                Полномочным Послом Ливии в России Эмхемедом А.Э. Альмаграви и
+                Чрезвычайным и Полномочным Послом России в Ливии Айдаром
+                Аганиным.
+              </p>
+              <p class="news__date">18 января 2021 г.</p>
+            </a>
+            <a
+              class="news__item wow fadeIn"
+              data-wow-offset="200"
+              href="news-item.html">
+              <div class="news__image-wrapper">
+                <img
+                  loading="lazy"
+                  class="news__image"
+                  width="426"
+                  height="284"
+                  src="img/news8.jpg"
+                  alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ" />
+              </div>
+
+              <h2 class="news__title">Своих героев нашли в ВУЦ СКФУ</h2>
+              <p class="news__text">
+                Творческий коллектив Северо-Кавказского федерального
+                университета стал победителем конкурса документальных фильмов
+                «Герои среди нас». Свою работу студенты снимали о преподавателях
+                Военного учебного центра СКФУ.
+              </p>
+              <p class="news__date">18 января 2023 г.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="abit mb-3 pb-3">
+        <div class="heading23 mb-2">
+          <div class="container site-section">
+            <div class="heading23__inner">
+              <h2 class="heading23__title">Абитуриенту</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container site-section wow fadeIn">
+          <div class="abit__grid">
+            <div class="abit__grid-icons-container">
+              <a class="card-icon mb-2" href="#">
+                <div class="card-icon__icon">
+                  <img
+                    class="card-icon__icon-image"
+                    src="img/facts1.png"
+                    alt="" />
+                </div>
+                <p class="card-icon__text">Приёмная кампания 2023</p>
+              </a>
+
+              <a class="card-icon mb-2" href="#">
+                <div class="card-icon__icon">
+                  <img
+                    class="card-icon__icon-image"
+                    src="img/facts2.png"
+                    alt="" />
+                </div>
+                <p class="card-icon__text">Задать вопрос о поступлении</p>
+              </a>
+
+              <a class="card-icon mb-2" href="#">
+                <div class="card-icon__icon">
+                  <img class="card-icon__icon-image" src="img/s1.png" alt="" />
+                </div>
+                <p class="card-icon__text">График открытых дней</p>
+              </a>
+
+              <a class="card-icon mb-2" href="#">
+                <div class="card-icon__icon">
+                  <img class="card-icon__icon-image" src="img/s1.png" alt="" />
+                </div>
+                <p class="card-icon__text">Бакалавриат, cпециалитет</p>
+              </a>
+
+              <a class="card-icon mb-2" href="#">
+                <div class="card-icon__icon">
+                  <img class="card-icon__icon-image" src="img/s1.png" alt="" />
+                </div>
+                <p class="card-icon__text">Магистратура</p>
+              </a>
+
+              <a class="card-icon mb-2" href="#">
+                <div class="card-icon__icon">
+                  <img class="card-icon__icon-image" src="img/s1.png" alt="" />
+                </div>
+                <p class="card-icon__text">Аспирантура</p>
+              </a>
+            </div>
+
+            <div class="abit__grid-photo-container">
+              <div
+                class="slider swiper js-slider-sm wow fadeIn"
+                data-wow-duration="1s">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/SUNC-2023/">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl1.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          Специализированный учебный научный центр
+                        </p>
+                        <p class="card-image__detail">
+                          Занимайся наукой и технологиями!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/Srednee-professional_noe-obrazovanie/">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl2.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          Среднее профессиональное образование
+                        </p>
+                        <p class="card-image__detail">
+                          Получи востребованную профессию!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/international-activity/inostrannym-studentam/">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl3.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">Иностранным обучающимся</p>
+                        <p class="card-image__detail">
+                          Доступно обучение на иностранных языках!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/Ordinatura-2023/">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl4.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">Ординатура</p>
+                        <p class="card-image__detail">Учись больше!</p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/Celevoe-obuchenie-2022/#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl5.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">Целевое обучение</p>
+                        <p class="card-image__detail">
+                          Обучайся по заявке от работодателя!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/Abiturientu-s-OVZ-i-invalidnost_u/">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl6.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          Абитуриенту с ОВЗ и инвалидностью
+                        </p>
+                        <p class="card-image__detail">
+                          Создаём равные условия для всех абитуриентов!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a
+                      class="card-image"
+                      href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/voennyj-uchebnyj-centr-skfu-voennaya-kafedra/#cE">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/sm-sl7.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">Военный учебный центр</p>
+                        <p class="card-image__detail">
+                          Получай военную специальность во время обучения в
+                          вузе!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="swiper-button-next slider__next-btn js-slider-sm-next">
+                  <img src="img/icons/right-arrow-blue.png" alt="" />
+                </div>
+                <div
+                  class="swiper-button-prev slider__prev-btn js-slider-sm-prev">
+                  <img src="img/icons/left-arrow-blue.png" alt="" />
+                </div>
+              </div>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  const swiper = new Swiper('.js-slider-sm', {
+                    autoplay: {
+                      delay: 5000,
+                    },
+                    navigation: {
+                      nextEl: '.js-slider-sm-next',
+                      prevEl: '.js-slider-sm-prev',
+                    },
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="unity wow fadeIn" data-wow-offset="200">
+        <div class="container site-section unity__wrapper">
+          <div class="unity__inner">
+            <div class="unity__col">
+              <h2 class="unity__title">Анонсы</h2>
+
+              <div class="modal js-modal">
+                <button class="modal__close js-modal-close-btn">
+                  &#10006;
+                </button>
+                <div class="modal__content js-modal-content">
+                  <p class="modal__title js-selected-date">10 августа</p>
+
+                  <template class="js-event-item-template">
+                    <a class="event-item js-event-item" href="#">
+                      <div class="event-item__inner">
+                        <div class="event-item__image-container">
+                          <img
+                            class="event-item__image js-event-image"
+                            src="img/n-news8.jpg"
+                            alt="" />
+                        </div>
+                        <div class="event-item__info-container">
+                          <p class="event-item__title js-event-title">
+                            «Университетские смены» в СКФУ
+                          </p>
+                          <p class="event-item__text js-event-text">
+                            <b>10 августа</b> в Северо-Кавказском федеральном
+                            университете состоится открытие программы
+                            «Университетские смены».
+                          </p>
+                          <p class="event-item__date js-event-date"></p>
+                        </div>
+                      </div>
+                    </a>
+                  </template>
+
+                  <div class="js-current-items-container"></div>
+
+                  <div class="js-another-events-block" style="display: none">
+                    <hr class="mt-2 mb-2" />
+
+                    <p class="modal__subtitle">Другие анонсы</p>
+
+                    <div class="js-another-events-container"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="overlay js-overlay"></div>
+
+              <div class="calendar mb-1">
+                <div class="calendar__top">
+                  <div>
+                    <button class="calendar__button" id="previous">
+                      <img
+                        class="calendar__btn-icon calendar__btn-icon_prev"
+                        src="img/icons/left-arrow-white.png"
+                        alt=""
+                        width="20"
+                        height="20" />
+                    </button>
+                  </div>
+                  <div>
+                    <p class="calendar__month" id="monthAndYear"></p>
+                  </div>
+                  <div>
+                    <button class="calendar__button" id="next">
+                      <img
+                        class="calendar__btn-icon calendar__btn-icon_next"
+                        src="img/icons/right-arrow-white.png"
+                        alt=""
+                        width="20"
+                        height="20" />
+                    </button>
+                  </div>
+                </div>
+
+                <table class="calendar__body" id="calendar" data-lang="ru">
+                  <thead id="thead-month"></thead>
+                  <tbody id="calendar-body"></tbody>
+                </table>
+
+                <div class="calendar__footer">
+                  <label class="calendar__label" for="month">Перейти: </label>
+                  <select class="calendar__select" id="month">
+                    <option value="0">Январь</option>
+                    <option value="1">Февраль</option>
+                    <option value="2">Март</option>
+                    <option value="3">Апрель</option>
+                    <option value="4">Май</option>
+                    <option value="5">Июнь</option>
+                    <option value="6">Июль</option>
+                    <option value="7">Август</option>
+                    <option value="8">Сентябрь</option>
+                    <option value="9">Октябрь</option>
+                    <option value="10">Ноябрь</option>
+                    <option value="11">Декабрь</option>
+                  </select>
+                  <select class="calendar__select" id="year"></select>
+                </div>
+              </div>
+
+              <div class="unity__col-footer">
+                <a class="unity__link" href="#">Все анонсы</a>
+              </div>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  // let loaderEl = document.querySelector('.js-loader');
+                  // loaderEl.classList.remove('hero__loader-wrapper--hidden');
+
+                  const addDateToEvents = function (events) {
+                    return events.map((eventItem) => {
+                      // добавили поле date с датой без нулей в дне и месяце и добавили '20' к году
+                      const day = eventItem.date.split('.')[0];
+                      const month = eventItem.date.split('.')[1];
+                      const year = eventItem.date.split('.')[2];
+
+                      return {
+                        ...eventItem,
+                        date3: (
+                          parseInt(day, 10) +
+                          '.' +
+                          parseInt(month, 10) +
+                          '.' +
+                          year
+                        ).split(' ')[0],
+                      };
+                    });
+                  };
+
+                  const makeEventsForCalendar = function (loadedEvents) {
+                    const events = addDateToEvents(loadedEvents);
+
+                    const years = [
+                      ...new Set(
+                        events.map(
+                          (eventItem) => eventItem.date3.split('.')[2],
+                        ),
+                      ),
+                    ];
+
+                    let res = {};
+                    years.forEach(function (year) {
+                      // отбор событий в текущем году
+                      let eventsInCurYear = events.filter(
+                        (eventItem) => eventItem.date3.split('.')[2] === year,
+                      );
+
+                      // отбор месяцев
+                      let allMonth = [
+                        ...new Set(
+                          eventsInCurYear.map(
+                            (eventItem) => eventItem.date3.split('.')[1],
+                          ),
+                        ),
+                      ];
+
+                      let monthInCurYear = {};
+                      allMonth.forEach(function (month) {
+                        eventsInCurMonth = events.filter(
+                          (eventItem) =>
+                            eventItem.date3.split('.')[1] === month,
+                        );
+                        let allDays = [
+                          ...new Set(
+                            eventsInCurMonth.map(
+                              (eventItem) => eventItem.date3.split('.')[0],
+                            ),
+                          ),
+                        ];
+                        monthInCurYear[month] = allDays;
+                      });
+
+                      res[year] = monthInCurYear;
+                    });
+
+                    return res;
+                  };
+
+                  fetch('https://ncfu.ru/api/events/index.php')
+                    .then((response) => {
+                      return response.json();
+                    })
+                    .then((events) => {
+                      const eventsForCalendar = makeEventsForCalendar(events);
+                      const eventsWithDate = addDateToEvents(events);
+                      makeCalendar(eventsForCalendar, eventsWithDate);
+                    });
+
+                  function makeCalendar(events, fullEvents) {
+                    // обработка кликов по дате с событием
+                    const addDateClickHandler = function (fullEvents) {
+                      let eventLinkEls =
+                        document.querySelectorAll('.js-event-link');
+                      for (let i = 0; i < eventLinkEls.length; i++) {
+                        eventLinkEls[i].addEventListener('click', function () {
+                          openModalHandler(this.dataset.date, fullEvents);
+                        });
+                      }
+
+                      const htmlEl = document.querySelector('html');
+                      const modalEl = document.querySelector('.js-modal');
+                      const overlayEl = document.querySelector('.js-overlay');
+                      const closeModalBtnEl = document.querySelector(
+                        '.js-modal-close-btn',
+                      );
+
+                      const eventItemTemplate = document
+                        .querySelector('.js-event-item-template')
+                        .content.querySelector('.js-event-item');
+                      const currentItemContainerEl = document.querySelector(
+                        '.js-current-items-container',
+                      );
+
+                      const selectedDateEl =
+                        document.querySelector('.js-selected-date');
+                      const anotherEventsBlockEl = document.querySelector(
+                        '.js-another-events-block',
+                      );
+                      const anotherEventsContainerEl = document.querySelector(
+                        '.js-another-events-container',
+                      );
+
+                      const openModalHandler = function (
+                        selectedDate,
+                        fullEvents,
+                      ) {
+                        const htmlDecode = function (input) {
+                          const doc = new DOMParser().parseFromString(
+                            input,
+                            'text/html',
+                          );
+                          return doc.documentElement.textContent;
+                        };
+
+                        const eventsInSelectedDate = fullEvents.filter(
+                          (eventItem) => eventItem.date3 === selectedDate,
+                        );
+
+                        const addEventItem = function (eventItem) {
+                          const newEventItemEl =
+                            eventItemTemplate.cloneNode(true);
+                          const eventTitleEl =
+                            newEventItemEl.querySelector('.js-event-title');
+                          const eventTextEl =
+                            newEventItemEl.querySelector('.js-event-text');
+                          const eventImageEl =
+                            newEventItemEl.querySelector('.js-event-image');
+                          const eventDateEl =
+                            newEventItemEl.querySelector('.js-event-date');
+
+                          newEventItemEl.href = eventItem.url;
+                          eventTitleEl.innerText = htmlDecode(eventItem.title);
+                          eventTextEl.innerText = htmlDecode(
+                            eventItem.short_description,
+                          );
+                          eventImageEl.src = eventItem.img;
+                          eventDateEl.innerText =
+                            'Начало: ' + eventItem.date.split(' ')[0];
+
+                          return newEventItemEl;
+                        };
+
+                        eventsInSelectedDate.forEach(function (eventItem) {
+                          const newEventItemEl = addEventItem(eventItem);
+                          currentItemContainerEl.appendChild(newEventItemEl);
+                        });
+
+                        if (fullEvents.length > 0) {
+                          anotherEventsBlockEl.style.display = 'block';
+                          const anotherEvents = fullEvents
+                            .filter(
+                              (eventItem) => eventItem.date3 !== selectedDate,
+                            )
+                            .sort(
+                              (a, b) =>
+                                new Date(
+                                  b.date3.split('.')[2],
+                                  b.date3.split('.')[1],
+                                  b.date3.split('.')[0],
+                                ) -
+                                new Date(
+                                  a.date3.split('.')[2],
+                                  a.date3.split('.')[1],
+                                  a.date3.split('.')[0],
+                                ),
+                            )
+                            .slice(0, 15);
+
+                          console.log(anotherEvents);
+                          anotherEvents.forEach(function (eventItem) {
+                            const newEventItemEl = addEventItem(eventItem);
+                            anotherEventsContainerEl.appendChild(
+                              newEventItemEl,
+                            );
+                          });
+                        }
+
+                        htmlEl.classList.add('modal-is-opened');
+                        overlayEl.classList.add('overlay_active');
+                        modalEl.classList.add('modal_active');
+                        selectedDateEl.innerText =
+                          eventsInSelectedDate[0].date.split(' ')[0];
+                      };
+
+                      const closeModalHandler = function () {
+                        htmlEl.classList.remove('modal-is-opened');
+                        overlayEl.classList.remove('overlay_active');
+                        modalEl.classList.remove('modal_active');
+                        currentItemContainerEl.innerHTML = '';
+                        anotherEventsContainerEl.innerHTML = '';
+                        anotherEventsBlockEl.style.display = 'none';
+                        selectedDateEl.innerText = '';
+                      };
+
+                      overlayEl.addEventListener('click', closeModalHandler);
+                      closeModalBtnEl.addEventListener(
+                        'click',
+                        closeModalHandler,
+                      );
+                    };
+
+                    function generate_year_range(start, end) {
+                      let years = '';
+                      for (let year = start; year <= end; year++) {
+                        years +=
+                          "<option value='" + year + "'>" + year + '</option>';
+                      }
+                      return years;
+                    }
+
+                    let today = new Date();
+                    let currentMonth = today.getMonth();
+                    let currentYear = today.getFullYear();
+                    let selectYear = document.getElementById('year');
+                    let selectMonth = document.getElementById('month');
+
+                    let createYear = generate_year_range(2022, 2025);
+                    /** or
+                     * createYear = generate_year_range( 1970, currentYear );
+                     */
+
+                    document.getElementById('year').innerHTML = createYear;
+
+                    let months = [
+                      'Январь',
+                      'Февраль',
+                      'Март',
+                      'Апрель',
+                      'Май',
+                      'Июнь',
+                      'Июль',
+                      'Август',
+                      'Сентябрь',
+                      'Октябрь',
+                      'Ноябрь',
+                      'Декабрь',
+                    ];
+                    let days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+
+                    let dayHeader = '<tr>';
+                    for (let day in days) {
+                      dayHeader +=
+                        "<th data-days='" +
+                        days[day] +
+                        "'>" +
+                        days[day] +
+                        '</th>';
+                    }
+                    dayHeader += '</tr>';
+
+                    document.getElementById('thead-month').innerHTML =
+                      dayHeader;
+
+                    let monthAndYear = document.getElementById('monthAndYear');
+                    showCalendar(currentMonth, currentYear);
+
+                    function next() {
+                      currentYear =
+                        currentMonth === 11 ? currentYear + 1 : currentYear;
+                      currentMonth = (currentMonth + 1) % 12;
+                      showCalendar(currentMonth, currentYear);
+                    }
+
+                    function previous() {
+                      currentYear =
+                        currentMonth === 0 ? currentYear - 1 : currentYear;
+                      currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+                      showCalendar(currentMonth, currentYear);
+                    }
+
+                    function jump() {
+                      currentYear = parseInt(selectYear.value);
+                      currentMonth = parseInt(selectMonth.value);
+                      showCalendar(currentMonth, currentYear);
+                    }
+
+                    let btnNext = document.getElementById('next');
+                    btnNext.onclick = function () {
+                      next();
+                    };
+
+                    let btnPrev = document.getElementById('previous');
+                    btnPrev.onclick = function () {
+                      previous();
+                    };
+
+                    let btnYear = document.getElementById('year');
+                    btnYear.onchange = function () {
+                      jump();
+                    };
+
+                    let btnMonth = document.getElementById('month');
+                    btnMonth.onchange = function () {
+                      jump();
+                    };
+
+                    function showCalendar(month, year) {
+                      let firstDay = new Date(year, month).getDay() - 1;
+
+                      if (firstDay === -1) {
+                        firstDay = 6;
+                      }
+
+                      let tbl = document.getElementById('calendar-body');
+
+                      tbl.innerHTML = '';
+                      monthAndYear.innerHTML = months[month] + ' ' + year;
+                      selectYear.value = year;
+                      selectMonth.value = month;
+
+                      // создание ячеек
+                      let date = 1;
+                      for (let i = 0; i < 6; i++) {
+                        let row = document.createElement('tr');
+
+                        for (let j = 0; j < 7; j++) {
+                          let cellTemplate =
+                            "<span class='calendar__date'>" + date + '</span>';
+                          let linkTemplate =
+                            "<button class='calendar__link js-event-link' " +
+                            ' data-date=' +
+                            date +
+                            '.' +
+                            (month + 1) +
+                            '.' +
+                            year +
+                            '>' +
+                            date +
+                            '</button>';
+
+                          if (i === 0 && j < firstDay) {
+                            let cell = document.createElement('td');
+                            let cellText = document.createTextNode('');
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                          } else if (date > daysInMonth(month, year)) {
+                            break;
+                          } else {
+                            let cell = document.createElement('td');
+
+                            if (events[year] !== undefined) {
+                              if (events[year][month + 1] !== undefined) {
+                                if (
+                                  events[year][month + 1].includes(
+                                    date.toString(),
+                                  )
+                                ) {
+                                  cell.innerHTML = linkTemplate;
+                                } else {
+                                  // cardContainer.innerHTML = '';
+                                  cell.innerHTML = cellTemplate;
+                                }
+                              } else {
+                                //noEventsEl.classList.remove('hero__calendar-no-events--hidden');
+                                //cardContainer.innerHTML = '';
+                                cell.innerHTML = cellTemplate;
+                              }
+                            } else {
+                              cell.innerHTML = cellTemplate;
+                            }
+                            // подсветка сегодняшней даты
+                            // if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                            //   cell.className = "selected";
+                            // }
+                            row.appendChild(cell);
+                            date++;
+                          }
+                        }
+
+                        tbl.appendChild(row);
+                      }
+
+                      addDateClickHandler(fullEvents);
+                    }
+
+                    function daysInMonth(iMonth, iYear) {
+                      return 32 - new Date(iYear, iMonth, 32).getDate();
+                    }
+                  }
+                });
+              </script>
+            </div>
+
+            <div class="unity__col unity__col_white">
+              <h2 class="unity__title">Конкурсы</h2>
+
+              <div class="swiper unity__slider js-konkurs-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">1</span
+                          >сентября
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">10</span
+                          >сентября
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        III Международный конкурс молодых ученых в сфере
+                        интеллектуальной собственности «Интеллект»
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">15</span
+                          >февраля
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">20</span
+                          >февраля
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        Конкурс работ на соискание премий Правительства
+                        Российской Федерации 2023
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">10</span
+                          >октября
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">20</span
+                          >октября
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        Всероссийский конкурс «Учитель года – 2023»
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">1</span>марта
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">31</span
+                          >декабря
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        Конкурс на лучший антикоррупционный плакат
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">1</span
+                          >сентябрь
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">10</span
+                          >сентябрь
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        «Рождество с акцентом» для студентов СКФУ
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">1</span
+                          >сентябрь
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">10</span
+                          >сентябрь
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        «Рождество с акцентом» для студентов СКФУ
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">1</span
+                          >сентябрь
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">10</span
+                          >сентябрь
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        «Рождество с акцентом» для студентов СКФУ
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="card-notice mb-1" href="#">
+                      <div class="card-notice__date-container">
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">1</span
+                          >сентябрь
+                        </p>
+                        <p class="card-notice__month-konkurs">
+                          <span class="card-notice__day-konkurs">10</span
+                          >сентябрь
+                        </p>
+                      </div>
+                      <p class="card-notice__text">
+                        «Рождество с акцентом» для студентов СКФУ
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="unity__col-footer">
+                <a class="unity__link unity__link_dark" href="#"
+                  >Все конкурсы</a
+                >
+              </div>
+
+              <div
+                class="swiper-button-next unity__slider-btn unity__slider-btn_next js-konkurs-slider-next">
+                <img
+                  class="unity__slider-btn-icon-k unity__slider-btn-icon-k_next"
+                  src="img/icons/right-arrow-white.png"
+                  alt=""
+                  width="20"
+                  height="20" />
+              </div>
+              <div
+                class="swiper-button-prev unity__slider-btn unity__slider-btn_prev js-konkurs-slider-prev">
+                <img
+                  class="unity__slider-btn-icon-k unity__slider-btn-icon-k_prev"
+                  src="img/icons/left-arrow-white.png"
+                  alt=""
+                  width="20"
+                  height="20" />
+              </div>
+            </div>
+
+            <div class="unity__col">
+              <h2 class="unity__title">Объявления</h2>
+
+              <div class="swiper unity__slider js-ob-slider">
+                <div class="swiper-wrapper unity__grid">
+                  <div class="swiper-slide">
+                    <a class="card-sticker" href="#">
+                      <div class="card-sticker__text">
+                        <p class="card-sticker__title">
+                          Противодействие незаконному обороту наркотиков
+                        </p>
+                        <p class="card-sticker__desc">
+                          В целях повышения эффективности деятельности по
+                          профилактике наркомании и противодействию незаконному
+                          обороту наркотиков аппаратом антинаркотической
+                          комиссии в Ставропольском крае организована работа
+                          телеграм-канала.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="card-sticker" href="#">
+                      <div class="card-sticker__text">
+                        <p class="card-sticker__title">
+                          Рекомендации по мерам предупреждения распространения
+                          новой коронавирусной инфекции
+                        </p>
+                        <p class="card-sticker__desc">
+                          Департамент координации деятельности образовательных
+                          организаций Минобрнауки России сообщает о
+                          необходимости доведения до обучающихся и сотрудников
+                          об обязательности соблюдения мер по предупреждению
+                          завоза и распространения новой коронавирусной инфекции
+                          в соответствии с приложением.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="card-sticker" href="#">
+                      <div class="card-sticker__text">
+                        <p class="card-sticker__title">
+                          Противодействие незаконному обороту наркотиков
+                        </p>
+                        <p class="card-sticker__desc">
+                          В целях повышения эффективности деятельности по
+                          профилактике наркомании и противодействию незаконному
+                          обороту наркотиков аппаратом антинаркотической
+                          комиссии в Ставропольском крае организована работа
+                          телеграм-канала.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a class="card-sticker" href="#">
+                      <div class="card-sticker__text">
+                        <p class="card-sticker__title">
+                          Противодействие незаконному обороту наркотиков
+                        </p>
+                        <p class="card-sticker__desc">
+                          В целях повышения эффективности деятельности по
+                          профилактике наркомании и противодействию незаконному
+                          обороту наркотиков аппаратом антинаркотической
+                          комиссии в Ставропольском крае организована работа
+                          телеграм-канала.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="unity__col-footer">
+                <a class="unity__link" href="#">Все объявления</a>
+              </div>
+
+              <div
+                class="swiper-button-next unity__slider-btn unity__slider-btn_next only-mobile js-ob-slider-next">
+                <img
+                  class="unity__slider-btn-icon-n unity__slider-btn-icon-n__next"
+                  src="img/icons/right-arrow-white.png"
+                  alt=""
+                  width="20"
+                  height="20" />
+              </div>
+              <div
+                class="swiper-button-prev unity__slider-btn unity__slider-btn_prev only-mobile js-ob-slider-prev">
+                <img
+                  class="unity__slider-btn-icon-n unity__slider-btn-icon-n__prev"
+                  src="img/icons/left-arrow-white.png"
+                  alt=""
+                  width="20"
+                  height="20" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const swiperKonkurs = new Swiper('.js-konkurs-slider', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: false,
+            autoHeight: true,
+            direction: 'horizontal',
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+                direction: 'vertical',
+              },
+            },
+            navigation: {
+              nextEl: '.js-konkurs-slider-next',
+              prevEl: '.js-konkurs-slider-prev',
+            },
+          });
+
+          let swiperOb;
+          const swiperInit = function () {
+            swiperOb = new Swiper('.js-ob-slider', {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              loop: false,
+              autoHeight: true,
+              direction: 'horizontal',
+              breakpoints: {
+                768: {
+                  slidesPerView: 2,
+                  direction: 'vertical',
+                },
+              },
+              navigation: {
+                nextEl: '.js-ob-slider-next',
+                prevEl: '.js-ob-slider-prev',
+              },
+            });
+          };
+
+          if (window.innerWidth < 1080) {
+            swiperInit();
+          }
+
+          window.addEventListener('resize', function () {
+            if (this.innerWidth < 1080 && swiperOb === undefined) {
+              swiperInit();
+            }
+
+            if (this.innerWidth > 1080 && swiperOb !== undefined) {
+              swiperOb.destroy(true, true);
+              swiperOb = undefined;
+            }
+          });
+        });
+      </script>
+
+      <section class="fact mb-05">
+        <div class="fact__inner">
+          <div class="container fact__container">
+            <div
+              class="fact__row wow2 fadeIn"
+              data-wow-duration="1s"
+              data-wow-offset="350">
+              <div class="fact__item-container">
+                <div class="change2">
+                  <div class="change2__inner js-change-f1">
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts1.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-1">24111</span>
+                          </p>
+                          <p class="fact-item__caption">студентов</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts5.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-2">165</span>
+                          </p>
+                          <p class="fact-item__caption">
+                            направлений подготовки и специальностей
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fact__item-container">
+                <div class="change2">
+                  <div class="change2__inner js-change-f2">
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts3.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-3">15</span>
+                          </p>
+                          <p class="fact-item__caption">
+                            институтов и факультетов
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts4.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-4">1351</span>
+                          </p>
+                          <p class="fact-item__caption">
+                            научно-педагогический работник
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fact__item-container">
+                <div class="change2">
+                  <div class="change2__inner js-change-f3">
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts6.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-5">27</span>
+                          </p>
+                          <p class="fact-item__caption">научных школ</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts7.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-6">45</span>
+                          </p>
+                          <p class="fact-item__caption">базовых кафедр</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fact__item-container">
+                <div class="change2">
+                  <div class="change2__inner js-change-f4">
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts8.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-7">33</span>
+                          </p>
+                          <p class="fact-item__caption">
+                            научно-исследовательские лаборатории
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="change2__item">
+                      <div class="fact-item">
+                        <div class="fact-item__image-container">
+                          <img
+                            class="fact-item__image"
+                            src="img/facts9.png"
+                            alt="" />
+                        </div>
+                        <div class="fact-item__text-container">
+                          <p class="fact-item__title">
+                            <span class="js-fact-counter-8">30</span>
+                          </p>
+                          <p class="fact-item__caption">
+                            научно-образовательных центров
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+          const startChange = function () {
+            const changeIt = function (selector) {
+              const changeItemEl = document.querySelector(selector);
+              changeItemEl.classList.toggle('change2__inner_active');
+            };
+
+            const slidesArr = [
+              () => changeIt('.js-change-f1'),
+              () => changeIt('.js-change-f2'),
+              () => changeIt('.js-change-f3'),
+              () => changeIt('.js-change-f4'),
+            ];
+
+            const maxSlideCnt = 3;
+            let slideCnt = 0;
+            setInterval(function () {
+              slidesArr[slideCnt]();
+              if (slideCnt < maxSlideCnt) {
+                slideCnt++;
+              } else {
+                slideCnt = 0;
+              }
+            }, 3000);
+          };
+
+          // анимация увеличения слайдов
+          const afterReveal = function () {
+            const fact1El = document.querySelector('.js-fact-counter-1');
+            const od1 = new Odometer({
+              el: fact1El,
+              value: 0,
+              format: '',
+            });
+            fact1El.innerHTML = 24111;
+
+            const fact2El = document.querySelector('.js-fact-counter-2');
+            const od2 = new Odometer({
+              el: fact2El,
+              value: 0,
+              format: '',
+            });
+            fact2El.innerHTML = 165;
+
+            const fact3El = document.querySelector('.js-fact-counter-3');
+            const od3 = new Odometer({
+              el: fact3El,
+              value: 0,
+              format: '',
+            });
+            fact3El.innerHTML = 15;
+
+            const fact4El = document.querySelector('.js-fact-counter-4');
+            const od4 = new Odometer({
+              el: fact4El,
+              value: 0,
+              format: '',
+            });
+            fact4El.innerHTML = 1351;
+
+            const fact5El = document.querySelector('.js-fact-counter-5');
+            const od5 = new Odometer({
+              el: fact5El,
+              value: 0,
+              format: '',
+            });
+            fact5El.innerHTML = 27;
+
+            const fact6El = document.querySelector('.js-fact-counter-6');
+            const od6 = new Odometer({
+              el: fact6El,
+              value: 0,
+              format: '',
+            });
+            fact6El.innerHTML = 45;
+
+            const fact7El = document.querySelector('.js-fact-counter-7');
+            const od7 = new Odometer({
+              el: fact7El,
+              value: 0,
+              format: '',
+            });
+            fact7El.innerHTML = 33;
+
+            const fact8El = document.querySelector('.js-fact-counter-8');
+            const od8 = new Odometer({
+              el: fact8El,
+              value: 0,
+              format: '',
+            });
+            fact8El.innerHTML = 30;
+
+            startChange();
+          };
+
+          const wowCounter = new WOW({
+            mobile: false,
+            boxClass: 'wow2',
+            callback: afterReveal,
+          });
+          wowCounter.init();
+        });
+      </script>
+
+      <section class="science23">
+        <div class="heading23 mb-2">
+          <div class="container site-section">
+            <div class="heading23__inner">
+              <h2 class="heading23__title">#Наука_вперед!</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container site-section wow fadeIn">
+          <div class="flex-grid">
+            <div class="flex-grid__col-33">
+              <a class="science-item mb-2" href="#">
+                <div class="science-item__icon">
+                  <img
+                    class="science-item__icon-image"
+                    src="img/s1.png"
+                    alt="" />
+                </div>
+                <p class="science-item__text">
+                  Ученые СКФУ синтезировали вещества с потенциально высокой
+                  противораковой активностью
+                </p>
+              </a>
+            </div>
+
+            <div class="flex-grid__col-33">
+              <a class="science-item mb-2" href="#">
+                <div class="science-item__icon">
+                  <img
+                    class="science-item__icon-image"
+                    src="img/s2.png"
+                    alt="" />
+                </div>
+                <p class="science-item__text">
+                  Изобретение ученых СКФУ поможет людям, страдающим диабетом
+                </p>
+              </a>
+            </div>
+
+            <div class="flex-grid__col-33">
+              <a class="science-item mb-2" href="#">
+                <div class="science-item__icon">
+                  <img
+                    class="science-item__icon-image"
+                    src="img/s3.png"
+                    alt="" />
+                </div>
+                <p class="science-item__text">
+                  Ученые СКФУ создадут первое в России производство пребиотика
+                  лактулозы
+                </p>
+              </a>
+            </div>
+
+            <div class="flex-grid__col-33">
+              <a class="science-item mb-2" href="#">
+                <div class="science-item__icon">
+                  <img
+                    class="science-item__icon-image"
+                    src="img/s4.png"
+                    alt="" />
+                </div>
+                <p class="science-item__text">
+                  Победить артрит помогут куриные эмбрионы
+                </p>
+              </a>
+            </div>
+
+            <div class="flex-grid__col-33">
+              <a class="science-item mb-2" href="#">
+                <div class="science-item__icon">
+                  <img
+                    class="science-item__icon-image"
+                    src="img/s5.png"
+                    alt="" />
+                </div>
+                <p class="science-item__text">
+                  Создание виртуальных лабораторий для школьников
+                </p>
+              </a>
+            </div>
+
+            <div class="flex-grid__col-33">
+              <a class="science-item mb-2" href="#">
+                <div class="science-item__icon">
+                  <img
+                    class="science-item__icon-image"
+                    src="img/s6.png"
+                    alt="" />
+                </div>
+                <p class="science-item__text">
+                  Нейронные сети помогут распознать рак кожи по фото
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stud-life">
+        <div class="heading23">
+          <div class="container site-section">
+            <div class="heading23__inner">
+              <h2 class="heading23__title">#СТУДLIFE 360°</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container site-section">
+          <div class="slider-life">
+            <div
+              class="slider-life__text-container wow fadeIn"
+              data-wow-offset="300">
+              <div class="slider-life__text-container-inner">
+                <div class="swiper slider-life__swiper js-slider-life">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-life__swiper-slide">
+                      <div class="card-text">
+                        <p class="card-text__title">
+                          Будущих докторов наук готовят в СУНЦ СКФУ
+                        </p>
+                        <p class="card-text__desc">
+                          Специализированный учебный научный центр
+                          Северо-Кавказского федерального университета вошел в
+                          топ лучших образовательных организаций по подготовке
+                          будущих математиков.
+                        </p>
+                        <a class="card-text__link js-slider-life-link" href="#"
+                          >Подробнее
+                          <span class="card-text__link-icon js-link-icon"
+                            >&#187;</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide slider-life__swiper-slide">
+                      <div class="card-text">
+                        <p class="card-text__title">
+                          Своих героев нашли в ВУЦ СКФУ
+                        </p>
+                        <p class="card-text__desc">
+                          Творческий коллектив Северо-Кавказского федерального
+                          университета стал победителем конкурса документальных
+                          фильмов «Герои среди нас». Свою работу студенты
+                          снимали о преподавателях Военного учебного центра
+                          СКФУ.
+                        </p>
+                        <a class="card-text__link js-slider-life-link" href="#"
+                          >Подробнее
+                          <span class="card-text__link-icon js-link-icon"
+                            >&#187;</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide slider-life__swiper-slide">
+                      <div class="card-text">
+                        <p class="card-text__title">
+                          Студентам СКФУ провели мастер-класс по актерскому
+                          мастерству
+                        </p>
+                        <p class="card-text__desc">
+                          В Северо-Кавказском федеральном университете прошел
+                          мастер-класс от артиста Ставропольского академического
+                          театра драмы Георгия Серебрянского. Его посетили
+                          участники театральной студии «МЫ» СКФУ.
+                        </p>
+                        <a class="card-text__link js-slider-life-link" href="#"
+                          >Подробнее
+                          <span class="card-text__link-icon js-link-icon"
+                            >&#187;</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide slider-life__swiper-slide">
+                      <div class="card-text">
+                        <p class="card-text__title">
+                          СКФУ выпускает в мир послов русского языка
+                        </p>
+                        <p class="card-text__desc">
+                          Студенты Северо-Кавказского федерального университета
+                          вновь поборолись за статус послов русского языка в
+                          мире. Трое обучающихся СКФУ стали победителями
+                          заочного этапа конкурса и достойно представили вуз уже
+                          на очной площадке в Пятигорске.
+                        </p>
+                        <a class="card-text__link js-slider-life-link" href="#"
+                          >Подробнее
+                          <span class="card-text__link-icon js-link-icon"
+                            >&#187;</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-button-next slider-life__btn slider-life__btn_next js-slider-life-next-btn wow horizontalShaking"
+                data-wow-delay="1s">
+                <img
+                  class="slider-life__icon slider-life__icon_next"
+                  src="img/icons/right-arrow-white.png"
+                  alt=""
+                  width="30"
+                  height="30" />
+              </div>
+              <div
+                class="swiper-button-prev slider-life__btn slider-life__btn_prev js-slider-life-prev-btn wow horizontalShaking"
+                data-wow-delay="1s">
+                <img
+                  class="slider-life__icon slider-life__icon_prev"
+                  src="img/icons/left-arrow-white.png"
+                  alt=""
+                  width="30"
+                  height="30" />
+              </div>
+            </div>
+
+            <div class="slider-life__image-container">
+              <div
+                class="swiper js-slider-life-image slider-life__image-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      class="slider-life__image"
+                      src="img/pic0.jpg"
+                      alt="Заголовок слайда" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="slider-life__image"
+                      src="img/pic1.jpg"
+                      alt="Заголовок слайда" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="slider-life__image"
+                      src="img/pic5.jpg"
+                      alt="Заголовок слайда" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="slider-life__image"
+                      src="img/pic6.jpg"
+                      alt="Заголовок слайда" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+          const lifeImageSwiper = new Swiper('.js-slider-life-image', {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            loop: true,
+            watchSlidesProgress: true,
+            allowTouchMove: false,
+            effect: 'cube',
+            speed: 2000,
+            autoplay: {
+              delay: 4000,
+            },
+            cubeEffect: {
+              shadow: true,
+              slideShadows: true,
+              shadowOffset: 20,
+              shadowScale: 0.94,
+            },
+          });
+
+          const lifeSwiper = new Swiper('.js-slider-life', {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            loop: true,
+            autoplay: {
+              delay: 4000,
+            },
+            navigation: {
+              nextEl: '.js-slider-life-next-btn',
+              prevEl: '.js-slider-life-prev-btn',
+            },
+            thumbs: {
+              swiper: lifeImageSwiper,
+            },
+          });
+
+          lifeSwiper.on('slideChange', function () {
+            let curSlideEl = lifeSwiper.slides[lifeSwiper.realIndex];
+            let linkEl = curSlideEl.querySelector('.js-slider-life-link');
+            linkEl.classList.add('card-text__link_animated');
+
+            let linkIconEl = linkEl.querySelector('.js-link-icon');
+            linkIconEl.classList.add('card-text__link-icon_animated');
+
+            linkEl.addEventListener('animationend', function () {
+              linkEl.classList.remove('card-text__link_animated');
+            });
+
+            linkIconEl.addEventListener('animationend', function () {
+              linkIconEl.classList.remove('card-text__link-icon_animated');
+            });
+          });
+        });
+      </script>
+
+      <section class="mb-2">
+        <div class="heading23 mb-2">
+          <div class="container site-section">
+            <div class="heading23__inner">
+              <h2 class="heading23__title">Вокруг СКФУ</h2>
+              <button class="btn-change js-btn-change" type="button">
+                <svg class="btn-change__icon">
+                  <use xlink:href="img/svg-sprite.svg#icon-change"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container site-section wow3 fadeIn" data-wow-offset="100">
+          <div class="gallery23">
+            <div class="gallery23__item gallery23__item_1">
+              <div class="change2">
+                <div class="change2__inner js-change-gal1">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic4.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          WorldSkills Russia в СКФУ
+                        </p>
+                        <p class="card-image__detail">
+                          Делай мир лучше силой своего мастерства!
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic0.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          Среднее профессиональное образование в СКФУ
+                        </p>
+                        <p class="card-image__detail">
+                          Обучение по специальностям среднего профессионального
+                          образования в городе Ставрополе.
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_2">
+              <div class="change2">
+                <div class="change2__inner js-change-gal2">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic9.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Дополнительное профессиональное образование
+                        </p>
+                        <p class="card-image__detail">
+                          Повышение квалификации, языковые программы,
+                          профессиональная переподготовка
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic2.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Ресурсный учебно-методический центр по обучению
+                          инвалидов и лиц с ограниченными возможностями здоровья
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_3">
+              <div class="change2">
+                <div class="change2__inner js-change-gal3">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic10.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Ассоциация выпускников СКФУ
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic11.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Научная библиотека
+                        </p>
+                        <p class="card-image__detail">
+                          Репозиторий научных публикаций, электронный каталог,
+                          электронные ресурсы, заказ литературы
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_4">
+              <div class="change2">
+                <div class="change2__inner js-change-gal4">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic12.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          Система управления обучением СКФУ
+                        </p>
+                        <p class="card-image__detail">
+                          Электронные учебные курсы
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic8.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title">
+                          Специализированный учебный научный центр
+                        </p>
+                        <p class="card-image__detail">
+                          Профильная школа для старшеклассников. Углубленная
+                          школьная программа, дополнительная научная и проектная
+                          деятельность
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_5">
+              <div class="change2">
+                <div class="change2__inner js-change-gal5">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic13.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Трудоустройство
+                        </p>
+                        <p class="card-image__detail">
+                          Вакансии для студентов и выпускников
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic14.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Точка кипения СКФУ
+                        </p>
+                        <p class="card-image__detail">
+                          Проведение образовательных и проектных мероприятий,
+                          доступ к цифровой платформе Университета 20.35
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_6">
+              <div class="change2 js-change-6">
+                <div class="change2__inner js-change-gal6">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic7.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Совет обучающихся
+                        </p>
+                        <p class="card-image__detail">
+                          Более подробное описание фото
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic2.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Куратору и старосте
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_7">
+              <div class="change2">
+                <div class="change2__inner js-change-gal7">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic15.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Военный учебный центр
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/pic6.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Предметные школы
+                        </p>
+                        <p class="card-image__detail">
+                          Более подробное описание фото
+                        </p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_8">
+              <div class="change2">
+                <div class="change2__inner js-change-gal8">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/news3.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Сотрудничество с ведущими кампаниями
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/news4.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Активная студенческая жизнь
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery23__item gallery23__item_9">
+              <div class="change2">
+                <div class="change2__inner js-change-gal9">
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/n-news1.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Подготовительные курсы
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div class="change2__item">
+                    <a class="card-image" href="#">
+                      <img
+                        class="card-image__image"
+                        loading="lazy"
+                        src="img/n-news3.jpg"
+                        alt="Подпись к фотографии" />
+                      <div class="card-image__info">
+                        <p class="card-image__title card-image__title_sm">
+                          Научные исследования
+                        </p>
+                        <p class="card-image__detail"></p>
+                      </div>
+                      <p class="card-image__link">
+                        Подробнее
+                        <span class="card-image__link-icon">&#187;</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+          const startChange = function () {
+            const changeIt = function (selector) {
+              const changeItemEl = document.querySelector(selector);
+              changeItemEl.classList.toggle('change2__inner_active');
+            };
+
+            const slidesArr = [
+              () => changeIt('.js-change-gal1'),
+              () => changeIt('.js-change-gal2'),
+              () => changeIt('.js-change-gal3'),
+              () => changeIt('.js-change-gal7'),
+              () => changeIt('.js-change-gal5'),
+              () => changeIt('.js-change-gal6'),
+              () => changeIt('.js-change-gal4'),
+              () => changeIt('.js-change-gal8'),
+              () => changeIt('.js-change-gal9'),
+            ];
+
+            const maxSlideCnt = 8;
+            let slideCnt = 0;
+            setInterval(function () {
+              slidesArr[slideCnt]();
+              if (slideCnt < maxSlideCnt) {
+                slideCnt++;
+              } else {
+                slideCnt = 0;
+              }
+            }, 3000);
+
+            const changeBtn = document.querySelector('.js-btn-change');
+            changeBtn.addEventListener('click', function () {
+              for (let i = 0; i <= maxSlideCnt; i++) {
+                slidesArr[i]();
+              }
+            });
+          };
+
+          const wowGallery = new WOW({
+            mobile: false,
+            boxClass: 'wow3',
+            callback: startChange,
+          });
+          wowGallery.init();
+        });
+      </script>
+
+      <section class="mb-2 wow fadeIn" data-wow-duration="1s">
+        <div class="heading23 mb-2">
+          <div class="container site-section">
+            <div class="heading23__inner">
+              <h2 class="heading23__title">#СКФУ</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container site-section">
+          <div class="slider-soc">
+            <div class="swiper-container js-slider-soc">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst2.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Тотальный диктант для всех
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/news4.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        "Маруся": от теории к практике
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst2.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Тотальный диктант для всех
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/news4.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        "Маруся": от теории к практике
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst1.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        СКФУ выиграл грант на обучение более 200 бойцов
+                        студенческих отрядов
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst2.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Тотальный диктант для всех
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst2.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Тотальный диктант для всех
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst1.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        СКФУ выиграл грант на обучение более 200 бойцов
+                        студенческих отрядов
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst2.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Тотальный диктант для всех
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst1.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        СКФУ выиграл грант на обучение более 200 бойцов
+                        студенческих отрядов
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst2.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Тотальный диктант для всех
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/inst1.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        СКФУ выиграл грант на обучение более 200 бойцов
+                        студенческих отрядов
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/n-news1.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Студенты СКФУ в стартап-школе "Бизнес+"
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/n-news8.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Как работать в команде
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="card-image" href="#">
+                    <img
+                      class="card-image__image"
+                      src="img/pic9.jpg"
+                      width="260"
+                      height="167"
+                      alt="Подпись к фотографии" />
+                    <div class="card-image__info card-image__info_hidden">
+                      <p class="card-image__title card-image__title_sm">
+                        Как правильно играть в экономику?
+                      </p>
+                    </div>
+                    <p class="card-image__link card-image__link_sm">
+                      Подробнее
+                      <span class="card-image__link-icon">&#187;</span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-next js-slider-soc-next-btn">
+              <img src="img/icons/right-arrow-blue.png" alt="" />
+            </div>
+            <div class="swiper-button-prev js-slider-soc-prev-btn">
+              <img src="img/icons/left-arrow-blue.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+          const socSwiper = new Swiper('.js-slider-soc', {
+            slidesPerView: 1,
+            spaceBetween: 5,
+            effect: 'coverflow',
+            loop: true,
+            centeredSlides: true,
+            coverflowEffect: {
+              rotate: 20,
+              stretch: 0,
+              depth: 250,
+              modifier: 0.8,
+            },
+            breakpoints: {
+              320: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+              },
+
+              400: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+
+              540: {
+                slidesPerView: 2.1,
+                spaceBetween: 20,
+              },
+
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              992: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+              1250: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+              },
+              1500: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+              },
+            },
+            navigation: {
+              nextEl: '.js-slider-soc-next-btn',
+              prevEl: '.js-slider-soc-prev-btn',
+            },
+          });
+        });
+      </script>
+    </main>
+
+    @@include('partials/footer.html')
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // анимация
+        const wow = new WOW({
+          mobile: false,
+        });
+        wow.init();
+      });
+    </script>
+
+    <script>
+      $(function () {
+        // $(document).snowfall({
+        //   image : "/img/flake.png",
+        //   minSize: 6,
+        //   maxSize: 22
+        // });
+      });
+    </script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

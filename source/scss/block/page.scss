@@ -1,0 +1,102 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+  background-color: #fff;
+  max-width: $max-page-width;
+  margin: 0 auto;
+
+  &__header {
+    order: 2;
+
+    @media (min-width: $tablet-size-land) {
+      order: 1;
+    }
+  }
+
+  &__navigation {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    order: 1;
+
+    @media (min-width: $tablet-size-land) {
+      order: 2;
+    }
+  }
+
+  &__main {
+    order: 3;
+    flex: 1 0 auto;
+
+    &_home {
+      overflow-x: hidden;
+    }
+  }
+
+  &__footer {
+    order: 4;
+    flex-shrink: 0;
+  }
+
+  &__column-container {
+    @media (min-width: $tablet-size-land) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__column-main {
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 75%;
+      max-width: 75%;
+      padding-right: 3rem;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      flex: 0 0 80%;
+      max-width: 80%;
+      padding-right: 5rem;
+    }
+
+    @media (min-width: $desktop-size-large) {
+      flex: 0 0 85%;
+      max-width: 85%;
+      padding-right: 5rem;
+    }
+  }
+
+  &__column-aside {
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    @media (min-width: $desktop-size-large) {
+      flex: 0 0 15%;
+      max-width: 15%;
+    }
+  }
+
+  &__section {
+    &:not(:first-child) {
+      padding-top: 1.3rem;
+
+      @media (min-width: $tablet-size-land) {
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

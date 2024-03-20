@@ -1,0 +1,21 @@
+.cookie-notice {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  background: white;
+  box-shadow: $shadow-medium;
+  border-radius: 8px;
+  z-index: 10;
+
+  @media (min-width: $tablet-size-land) {
+    width: 50%;
+  }
+
+  &_hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,63 @@
+.tab23 {
+
+  &__btn-container {
+    display: flex;
+  }
+
+  &__btn {
+    font-size: 0.9rem;
+    border: 2px solid $white-color;
+    background-color: $grey-color;
+    border-top: none;
+    color: $tertiary-color;
+    padding: 0.5rem 2rem;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-weight: 600;
+    margin-right: 0.3rem;
+
+    @media (min-width: $tablet-size-land) {
+      min-width: 160px;
+      font-size: 1.3rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $white-color;
+      color: $primary-color;
+    }
+
+    &_status_active {
+      background-color: $white-color;
+      color: $primary-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $white-color;
+        cursor: auto;
+      }
+    }
+  }
+
+  &__inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__content {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &.tab__content_status_active {
+      opacity: 1;
+      overflow: initial !important;
+      height: auto;
+    }
+  }
+}

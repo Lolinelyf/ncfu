@@ -1,0 +1,132 @@
+.navigation {
+  background-color: $primary-color;
+  color: $white-color;
+
+  &__panel {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-size-land) {
+      display: none;
+    }
+  }
+
+  &__logo-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__menu {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+
+    &_status_opened {
+      max-height: 100vh;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      max-height: 100vh;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $white-color;
+    text-decoration: none !important;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    font-size: 0.8rem;
+
+    &:focus {
+      color: white !important;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      padding: 0.5rem 0.7rem;
+      font-size: 0.68rem;
+      white-space: nowrap;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      font-size: 0.76rem;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__item {
+    &:hover {
+      .navigation__link {
+        background-color: $primary-light-color;
+        color: $white-color;
+      }
+    }
+
+    @media (min-width: $tablet-size-land) {
+      position: relative;
+
+      &:hover {
+        .navigation__dropdown {
+          min-height: auto;
+          opacity: 1;
+          visibility: visible;
+          z-index: 500;
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    background-color: $primary-light-color;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 277px;
+    min-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+
+    &_two-col {
+      @media (min-width: $tablet-size-land) {
+        columns: 2;
+        min-width: 557px;
+      }
+    }
+  }
+
+  &__dropdown-link {
+    display: block;
+    color: $white-color !important;
+    text-decoration: none !important;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+
+    &:hover {
+      background-color: $primary-hover-color;
+    }
+  }
+}

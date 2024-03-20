@@ -1,0 +1,120 @@
+.card-link {
+  display: block;
+  border-radius: 16px;
+  background-color: #fcfbfb;
+  border: 1px solid $light-grey-color;
+  box-shadow: $shadow-normal;
+  overflow: hidden;
+  text-decoration: none;
+  height: 100%;
+
+  &[href$=".pdf"]::before,
+  &[href$=".PDF"]::before {
+    display: none;
+  }
+
+  &__image-container {
+    position: relative;
+    overflow: hidden;
+
+    &_padding {
+      padding-top: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    width: 100%;
+    height: 220px !important;
+
+    @media (min-width: $tablet-size-port) {
+      height: 260px !important;
+    }
+    
+    @media (min-width: $tablet-size-land) {
+      height: 180px !important;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      height: 200px !important;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      height: 240px !important;
+    }
+
+    @media (min-width: $desktop-size-large) {
+      height: 260px !important;
+    }
+
+    &_two-col {
+
+      @media (min-width: $tablet-size-land) {
+        height: 220px !important;
+      }
+      
+      @media (min-width: $desktop-size-small) {
+        height: 220px !important;
+      }
+
+      @media (min-width: $desktop-size-average) {
+        height: 160px !important;
+      }
+  
+      @media (min-width: $desktop-size-large) {
+        height: 220px !important;
+      }
+
+    }
+
+    &_rounded {
+      display: block;
+      width: 200px !important;
+      height: 200px !important;
+      border-radius: 50%;
+      margin: 0 auto;
+
+      @media (min-width: $desktop-size-average) {
+        width: 290px !important;
+        height: 290px !important;
+      }
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .card-link__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    padding: 1rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin: 0;
+    font-size: 1.2rem;
+    background-color: #fcfbfb;
+    height: 100%;
+
+    &_centered {
+      text-align: center;
+    }
+  }
+
+  &_no-hover:hover {
+    .card-link__image {
+      transform: none;
+    }
+
+    .card-link__title {
+      text-decoration: underline;
+    }
+  }
+}

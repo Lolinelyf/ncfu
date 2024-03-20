@@ -1,0 +1,60 @@
+.card-sticker {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  height: 280px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-size-port) {
+    padding: 1rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 0 50px 50px 0;
+    border-color: transparent $tertiary-color $green-color transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__text {
+    overflow: hidden;
+    -webkit-line-clamp: 9;
+
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.4;
+
+    p {
+      display: inline;
+
+      &::after {
+        content: " \A\A";
+        white-space: pre;
+      }
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $white-color;
+
+    &::after {
+      border-color: transparent $primary-color $green-color transparent;
+    }
+  }
+}

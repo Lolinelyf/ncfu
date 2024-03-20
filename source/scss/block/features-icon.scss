@@ -1,0 +1,133 @@
+.features-icon {
+  background-color: #eaeff5;
+  background-image: url("../img/features-bg.png");
+  background-size: cover;
+  padding-top: 2rem;
+
+  @media (min-width: $tablet-size-land) {
+    padding-bottom: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__row {
+    @media (min-width: $mobile-size-land) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__block {
+    margin-bottom: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @media (min-width: $mobile-size-land) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 80px;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      min-height: 105px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+    transition: all 0.2s ease-out;
+    font-weight: 500;
+    border: none;
+    box-shadow: 3px 5px 13px -9px #7383bf;
+    background-color: #4d6fb7;
+    border-radius: 500px;
+    padding-left: 1.4rem;
+    height: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    @media (min-width: $mobile-size-land) {
+      padding-left: 2rem;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      padding-left: 1.3rem;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 1.8rem;
+    }
+
+    @media (min-width: $desktop-size-large) {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 3px 5px 25px -9px #7383bf;
+      text-decoration: underline;
+      color: white;
+      //background-color: #435f9d;
+      background-color: $primary-color;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 50px;
+    height: auto;
+
+    @media (min-width: $desktop-size-average) {
+      width: 60px;
+    }
+
+    @media (min-width: $desktop-size-large) {
+      width: 70px;
+    }
+  }
+
+  &__label {
+    display: block;
+    flex: 1;
+    padding-left: 1rem;
+    padding-right: 5px;
+    font-size: 0.8rem;
+
+    @media (min-width: $desktop-size-small) {
+      padding-left: 0.3rem;
+      font-size: 0.7rem;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      font-size: 0.8rem;
+      padding-left: 0.5rem;
+      padding-right: 0.4rem;
+    }
+
+    @media (min-width: $desktop-size-large) {
+      font-size: 1rem;
+      padding-right: 2.8rem;
+      line-height: 1.2;
+      padding-left: 0.7rem;
+    }
+  }
+}

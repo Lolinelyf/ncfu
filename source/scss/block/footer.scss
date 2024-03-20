@@ -1,0 +1,117 @@
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: $aside-color;
+  color: $white-color;
+  font-size: 0.75rem;
+
+  & a {
+    color: inherit;
+  }
+
+  &__logo {
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  & p {
+    margin-bottom: 0.3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &__col1,
+  &__col2,
+  &__col3,
+  &__col4,
+  &__col5 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__col1 {
+    @media (min-width: $tablet-size-port) {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+  }
+
+  &__col2 {
+    @media (min-width: $tablet-size-port) {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+    }
+  }
+
+  &__col3 {
+    @media (min-width: $tablet-size-port) {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+    }
+  }
+
+  &__col4 {
+    @media (min-width: $tablet-size-port) {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+    }
+  }
+
+  &__col5 {
+    @media (min-width: $tablet-size-port) {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+    }
+  }
+
+  &__col1-wrapper {
+    display: none;
+
+    @media (min-width: $tablet-size-port) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-container {
+    flex: 0 0 100px;
+  }
+
+  &__name-container {
+    flex: 1;
+    padding-left: 2rem;
+  }
+
+  & a[href$=".pdf"]::before {
+    height: 0;
+    width: 0;
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & a[href$=".doc"]::before {
+    height: 0;
+    width: 0;
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & a[href$=".zip"]::before {
+    height: 0;
+    width: 0;
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
+}

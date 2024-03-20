@@ -1,0 +1,258 @@
+.orgchart {
+  --line-color: #6D7DB5;
+  background-image: none;
+  padding-left: 0!important;
+}
+
+#chart-container {
+  height: auto;
+  overflow: auto;
+  font-family: Arial, serif;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.orgchart .node {
+  width: 120px;
+}
+
+.orgchart .node:hover .title {
+  background-color: #223fb4;
+}
+
+.orgchart .node .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  height: 100%;
+  padding: 0 0.1rem;
+  margin-bottom: -8px;
+  border: 1px solid var(--line-color);
+  white-space: normal;
+  text-align: center;
+}
+
+.orgchart .node .content a {
+  display: block;
+  cursor: pointer;
+  line-height: 13px;
+  padding: 0.2rem;
+  text-decoration: none!important;
+}
+
+.orgchart .node a {
+  text-decoration: none!important;
+}
+
+.orgchart .node a:hover {
+  text-decoration: underline!important;
+}
+
+.orgchart .node .title {
+  display: flex;
+  height: auto !important;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0 !important;
+  padding: 0 0.2rem;
+  white-space: inherit;
+  font-size: .54rem!important;
+  line-height: 12px;
+  background-color: #6D7DB5;
+  text-transform: none !important;
+  transition: 0.7s;
+}
+
+.rec {
+  width: 230px !important;
+}
+
+.rec.node {
+  position: relative;
+}
+
+.rec .title {
+  min-height: 40px !important;
+}
+
+.rec .title:first-child {
+  font-size: 0.9rem !important;
+}
+
+.rec .content {
+  min-height: 40px !important;
+}
+
+/*полоска от ректора*/
+.rec.node:before {
+  content: '';
+  position: absolute;
+  background-color: #6D7DB5;
+  bottom: -36px;
+  height: 31px;
+  left: 45%;
+  width: 2px;
+}
+
+.rec.node:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  bottom: -36px;
+  height: 31px;
+  left: 49.6%;
+  width: 2px;
+}
+
+/*сдвинули вверх блок с ректором*/
+.orgchart>table:first-child>tr:first-child {
+  transform: translateY(-27px);
+}
+
+/*плюсик*/
+.orgchart .node .toggleBtn {
+  left: -3px;
+  bottom: -8px;
+  font-size: 18px;
+  color: rgba(251, 26, 89, 0.6);
+}
+
+.orgchart .node .toggleBtn:hover {
+  color: rgba(251, 26, 89, 1);
+}
+
+/*заголовки с иконкой сдвигаем*/
+.title-with-icon {
+  padding-left: 60px !important;
+  text-align: left !important;
+}
+
+.orgchart .lines .topLine {
+  border-color: var(--line-color);
+}
+
+.orgchart .lines .rightLine {
+  border-color: var(--line-color);
+}
+
+.orgchart .lines .leftLine {
+  border-color: var(--line-color);
+}
+
+.orgchart .lines .downLine {
+  background-color: var(--line-color);
+  margin-top: -6px;
+}
+
+.orgchart .verticalNodes>td::before {
+  border-color: var(--line-color);
+}
+
+.orgchart .verticalNodes ul>li::before,
+.orgchart .verticalNodes ul>li::after {
+  border-color: var(--line-color);
+}
+
+.chart-icon {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  left: 8px;
+  top: 4px;
+  border-radius: 50%;
+}
+
+/*там, где нет должности прячем нижний блок*/
+.orgchart .node.full .content {
+  display: none;
+}
+
+.orgchart .node.full .title {
+  border-radius: 4px;
+}
+
+.fa-group:before,
+.fa-users:before {
+  content: '';
+}
+
+/*блоки с ученым и наблюдатетельным советом*/
+.orgchart .assistant-node {
+  display: inline-block;
+  position: absolute;
+  width: 230px;
+  margin: 0;
+  padding: 3px;
+  left: 243px;
+  top: -2px;
+  border: 2px solid transparent;
+  text-align: center;
+  z-index: 2;
+}
+
+.orgchart .assistant-node .connector {
+  position: absolute;
+  left: -22px;
+  width: 26px;
+  height: 12.5px;
+  top: 25px;
+  border-bottom: var(--line-color) solid 2px;
+}
+
+.orgchart .assistant-node1 {
+  display: inline-block;
+  position: absolute;
+  width: 230px;
+  left: -247px;
+  top: -2px;
+  margin: 0;
+  padding: 3px;
+  border: 2px solid transparent;
+  text-align: center;
+  z-index: 2;
+}
+
+.orgchart .assistant-node1 .connector1 {
+  position: absolute;
+  left: 222px;
+  width: 26px;
+  height: 12.5px;
+  top: 24px;
+  border-bottom: var(--line-color) solid 2px;
+}
+
+.orgchart .node {
+  width: 130px;
+  margin-top: -6px;
+  margin-bottom: -7px;
+}
+
+/*удалить эффекты при наведении*/
+.orgchart .node .verticalEdge,
+.orgchart .node .horizontalEdge {
+  display: none;
+}
+
+.orgchart .node:hover,
+.orgchart .node.focused {
+  background: none !important;
+}
+
+.verticalNodes .node {
+  margin-bottom: 10px;
+}
+
+.orgchart .node .title a {
+  color: #FFFFFF;
+}
+
+.orgchart .node.height1 .title {
+  min-height: 50px !important;
+}
+
+.orgchart .node.height1 .content {
+  min-height: 40px !important;
+}
+

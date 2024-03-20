@@ -1,0 +1,54 @@
+.card-image-link {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 16px;
+  background-color: white;
+  border: 1px solid $light-grey-color;
+  box-shadow: $shadow-medium;
+  overflow: hidden;
+  text-decoration: none !important;
+  background-size: cover;
+  background-position: center center;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  padding: 1rem;
+
+
+  @media (min-width: $desktop-size-small) {
+    min-height: 160px;
+  }
+
+
+  @media (min-width: $desktop-size-large) {
+    min-height: 180px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background 0.5s ease 0s;
+  }
+
+  &:hover {
+    &::after {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__title {
+    position: relative;
+    max-width: 70%;
+    color: #fff;
+    z-index: 10;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}

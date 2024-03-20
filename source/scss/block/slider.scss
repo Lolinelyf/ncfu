@@ -1,0 +1,22 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &__next-btn,
+  &__prev-btn {
+    &::after {
+      content: '';
+    }
+    
+    @media (min-width: $desktop-size-small) {
+      transform: translateY(-50%);
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

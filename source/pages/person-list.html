@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- В идеале проверить есть ли присоединённые фото для галереи и если есть, то подключать файлы -->
+  <link href="css/parvus.min.css" rel="stylesheet" type="text/css">
+  <!-- конец проверки -->
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item">Список персоналий</li>
+    </ul>
+
+    <h1 class="title">Список персоналий</h1>
+
+    <div class="flex-grid mb-1">
+      <div class="flex-grid__col-50 mb-2">
+        <div class="card-image-desc">
+          <div class="card-image-desc__img-wrapper">
+            <img class="card-image-desc__img card-image-desc__img_rounded" src="/img/topalyan.jpg"  alt="" />
+          </div>
+          <div class="card-image-desc__text centered-vertical">
+            <a class="text-title" href="#">Иванов Иван Иванович</a>
+            <p>Должность</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex-grid__col-50 mb-2">
+        <div class="card-image-desc">
+          <div class="card-image-desc__img-wrapper">
+            <img class="card-image-desc__img card-image-desc__img_rounded" src="/img/topalyan.jpg"  alt="" />
+          </div>
+          <div class="card-image-desc__text centered-vertical">
+            <a class="text-title" href="#">Иванов Иван Иванович</a>
+            <p>Должность</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex-grid__col-50 mb-2">
+        <div class="card-image-desc">
+          <div class="card-image-desc__img-wrapper">
+            <img class="card-image-desc__img card-image-desc__img_rounded" src="/img/topalyan.jpg"  alt="" />
+          </div>
+          <div class="card-image-desc__text centered-vertical">
+            <a class="text-title" href="#">Иванов Иван Иванович</a>
+            <p>Должность</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+<!--В идеале проверить есть ли присоединённые фото для галереи и если есть, то подключать файлы-->
+<script src="js/single/parvus.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const prvs = new Parvus({
+      gallerySelector: '.gallery-news',
+      selector: '.gallery-news__item',
+    })
+  });
+</script>
+<!-- конец проверки -->
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

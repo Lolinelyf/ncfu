@@ -1,0 +1,35 @@
+.detail {
+  &__btn {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active,
+    &:focus  {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    font-size: 1rem;
+  }
+
+  &__text {
+    max-height: initial;
+    transition: max-height 1s;
+
+    &_hidden {
+      overflow: hidden;
+      max-height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &--main {
+    height: 204px;
+    margin-bottom: 0.5rem;
+    padding: 2rem 0;
+    background-color: $color-white;
+    border-radius: 0.5rem;
+
+    @media (min-width: $mobile-size-land) {
+      height: 350px;
+      margin-bottom: 1rem;
+      padding: 0;
+      background-color: inherit;
+    }
+    @media (min-width: $tablet-size-land) {
+      height: 438px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--abit {
+    height: 200px;
+    width: auto;
+    margin: 0 -1rem 1rem;
+
+    @media (min-width: $mobile-size-land) {
+      height: 310px;
+      border-radius: 0.5rem;
+      margin: 0;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      height: 340px;
+    }
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 32px;
+  height: 32px;
+  top: 53%;
+  border-radius: 50%;
+  background-color: rgba(58, 63, 74, 0.2);
+  transition: background-color 0.15s;
+  :active,
+  :focus {
+    background-color: rgba(58, 63, 74, 0.4);
+  }
+
+  @media (min-width: $mobile-size-land) {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+  }
+  @media (min-width: $tablet-size-land) {
+    &:hover {
+      background-color: rgba(58, 63, 74, 0.7);
+    }
+  }
+}
+
+.swiper-button-prev > img {
+  margin-left: -6px;
+}
+.swiper-button-next > img {
+  margin-left: 6px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.slider__image {
+  width: 100%;
+  max-width: 1288px;
+  height: 100%;
+  object-fit: cover;
+}

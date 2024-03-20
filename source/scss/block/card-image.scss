@@ -1,0 +1,151 @@
+.card-image {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: $shadow-normal;
+
+  &:hover {
+    .card-image__link {
+      transition-delay: 0.7s;
+      opacity: 1;
+
+      &_sm {
+        transition-delay: 0.45s;
+
+        .card-image__link-icon {
+          animation: iconAnim 0.8s ease 0.5s 1 normal backwards;
+        }
+      }
+    }
+
+    .card-image__link-icon {
+      animation: iconAnim 0.8s ease 0.9s 1 normal backwards;
+    }
+
+    .card-image__info {
+      min-height: 100%;
+      bottom: 0;
+    }
+
+    .card-image__detail {
+      padding-top: 0;
+      max-height: 100%;
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: #dddbdb;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin: 0;
+    text-transform: lowercase;
+
+    &:hover {
+      color: $white-color;
+    }
+
+    &_sm {
+      bottom: -6px;
+    }
+  }
+
+  &__link-icon {
+    font-size: 1.5rem;
+    display: inline-block;
+    transform: translateY(2px);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    position: absolute;
+    transition: 0.3s ease-out;
+    background-color: rgba(1, 57, 116, .7);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: $white-color;
+    min-height: 1px;
+
+    &_hidden {
+      bottom: -100%;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    line-height: 1.3;
+
+    @media (min-width: $desktop-size-small) {
+      font-size: 1.5rem;
+    }
+
+    &_sm {
+      font-size: 1rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+
+  &__detail {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s 0.5s;
+    color: #f7f7f7;
+    font-weight: 400;
+  }
+}
+
+@keyframes iconAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-5px) translateY(2px);
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(4px) translateY(2px);
+  }
+
+  50% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(-2px) translateY(2px);
+  }
+
+  75% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(2px) translateY(2px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0) translateY(2px);
+  }
+}

@@ -1,0 +1,54 @@
+.card-sticker {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: $color-white;
+  border-radius: 0.5rem;
+  height: 210px;
+  overflow: hidden;
+  border: 2px solid $color-hover;
+
+  @media (min-width: $tablet-size-port) {
+    height: 300px;
+    padding: 1rem;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $color-black;
+    font-size: 13px;
+    border-bottom: 1px solid #ebebeb87;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    @media (min-width: $mobile-size-land) {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      font-size: 15px;
+    }
+  }
+
+  &__text {
+    overflow: hidden;
+    -webkit-line-clamp: 10;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.4;
+    color: $color-grey;
+    font-size: 12px;
+    @media (min-width: $mobile-size-land) {
+      -webkit-line-clamp: 11;
+      font-size: 14px;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $white-color;
+
+    &::after {
+      border-color: transparent $primary-color $green-color transparent;
+    }
+  }
+}

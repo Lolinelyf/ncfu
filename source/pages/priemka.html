@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- В идеале проверить есть ли слайдер, то подключать файлы -->
+  <script src="js/single/swiper.min.js"></script>
+  <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+  <!-- конец проверки -->
+
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Поступающему</a> </li>
+      <li class="breadcrumbs__item">Приёмная компания</li>
+    </ul>
+
+    <!-- <h1 class="title js-title">Приёмная компания</h1> -->
+
+    
+    <section class="promo mb-2">
+      <div class="promo__col promo__col_1">
+        
+        <div class="hero-text">
+          <p class="title">СКФУ - это возможность:</p>
+          <div class="hero-text__content">
+            <ul>
+              <li>получить достойное образование; </li>
+              <li>стать востребованным специалистом на рынке труда;</li>
+              <li>стать частью семьи федерального (нас более 27 500);</li>
+              <li>провести незабываемые студенческие годы в прекрасном регионе, где тепло, вкусно и красиво.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="promo__col promo__col_2">
+        <p class="promo__col-label">Календарь поступающего </p>
+
+        <div class="modal js-modal">
+          <button class="modal__close js-modal-close-btn">&#10006;</button>
+          <div class="modal__content js-modal-content">
+
+            <p class="modal__title js-selected-date">10 августа</p>
+
+            <template class="js-event-item-template">
+              <a class="event-item js-event-item" href="#">
+                <div class="event-item__inner">
+                  <div class="event-item__image-container">
+                    <img class="event-item__image js-event-image" src="img/n-news8.jpg" alt="" />
+                  </div>
+                  <div class="event-item__info-container">
+                    <p class="event-item__title js-event-title">«Университетские смены» в СКФУ</p>
+                    <p class="event-item__text js-event-text"><b>10 августа</b> в Северо-Кавказском федеральном
+                      университете состоится открытие программы «Университетские смены».</p>
+                    <p class="event-item__date js-event-date"></p>
+                  </div>
+                </div>
+              </a>
+            </template>
+
+            <div class="js-current-items-container">
+
+            </div>
+
+            <div class="js-another-events-block" style="display: none;">
+              <hr class="mt-2 mb-2">
+
+              <p class="modal__subtitle">Другие анонсы</p>
+
+              <div class="js-another-events-container">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="overlay js-overlay"></div>
+
+        <div class="calendar calendar_fix-height">
+
+          <div class="calendar__top mb-1">
+            <div>
+              <button class="calendar__button" id="previous">
+                <img class="calendar__btn-icon calendar__btn-icon_prev" src="img/icons/left-arrow-white.png" alt=""
+                  width="20" height="20">
+              </button>
+            </div>
+            <div>
+              <p class="calendar__month" id="monthAndYear"></p>
+            </div>
+            <div>
+              <button class="calendar__button" id="next">
+                <img class="calendar__btn-icon calendar__btn-icon_next" src="img/icons/right-arrow-white.png" alt=""
+                  width="20" height="20">
+              </button>
+            </div>
+          </div>
+
+          <table class="calendar__body" id="calendar" data-lang="ru">
+            <thead id="thead-month"></thead>
+            <tbody id="calendar-body"></tbody>
+          </table>
+
+          <div class="calendar__footer">
+            <label class="calendar__label" for="month">Перейти: </label>
+            <select class="calendar__select" id="month">
+              <option value=0>Январь</option>
+              <option value=1>Февраль</option>
+              <option value=2>Март</option>
+              <option value=3>Апрель</option>
+              <option value=4>Май</option>
+              <option value=5>Июнь</option>
+              <option value=6>Июль</option>
+              <option value=7>Август</option>
+              <option value=8>Сентябрь</option>
+              <option value=9>Октябрь</option>
+              <option value=10>Ноябрь</option>
+              <option value=11>Декабрь</option>
+            </select>
+            <select class="calendar__select" id="year"></select>
+          </div>
+        </div>
+ 
+      </div>
+
+      <div class="promo__col promo__col_3">
+        <p class="promo__col-label">Анонсы</p>
+
+        <div class="promo__slider">
+
+          <div class="swiper promo__swiper js-konkurs-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">1</span>сентября</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">10</span>сентября</p>
+                  </div>
+                  <p class="card-notice__text">III Международный конкурс молодых ученых в сфере интеллектуальной
+                    собственности «Интеллект»</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">15</span>февраля</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">20</span>февраля</p>
+                  </div>
+                  <p class="card-notice__text">Конкурс работ на соискание премий Правительства Российской Федерации
+                    2023</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">10</span>октября</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">20</span>октября</p>
+                  </div>
+                  <p class="card-notice__text">Всероссийский конкурс «Учитель года – 2023»</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">1</span>марта</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">31</span>декабря</p>
+                  </div>
+                  <p class="card-notice__text">Конкурс на лучший антикоррупционный плакат</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">1</span>сентябрь</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">10</span>сентябрь</p>
+                  </div>
+                  <p class="card-notice__text">«Рождество с акцентом» для студентов СКФУ</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">1</span>сентябрь</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">10</span>сентябрь</p>
+                  </div>
+                  <p class="card-notice__text">«Рождество с акцентом» для студентов СКФУ</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">1</span>сентябрь</p>
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">10</span>сентябрь</p>
+                  </div>
+                  <p class="card-notice__text">«Рождество с акцентом» для студентов СКФУ</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="card-notice mb-1" href="#">
+                  <div class="card-notice__date-container">
+                  
+                    <p class="card-notice__month-konkurs"><span class="card-notice__day-konkurs">10</span>сентябрь</p>
+                  </div>
+                  <p class="card-notice__text">«Рождество с акцентом» для студентов СКФУ</p>
+                </a>
+              </div>
+            </div>
+
+          
+          </div>
+
+          <div class="swiper-button-prev promo__slider-btn promo__slider-btn_prev js-konkurs-slider-prev">
+            <img class="promo__slider-btn-icon promo__slider-btn-icon_prev" src="img/icons/left-arrow-white.png"
+              alt="" width="20" height="20">
+          </div>
+          
+          <div class="swiper-button-next promo__slider-btn promo__slider-btn_next js-konkurs-slider-next">
+            <img class="promo__slider-btn-icon promo__slider-btn-icon_next" src="img/icons/right-arrow-white.png"
+              alt="" width="20" height="20">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // let loaderEl = document.querySelector('.js-loader');
+        // loaderEl.classList.remove('hero__loader-wrapper--hidden');
+
+        const addDateToEvents = function (events) {
+          return events.map(eventItem => {
+            // добавили поле date с датой без нулей в дне и месяце и добавили '20' к году
+            const day = eventItem.date.split('.')[0];
+            const month = eventItem.date.split('.')[1];
+            const year = eventItem.date.split('.')[2];
+
+            return {
+              ...eventItem,
+              date3: (parseInt(day, 10) + '.' + parseInt(month, 10) + '.' + year).split(' ')[0]
+            }
+          });
+        }
+
+        const makeEventsForCalendar = function (loadedEvents) {
+          const events = addDateToEvents(loadedEvents);
+
+          const years = [...new Set(events.map(eventItem => eventItem.date3.split('.')[2]))];
+
+          let res = {};
+          years.forEach(function (year) {
+
+            // отбор событий в текущем году
+            let eventsInCurYear = events.filter(eventItem => eventItem.date3.split('.')[2] === year);
+
+            // отбор месяцев
+            let allMonth = [...new Set(eventsInCurYear.map(eventItem => eventItem.date3.split('.')[1]))];
+
+            let monthInCurYear = {};
+            allMonth.forEach(function (month) {
+              eventsInCurMonth = events.filter(eventItem => eventItem.date3.split('.')[1] === month);
+              let allDays = [...new Set(eventsInCurMonth.map(eventItem => eventItem.date3.split('.')[0]))];
+              monthInCurYear[month] = allDays
+            })
+
+            res[year] = monthInCurYear;
+          })
+
+          return res;
+
+        };
+
+
+        fetch('https://ncfu.ru/api/events/index.php')
+          .then((response) => {
+            return response.json();
+          })
+          .then((events) => {
+            const eventsForCalendar = makeEventsForCalendar(events);
+            const eventsWithDate = addDateToEvents(events);
+            makeCalendar(eventsForCalendar, eventsWithDate);
+          });
+
+
+        function makeCalendar(events, fullEvents) {
+
+          // обработка кликов по дате с событием
+          const addDateClickHandler = function (fullEvents) {
+
+            let eventLinkEls = document.querySelectorAll('.js-event-link');
+            for (let i = 0; i < eventLinkEls.length; i++) {
+              eventLinkEls[i].addEventListener('click', function () {
+                openModalHandler(this.dataset.date, fullEvents);
+              })
+            }
+
+            const htmlEl = document.querySelector('html');
+            const modalEl = document.querySelector('.js-modal');
+            const overlayEl = document.querySelector('.js-overlay');
+            const closeModalBtnEl = document.querySelector('.js-modal-close-btn');
+
+            const eventItemTemplate = document.querySelector('.js-event-item-template').content.querySelector('.js-event-item');
+            const currentItemContainerEl = document.querySelector('.js-current-items-container');
+
+            const selectedDateEl = document.querySelector('.js-selected-date');
+            const anotherEventsBlockEl = document.querySelector('.js-another-events-block');
+            const anotherEventsContainerEl = document.querySelector('.js-another-events-container');
+
+
+            const openModalHandler = function (selectedDate, fullEvents) {
+
+              const htmlDecode = function (input) {
+                const doc = new DOMParser().parseFromString(input, "text/html");
+                return doc.documentElement.textContent;
+              }
+
+
+              const eventsInSelectedDate = fullEvents.filter(eventItem => eventItem.date3 === selectedDate);
+
+              const addEventItem = function (eventItem) {
+                const newEventItemEl = eventItemTemplate.cloneNode(true);
+                const eventTitleEl = newEventItemEl.querySelector('.js-event-title');
+                const eventTextEl = newEventItemEl.querySelector('.js-event-text');
+                const eventImageEl = newEventItemEl.querySelector('.js-event-image');
+                const eventDateEl = newEventItemEl.querySelector('.js-event-date');
+
+                newEventItemEl.href = eventItem.url;
+                eventTitleEl.innerText = htmlDecode(eventItem.title);
+                eventTextEl.innerText = htmlDecode(eventItem.short_description);
+                eventImageEl.src = eventItem.img;
+                eventDateEl.innerText = 'Начало: ' + eventItem.date.split(' ')[0];
+
+                return newEventItemEl;
+              }
+
+              eventsInSelectedDate.forEach(function (eventItem) {
+                const newEventItemEl = addEventItem(eventItem);
+                currentItemContainerEl.appendChild(newEventItemEl);
+              })
+
+              if (fullEvents.length > 0) {
+                anotherEventsBlockEl.style.display = 'block';
+                const anotherEvents = fullEvents
+                  .filter(eventItem => eventItem.date3 !== selectedDate)
+                  .sort((a, b) => (new Date(b.date3.split('.')[2], b.date3.split('.')[1], b.date3.split('.')[0]) - new Date(a.date3.split('.')[2], a.date3.split('.')[1], a.date3.split('.')[0])))
+                  .slice(0, 15);
+
+        
+                anotherEvents.forEach(function (eventItem) {
+                  const newEventItemEl = addEventItem(eventItem);
+                  anotherEventsContainerEl.appendChild(newEventItemEl);
+                })
+              }
+
+              htmlEl.classList.add('modal-is-opened');
+              overlayEl.classList.add('overlay_active');
+              modalEl.classList.add('modal_active');
+              selectedDateEl.innerText = eventsInSelectedDate[0].date.split(' ')[0];
+
+            };
+
+            const closeModalHandler = function () {
+              htmlEl.classList.remove('modal-is-opened');
+              overlayEl.classList.remove('overlay_active');
+              modalEl.classList.remove('modal_active');
+              currentItemContainerEl.innerHTML = "";
+              anotherEventsContainerEl.innerHTML = "";
+              anotherEventsBlockEl.style.display = 'none';
+              selectedDateEl.innerText = "";
+            };
+
+            overlayEl.addEventListener('click', closeModalHandler);
+            closeModalBtnEl.addEventListener('click', closeModalHandler)
+          }
+
+          function generate_year_range(start, end) {
+            let years = "";
+            for (let year = start; year <= end; year++) {
+              years += "<option value='" + year + "'>" + year + "</option>";
+            }
+            return years;
+          }
+
+          let today = new Date();
+          let currentMonth = today.getMonth();
+          let currentYear = today.getFullYear();
+          let selectYear = document.getElementById("year");
+          let selectMonth = document.getElementById("month");
+
+          let createYear = generate_year_range(2022, 2025);
+          /** or
+           * createYear = generate_year_range( 1970, currentYear );
+           */
+
+          document.getElementById("year").innerHTML = createYear;
+
+          let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+          let days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+
+          let dayHeader = "<tr>";
+          for (let day in days) {
+            dayHeader += "<th data-days='" + days[day] + "'>" + days[day] + "</th>";
+          }
+          dayHeader += "</tr>";
+
+          document.getElementById("thead-month").innerHTML = dayHeader;
+
+          let monthAndYear = document.getElementById("monthAndYear");
+          showCalendar(currentMonth, currentYear);
+
+          function next() {
+            currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+            currentMonth = (currentMonth + 1) % 12;
+            showCalendar(currentMonth, currentYear);
+          }
+
+          function previous() {
+            currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+            currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+            showCalendar(currentMonth, currentYear);
+          }
+
+          function jump() {
+            currentYear = parseInt(selectYear.value);
+            currentMonth = parseInt(selectMonth.value);
+            showCalendar(currentMonth, currentYear);
+          }
+
+          let btnNext = document.getElementById("next");
+          btnNext.onclick = function () {
+            next();
+          };
+
+          let btnPrev = document.getElementById("previous");
+          btnPrev.onclick = function () {
+            previous();
+          };
+
+          let btnYear = document.getElementById("year");
+          btnYear.onchange = function () {
+            jump();
+          };
+
+          let btnMonth = document.getElementById("month");
+          btnMonth.onchange = function () {
+            jump();
+          };
+
+
+
+          function showCalendar(month, year) {
+
+            let firstDay = (new Date(year, month)).getDay() - 1;
+
+            if (firstDay === - 1) {
+              firstDay = 6
+            }
+
+            let tbl = document.getElementById("calendar-body");
+
+            tbl.innerHTML = "";
+            monthAndYear.innerHTML = months[month] + " " + year;
+            selectYear.value = year;
+            selectMonth.value = month;
+
+            // создание ячеек
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+              let row = document.createElement("tr");
+
+              for (let j = 0; j < 7; j++) {
+                let cellTemplate = "<span class='calendar__date'>" + date + "</span>";
+                let linkTemplate = "<button class='calendar__link js-event-link' " + " data-date=" + date + "." + (month + 1) + "." + year + ">" + date + "</button>";
+
+                if (i === 0 && j < firstDay) {
+                  let cell = document.createElement("td");
+                  let cellText = document.createTextNode("");
+                  cell.appendChild(cellText);
+                  row.appendChild(cell);
+                } else if (date > daysInMonth(month, year)) {
+                  break;
+                } else {
+                  let cell = document.createElement("td");
+
+                  if (events[year] !== undefined) {
+                    if ((events[year][month + 1] !== undefined)) {
+
+                      if (events[year][month + 1].includes(date.toString())) {
+                        cell.innerHTML = linkTemplate;
+                      } else {
+                        // cardContainer.innerHTML = '';
+                        cell.innerHTML = cellTemplate;
+                      }
+                    } else {
+                      //noEventsEl.classList.remove('hero__calendar-no-events--hidden');
+                      //cardContainer.innerHTML = '';
+                      cell.innerHTML = cellTemplate;
+                    }
+                  } else {
+                    cell.innerHTML = cellTemplate;
+                  }
+                  // подсветка сегодняшней даты
+                  // if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                  //   cell.className = "selected";
+                  // }
+                  row.appendChild(cell);
+                  date++;
+                }
+              }
+
+              tbl.appendChild(row);
+            }
+
+            addDateClickHandler(fullEvents);
+
+          }
+
+          function daysInMonth(iMonth, iYear) {
+            return 32 - new Date(iYear, iMonth, 32).getDate();
+          }
+
+        }
+
+
+        // инициализация слайдера
+        const swiperKonkurs = new Swiper(".js-konkurs-slider", { 
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+          loop: false,
+          autoHeight: true,
+          direction: 'horizontal',
+          breakpoints: {
+            576: {
+              slidesPerView: 2.6,
+              direction: 'vertical',
+            }
+          },
+          navigation: {
+            nextEl: ".js-konkurs-slider-next",
+            prevEl: ".js-konkurs-slider-prev",
+          }
+        });
+
+        
+      });
+    </script>
+
+    
+
+    <div class="user-content">
+
+      <div class="cards-grid mb-3">
+
+        <div class="cards-grid__item" id="bx_1293490900_25870">
+          <a class="card-link" href="https://ncfu.ru/abiturientu/priemnaya-kampaniya-2024/bakalavriat-spetsialitet-2024/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/5f1/e71il6r4os88w4ezsoyi2kqknrbmux6n/800_600_2/Bakalavr_2023.jpg_271326768.jpg" alt="Бакалавриат, специалитет" title="Бакалавриат, специалитет">
+            </div>
+            <p class="card-link__title">Бакалавриат, специалитет</p>
+          </a>
+        </div>
+               
+        <div class="cards-grid__item" id="bx_1293490900_25872">
+          <a class="card-link" href="https://ncfu.ru/abiturientu/priemnaya-kampaniya-2024/magistratura-2024/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/836/0bj26sgohuz0vn3uc333p3qjez9evmdb/800_600_2/magistry_2023.jpg_271326768.jpg" alt="Магистратура" title="Магистратура">
+            </div>
+            <p class="card-link__title">Магистратура</p>
+          </a>
+        </div>          
+  
+        <div class="cards-grid__item" id="bx_1293490900_25873">
+          <a class="card-link" href="https://ncfu.ru/abiturientu/priemnaya-kampaniya-2024/aspirantura-2024/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/da2/hla73zvjs65qvjy3sfrk8t8vlv41yczw/800_600_2/Aspirant_2023.jpg_271326768.jpg" alt="Аспирантура" title="Аспирантура">
+            </div>
+            <p class="card-link__title">Аспирантура</p>
+          </a>
+        </div>            
+      
+        <div class="cards-grid__item" id="bx_1293490900_25874">
+          <a class="card-link" href="https://ncfu.ru/abiturientu/priemnaya-kampaniya-2024/ordinatura/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/284/395ltzvyn2bjliwh0cayx5rhd0pihoob/800_600_2/ordinatura_2023.jpg_271326768.jpg" alt="Ординатура" title="Ординатура">
+            </div>
+            <p class="card-link__title">Ординатура</p>
+          </a>
+        </div>
+                      
+        <div class="cards-grid__item" id="bx_1293490900_25875">
+          <a class="card-link" href="https://spo.ncfu.ru/?back_url_admin=%2Fbitrix%2Fadmin%2F">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/026/9wn67kylwce8o1y23vxxann9lwj1j1im/800_600_2/SPO_2023.jpg_271326768.jpg" alt="Среднее профессиональное образование" title="Среднее профессиональное образование">
+            </div>
+            <p class="card-link__title">Среднее профессиональное образование</p>
+          </a>
+        </div>
+                  
+        <div class="cards-grid__item" id="bx_1293490900_25876">
+          <a class="card-link" href="https://ncfu.ru/abiturientu/priemnaya-kampaniya-2024/spetsializirovannyy-uchebnyy-nauchnyy-tsentr/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/f1d/jl1jyvaqvqhdqk8uyuclt6e33efwtddk/800_600_2/SUNC_2023.jpg_271326768.jpg" alt="Специализированный учебный научный центр" title="Специализированный учебный научный центр">
+            </div>
+            <p class="card-link__title">Специализированный учебный научный центр</p>
+          </a>
+        </div>
+                   
+        <div class="cards-grid__item" id="bx_1293490900_25877">
+          <a class="card-link" href="/abiturientu/arkhiv/priemnaya-kampaniya-2022/tselevoe-obuchenie/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/medialibrary/baf/gi1l233ov2y49k37kxm9vski8bk3il5i/ns_4.jpg" alt="Целевое обучение" title="Целевое обучение">
+            </div>
+            <p class="card-link__title">Целевое обучение</p>
+          </a>
+        </div>
+                   
+        <div class="cards-grid__item" id="bx_1293490900_25878">
+          <a class="card-link" href="/mezhdunarodnaya-deyatelnost/inostrannym-abiturientam/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/cc7/8gkj3bnnugyxb0vjsz10xqg4ece0b3r0/800_600_2/inostrancy_2023.jpg_271326768.jpg" alt="Иностранным абитуриентам" title="Иностранным абитуриентам">
+            </div>
+            <p class="card-link__title">Иностранным абитуриентам</p>
+          </a>
+        </div>
+      
+        <div class="cards-grid__item" id="bx_1293490900_25879">
+          <a class="card-link" href="/abiturientu/arkhiv/priemnaya-kampaniya-2022/abiturientu-s-ovz-i-invalidnostyu/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/medialibrary/ed7/vyvlfpml7dk7sbgqd1j8w65nbcbyualu/800_600_2/abiturientu_s_ovz_i_invalidnostyu_i_ncfu_ru_03.jpg_951386868.jpg" alt="Абитуриенту с ОВЗ и инвалидностью" title="Абитуриенту с ОВЗ и инвалидностью">
+            </div>
+            <p class="card-link__title">Абитуриенту с ОВЗ и инвалидностью</p>
+          </a>
+        </div>
+                   
+        <div class="cards-grid__item" id="bx_1293490900_25880">
+          <a class="card-link" href="/abiturientu/arkhiv/priemnaya-kampaniya-2021/voennyy-uchebnyy-tsentr/">
+            <div class="card-link__image-container">
+              <img class="card-link__image" src="https://ncfu.ru/upload/resize_cache/iblock/dcf/7y9553neavmgzdwdcuw5hg96zlbfv0ka/800_600_2/7.Voennyi_uchebnyi_centr.jpg" alt="Военный учебный центр" title="Военный учебный центр">
+            </div>
+            <p class="card-link__title">Военный учебный центр</p>
+          </a>
+        </div>
+      
+      </div>
+
+
+      <h2 class="title">Новости</h2>
+
+      <div class="news">
+
+        <a class="news__item" href="/novosti/glavnaya/skfu-stanet-ploshchadkoy-vserossiyskoy-olimpiady-shkolnikov-po-russkomu-yazyku/" id="bx_3218110189_27006">
+            
+          <div class="news__image-wrapper">
+            <img class="news__image" width="426" height="284" src="https://ncfu.ru/upload/resize_cache/iblock/cda/tne2qfqsmhsypb56gt0o7c7xoozz8oqt/426_284_2/skfu_stanet_ploshchadkoj_vserossijskoj_olimpiady_shkolnikov_po_russkomu_yazyku_ncfu_ru_01-_1_.jpg" alt="СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку">
+          </div>
+          
+          <h2 class="news__title">СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку</h2>
+          <p class="news__text">Северо-Кавказский федеральный университет (СКФУ) выступит площадкой для проведения заключительного этапа Всероссийской олимпиады школьников по русскому языку. Основная цель - развитие творческих способностей и интереса к научной деятельности у обучающихся.</p>
+          <p class="news__date">01 февраля 2024</p>
+        </a>
+
+        <a class="news__item" href="/novosti/glavnaya/skfu-stanet-ploshchadkoy-vserossiyskoy-olimpiady-shkolnikov-po-russkomu-yazyku/" id="bx_3218110189_27006">
+            
+          <div class="news__image-wrapper">
+            <img class="news__image" width="426" height="284" src="https://ncfu.ru/upload/resize_cache/iblock/cda/tne2qfqsmhsypb56gt0o7c7xoozz8oqt/426_284_2/skfu_stanet_ploshchadkoj_vserossijskoj_olimpiady_shkolnikov_po_russkomu_yazyku_ncfu_ru_01-_1_.jpg" alt="СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку">
+          </div>
+          
+          <h2 class="news__title">СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку</h2>
+          <p class="news__text">Северо-Кавказский федеральный университет (СКФУ) выступит площадкой для проведения заключительного этапа Всероссийской олимпиады школьников по русскому языку. Основная цель - развитие творческих способностей и интереса к научной деятельности у обучающихся.</p>
+          <p class="news__date">01 февраля 2024</p>
+        </a>
+
+        <a class="news__item" href="/novosti/glavnaya/skfu-stanet-ploshchadkoy-vserossiyskoy-olimpiady-shkolnikov-po-russkomu-yazyku/" id="bx_3218110189_27006">
+            
+          <div class="news__image-wrapper">
+            <img class="news__image" width="426" height="284" src="https://ncfu.ru/upload/resize_cache/iblock/cda/tne2qfqsmhsypb56gt0o7c7xoozz8oqt/426_284_2/skfu_stanet_ploshchadkoj_vserossijskoj_olimpiady_shkolnikov_po_russkomu_yazyku_ncfu_ru_01-_1_.jpg" alt="СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку">
+          </div>
+          
+          <h2 class="news__title">СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку</h2>
+          <p class="news__text">Северо-Кавказский федеральный университет (СКФУ) выступит площадкой для проведения заключительного этапа Всероссийской олимпиады школьников по русскому языку. Основная цель - развитие творческих способностей и интереса к научной деятельности у обучающихся.</p>
+          <p class="news__date">01 февраля 2024</p>
+        </a>
+
+        <a class="news__item" href="/novosti/glavnaya/skfu-stanet-ploshchadkoy-vserossiyskoy-olimpiady-shkolnikov-po-russkomu-yazyku/" id="bx_3218110189_27006">
+            
+          <div class="news__image-wrapper">
+            <img class="news__image" width="426" height="284" src="https://ncfu.ru/upload/resize_cache/iblock/cda/tne2qfqsmhsypb56gt0o7c7xoozz8oqt/426_284_2/skfu_stanet_ploshchadkoj_vserossijskoj_olimpiady_shkolnikov_po_russkomu_yazyku_ncfu_ru_01-_1_.jpg" alt="СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку">
+          </div>
+          
+          <h2 class="news__title">СКФУ станет площадкой Всероссийской олимпиады школьников по русскому языку</h2>
+          <p class="news__text">Северо-Кавказский федеральный университет (СКФУ) выступит площадкой для проведения заключительного этапа Всероссийской олимпиады школьников по русскому языку. Основная цель - развитие творческих способностей и интереса к научной деятельности у обучающихся.</p>
+          <p class="news__date">01 февраля 2024</p>
+        </a>
+      
+      </div>
+
+      <div class="cards-grid mb-3">
+         
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>  
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>  
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>
+
+        <div class="cards-grid__item" id="bx_3557837678_25881">
+          <a class="card-image-link" href="/abiturientu/obrashcheniya-grazhdan-svyazannye-s-priemom-na-obuchenie/" style="background-image: url(https://ncfu.ru/local/components/gnvs/folur_blocks_links/templates/card_img_link/img/nophoto.png)">
+            <p class="card-image-link__title">Задать вопрос о поступлении</p>
+          </a>
+        </div>
+
+      
+      </div>
+      
+
+
+
+
+
+
+      <br><br>
+      <h2 class="title">Контактная информация</h2>
+
+      <p>
+        Адрес&nbsp; г. Ставрополь , пл.&nbsp;Ленина 3А, корп. 6.<br>
+        График работы: Пн-Чт&nbsp;&nbsp;9.00-18.00 , Пт 9.00-16.45&nbsp;<br>
+        Телефон: 8 (8652) 95-68-13<br>
+        Горячая линия:8-800-200-6476 (звонок бесплатный)<br>
+        E-mail:&nbsp;<a href="mailto:selcom@ncfu.ru" target="_blank">selcom@ncfu.ru&nbsp;</a><br>
+     </p>
+  
+      
+      
+     
+    
+    
+    </div>
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.person-grid {
+  @media (min-width: $tablet-size-land) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 48%;
+      max-width: 48%;
+      margin-bottom: 1.5rem;
+    }
+
+    &_lg {
+      @media (min-width: $tablet-size-land) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    &_first {
+      @media (min-width: $tablet-size-land) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

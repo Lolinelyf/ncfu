@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--Для карты кампусов-->
+  <link href="css/leaflet.css" rel="stylesheet"  />
+  <link href="css/spinner/react-spinner-loader.css" rel="stylesheet"/>
+<!--Конец для карты кампусов-->
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Университет</a> </li>
+      <li class="breadcrumbs__item">Карта корпусов и кампусов</li>
+    </ul>
+
+    <h1 class="title">Карта корпусов и кампусов</h1>
+
+    <div id="root" data-lang="RU"></div>
+
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+<!--Для карты кампусов-->
+<script src="js/single/campuses.js"></script>
+<!--Конец для карты кампусов-->
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

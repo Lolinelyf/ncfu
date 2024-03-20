@@ -1,0 +1,41 @@
+.top {
+  display: none;
+
+  @media (min-width: $tablet-size-land) {
+    display: block;
+    background-color: $grey-color;
+  }
+
+  &__inner {
+    @media (min-width: $tablet-size-land) {
+      display: flex;
+      color: $primary-color;
+      justify-content: flex-end;
+      padding-top: 6px;
+      padding-bottom: 4px;
+    }
+  }
+
+  &__link {
+    @media (min-width: $tablet-size-land) {
+      display: flex;
+      justify-items: center;
+      color: $primary-color;
+      font-size: 0.7rem;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+
+    @media (min-width: $desktop-size-large) {
+      font-size: 0.75rem;
+    }
+  }
+}

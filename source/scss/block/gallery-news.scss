@@ -1,0 +1,38 @@
+.gallery-news {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-size-port) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $tablet-size-land) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.3s;
+
+    @media (min-width: $tablet-size-land) {
+      max-height: 300px !important;
+      height: 100% !important;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+
+    &:hover {
+      .gallery-news__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

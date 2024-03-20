@@ -1,0 +1,41 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+
+  &__link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: $primary-color;
+
+    &:not(:last-child) {
+      &::after {
+        display: block;
+        content: "›";
+        margin-left: 0.5rem;
+        color: $primary-color;
+      }
+
+      .breadcrumbs__link {
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

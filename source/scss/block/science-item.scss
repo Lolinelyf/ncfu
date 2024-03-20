@@ -1,0 +1,40 @@
+.science-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $tertiary-color;
+
+  &:hover {
+    .science-item__icon {
+      background-color: $primary-color;
+    }
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
+    max-width: 100px;
+    background-color: $tertiary-color;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: flex;
+    padding: 0.7rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 700;
+    flex: 1;
+    padding-left: 1rem;
+    margin-bottom: 0;
+  }
+}

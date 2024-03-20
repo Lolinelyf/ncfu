@@ -1,0 +1,9 @@
+.img-row {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-size-port) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

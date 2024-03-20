@@ -1,0 +1,68 @@
+.button {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  background-color: $color-accent;
+  outline: none;
+  cursor: pointer;
+  color: $color-white;
+  font-size: 13px;
+  padding: 0.5rem 1rem;
+
+  text-decoration: none;
+  border-radius: 0.5rem;
+  text-transform: none;
+  transition: opacity 0.25s;
+  line-height: 14px;
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  @media (min-width: $tablet-size-land) {
+    font-weight: 700;
+    font-size: 14px;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    box-shadow: $shadow-small-accent;
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+
+  &--light {
+    background-color: $color-hover;
+    color: $color-accent;
+    font-weight: 400;
+    box-shadow: none;
+
+    @media (min-width: $tablet-size-land) {
+      text-transform: none;
+      padding: 0.5rem 1.5rem;
+      &:hover {
+        color: $color-accent;
+        opacity: 0.8;
+        text-decoration: none;
+        box-shadow: $shadow-small-hover;
+      }
+    }
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-accent;
+    box-shadow: $shadow-small-white;
+    @media (min-width: $tablet-size-land) {
+      &:hover {
+        background-color: $color-hover;
+        color: $color-accent;
+        text-decoration: none;
+      }
+    }
+  }
+}

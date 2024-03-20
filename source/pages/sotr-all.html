@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Для списка сотрудников -->
+  <link href="css/spinner/react-spinner-loader.css" rel="stylesheet"/>
+  <!-- Конец для списка сотрудников -->
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Сотруднику</a> </li>
+      <li class="breadcrumbs__item">Личные страницы сотрудников</li>
+    </ul>
+
+    <div id="root" data-lang="RU"></div>
+
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+<!-- Для списка сотрудников -->
+<script src="js/single/employee.js"></script>
+<!-- Конец для списка сотрудников -->
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

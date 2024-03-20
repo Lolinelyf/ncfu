@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Работа в СКФУ</a> </li>
+      <li class="breadcrumbs__item">Вакансии</li>
+    </ul>
+
+    <h1 class="title js-title">Вакансии</h1>
+
+    <div class="centered pt-4 pb-4 js-loader">
+
+      <div class="loader">
+        <div class="loader-inner">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <ul class="js-list-container">
+
+      <template id="js-item-template">
+        <li class="mb-2 js-item">
+          <hr>
+          <h3><strong class="js-title">Повар </strong></h3>
+          <p><svg class="icon"><use xlink:href="/img/svg-sprite.svg#icon-library"></use></svg><span class="js-department">Служба общественного питания<span></span></p>
+
+          <div class="js-info-container">
+
+          </div>
+          <p><a class="button button_type_primary" href="mailto:hrd@ncfu.ru"> <svg class="icon"><use xlink:href="/img/svg-sprite.svg#icon-envelop"></use></svg> Откликнуться&nbsp; </a></p>
+        </li>
+      </template>
+
+    </ul>
+
+    <template id="js-info-template">
+      <div class="js-info-item">
+        <p class="mb-1"><strong class="js-info-title">Обязанности:</strong></p>
+        <div class="mb-1 js-info-detail">
+        </div>
+      </div>
+    </template>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+
+        function htmlDecode(input) {
+          const doc = new DOMParser().parseFromString(input, "text/html");
+          return doc.documentElement.textContent;
+        }
+
+        // запросили данные
+        fetch('https://webadm.ncfu.ru/api/vacansy/list.php')
+          .then(response => response.json())
+          .then(data => {
+
+            // контейнер для вставки вакансий
+            const jsListContainer = document.querySelector('.js-list-container');
+            // шаблон вакансии
+            const itemTemplate =  document.querySelector("#js-item-template").content.querySelector(".js-item");
+            // шаблон блока Обязанности
+            let itemInfoTemplate = document.querySelector("#js-info-template").content.querySelector(".js-info-item");
+
+
+            for (let i = 0; i < data.length; i++) {
+              let newItem = itemTemplate.cloneNode(true);
+
+              // контейнер для вставки информации о вакансии
+              const jsInfoContainer = newItem.querySelector('.js-info-container');
+
+              let vakNameEl = newItem.querySelector('.js-title');
+              vakNameEl.textContent = data[i].name;
+
+              let vakDepartmentEl = newItem.querySelector('.js-department');
+              vakDepartmentEl.textContent = data[i].department;
+
+              if (data[i].task.TEXT) {
+                let newItemInfo = itemInfoTemplate.cloneNode(true);
+                let infoTitleEl = newItemInfo.querySelector('.js-info-title');
+                infoTitleEl.textContent = 'Обязанности';
+
+                let infoDetailEl = newItemInfo.querySelector('.js-info-detail');
+                infoDetailEl.innerHTML = htmlDecode(data[i].task.TEXT);
+                jsInfoContainer.appendChild(newItemInfo);
+              }
+
+              if (data[i].demands.TEXT) {
+                let newItemInfoDemands = itemInfoTemplate.cloneNode(true);
+                let infoTitleDemandsEl = newItemInfoDemands.querySelector('.js-info-title');
+                infoTitleDemandsEl.textContent = 'Требования';
+
+                let infoDetailDemandsEl = newItemInfoDemands.querySelector('.js-info-detail');
+                infoDetailDemandsEl.innerHTML = htmlDecode(data[i].demands.TEXT);
+                jsInfoContainer.appendChild(newItemInfoDemands);
+              }
+
+              if (data[i].terms.TEXT) {
+                let newItemInfoTerms = itemInfoTemplate.cloneNode(true);
+                let infoTitleTermsEl = newItemInfoTerms.querySelector('.js-info-title');
+                infoTitleTermsEl.textContent = 'Условия';
+
+                let infoDetailTermsEl = newItemInfoTerms.querySelector('.js-info-detail');
+                infoDetailTermsEl.innerHTML = htmlDecode(data[i].terms.TEXT);
+                jsInfoContainer.appendChild(newItemInfoTerms);
+              }
+
+              if (data[i].misc.TEXT) {
+                let newItemInfoMisc = itemInfoTemplate.cloneNode(true);
+                let infoTitleMiscEl = newItemInfoMisc.querySelector('.js-info-title');
+                infoTitleMiscEl.textContent = 'Дополнительно';
+
+                let infoDetailMiscEl = newItemInfoMisc.querySelector('.js-info-detail');
+                infoDetailMiscEl.innerHTML = htmlDecode(data[i].misc.TEXT);
+                jsInfoContainer.appendChild(newItemInfoMisc);
+              }
+
+              jsListContainer.appendChild(newItem);
+            }
+
+            const loaderEl = document.querySelector('.js-loader');
+
+            loaderEl.remove();
+
+
+          });
+
+      })
+
+    </script>
+
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

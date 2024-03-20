@@ -1,0 +1,26 @@
+.card-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: block;
+
+  &_no-fix {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    width: auto;
+    height: 150px !important;
+
+    &_no-fix {
+      height: auto!important;
+      padding: 1rem;
+    }
+  }
+}

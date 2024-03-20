@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/jquery.orgchart.min.css" rel="stylesheet" type="text/css">
+  <link href="css/structure.css" rel="stylesheet" type="text/css">
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Университет</a> </li>
+      <li class="breadcrumbs__item">Структура</li>
+    </ul>
+
+    <h1 class="title title_centered">Структура Северо-Кавказского федерального университета</h1>
+
+    <div class="centered pt-4 pb-4 js-loader">
+
+      <div class="loader">
+        <div class="loader-inner">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="chart-container"></div>
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+<script src="js/single/jquery-3.3.1.min.js"></script>
+<script src="js/single/jquery.orgchart.min.js"></script>
+
+<script>
+  (function ($) {
+
+    const show = function(ds) {
+      let nodeTemplate = function (data) {
+        let personContent =  '<a href="' + data.url + '">' + data.title + "</a>";
+        if (data.url === "") {
+          personContent = data.title;
+        }
+
+        let departmentContent = '<a href="' + data.depUrl + '">' + data.name + "</a>";
+        if (data.depUrl === "") {
+          departmentContent = data.name;
+        }
+
+        return (
+          '<div class="title">' +
+          departmentContent.replace(/&lt;br&gt;/g, '<br/>') +
+          '</div><div class="content">' +
+          personContent.replace(/&lt;br&gt;/g, '<br/>') +
+          "</div>"
+        );
+      };
+
+      let oc = $("#chart-container").orgchart({
+        data: ds,
+        nodeContent: "title",
+        verticalLevel: 3,
+        visibleLevel: 3,
+        nodeTemplate: nodeTemplate,
+        createNode: function ($node, data) {
+          if (data.name === "Ректор") {
+            let assistantNode =
+              '<div class="assistant-node"><div class="connector"/><div class="title title--assistant">Ученый совет <br>Ученый секретарь</div><div class="content"><a href="http://www.ncfu.ru/for-employee/list-of-employees/employee/2881537b-1e28-11e9-bd69-0050568c7ce8/">Покотилова Татьяна Евгеньевна</a></div><i class="edge verticalEdge bottomEdge fa"></i></div>';
+            $node.append(assistantNode);
+
+            let assistantNode1 =
+              '<div class="assistant-node1"><div class="connector1"/><div class="title">Наблюдательный совет <br>Председатель</div><div class="content"><a href="https://www.gubernator.stavkray.ru/">Владимиров Владимир Владимирович</div><i class="edge verticalEdge bottomEdge fa"></i></div>';
+            $node.append(assistantNode1);
+          }
+        },
+      });
+    }
+
+    // запросили данные
+    fetch('https://ncfu.ru/api/structure/')
+      .then(response => response.json())
+      .then(data => {
+
+        const formatChildren = (rows) => {
+          return Object.entries(rows).map(([, value]) => {
+            return {
+              ...value,
+              children: value.children ? formatChildren(value.children) : []
+            }
+          }).sort(function (a, b) {
+            return a.sort - b.sort;
+          });
+        }
+
+        let dataForChart = formatChildren(data)[0];
+        show(dataForChart);
+
+        // удаляется спиннер
+        const loaderEl = document.querySelector('.js-loader');
+
+        loaderEl.remove();
+
+      });
+
+  })(jQuery);
+
+</script>
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

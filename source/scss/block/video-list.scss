@@ -1,0 +1,12 @@
+.video-list {
+  display: grid;
+  gap: 2rem;
+
+  @media (min-width: $tablet-size-port) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__title {
+    padding-top: 4px;
+  }
+}

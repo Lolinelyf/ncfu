@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Университет</a> </li>
+      <li class="breadcrumbs__item">Сервис «Запрос КП»</li>
+    </ul>
+
+    <h1 class="title js-title">Сервис «Запрос КП»</h1>
+
+    <div class="user-content">
+      <p><strong>Извещаем Вас о размещении заказчиком ФГАОУ ВО «Северо-Кавказский федеральный университет» ценового запроса </strong></p>
+
+      <div class="centered pt-4 pb-4 js-loader">
+
+        <div class="loader">
+          <div class="loader-inner">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <ol class="js-list-container">
+
+        <template class="js-item-template">
+          <li class="js-item"><a class="js-link" href=""></a></li>
+        </template>
+
+      </ol>
+
+      <p><strong>Просим Вас рассчитать цену, а также указать предусмотрен/не предусмотрен НДС, сборы и другие обязательные платежи.</strong></p>
+      <p><a class="button button_type_primary" href="mailto:com.offers@ncfu.ru"> <svg class="icon"><use xlink:href="/img/svg-sprite.svg#icon-envelop"></use></svg> Направить КП&nbsp; </a></p>
+      <p>E-mail для направления КП: <a href="mailto:com.offers@ncfu.ru">com.offers@ncfu.ru</a></p>
+      <p><strong>Кроме того просим указать:</strong></p>
+      <p>- сведения о сроках поставки;<br>- реквизиты организации (ИНН, ОГРН/ОРГНИП, ФИО руководителя, адрес регистрации);<br>- контактные данные для обратной связи (адрес электронной почты и телефон организации, ФИО контактного лица).</p>
+      <p>Также обращаем Ваше внимание, что из ответа должны определяться цена договора на условиях, указанных в запросе, срок действия предлагаемой цены, расчет такой цены, цена единицы.</p>
+      <p>&nbsp;</p>
+      <p><strong>Реквизиты СКФУ:<br></strong><span style="font-size: 0.9rem;">Федеральное государственное автономное образовательное учреждение высшего образования «Северо-Кавказский федеральный университет»<br></span><span style="font-size: 0.9rem;">Организационно-правовая форма: Федеральное государственное автономное образовательное учреждение высшего образования<br></span><span style="font-size: 0.9rem;">Сокращённое наименование: ФГАОУ ВО «Северо-Кавказский федеральный университет»<br></span><span style="font-size: 0.9rem;">Юридический/Почтовый адрес: 355017,&nbsp;</span><span style="font-size: 0.9rem;">г. Ставрополь, ул. Пушкина, 1<br></span><span style="font-size: 0.9rem;">Телефон: (8652) 95-68-08, Факс: (8652) 95-68-03<br></span><span style="font-size: 0.9rem;">E-mail: </span><a href="mailto:info@ncfu.ru" style="font-size: 0.9rem; background-color: #ffffff;">info@ncfu.ru</a></p>
+      <div style="font-size: 0.9rem;">
+        <p><em>Банковские реквизиты</em><br>ИНН/КПП - 2635014955/263401001<br>Получатель - УФК ПО СТАВРОПОЛЬСКОМУ КРАЮ (ФГАОУ ВО «Северо-Кавказский федеральный университет» л/счет 30216Ш58810)<br>Банк - ОТДЕЛЕНИЕ СТАВРОПОЛЬ БАНКА РОССИИ//УФК по Ставропольскому краю г. Ставрополь&nbsp; Р/счет - 03214643000000012100<br>К/счет - 40102810345370000013<br>БИК- 010702101<br>ОКПО - 02067965<br>ОГРН -1022601961580<br>ОКТМО - 07701000<br>КБК - 07060000000000000130</p>
+      </div>
+      <p>Запрос КП осуществляется с целью формирования НМЦД.</p>
+      <p>По всем вопросам обращайтесь по телефону <a href="tel:+78652330505">+7(8652)33 05 05</a></p>
+      <p>С уважением, управление закупок&nbsp;планирования и организации СКФУ<br><a href="mailto:com.offers@ncfu.ru">com.offers@ncfu.ru</a></p></div>
+
+
+
+
+    </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      // запросили данные
+      fetch('https://webadm.ncfu.ru/api/zakupki/list.php')
+        .then(response => response.json())
+        .then(data => {
+
+          const jsListContainer = document.querySelector('.js-list-container');
+
+          const itemTemplate =  document.querySelector(".js-item-template").content.querySelector(".js-item");
+
+          for (let i = 0; i < data.length; i++) {
+            let newItem = itemTemplate.cloneNode(true);
+
+            let itemLinkEl = newItem.querySelector('.js-link');
+            itemLinkEl.textContent = data[i].name;
+            itemLinkEl.href = data[i].file;
+
+            jsListContainer.appendChild(newItem);
+          }
+
+          const loaderEl = document.querySelector('.js-loader');
+
+          loaderEl.remove();
+
+        });
+
+    })
+
+  </script>
+
+
+
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

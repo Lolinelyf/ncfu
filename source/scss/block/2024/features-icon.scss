@@ -1,0 +1,110 @@
+.features-icon {
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: $color-white;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: $mobile-size-land) {
+      grid-template-columns: repeat(2, 1fr);
+      background-color: initial;
+      padding: 0;
+      border-radius: 0;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+    @media (min-width: $tablet-size-land) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+    background-color: $color-white;
+    transition: background-color 0.15s Linear, box-shadow 0.15s Linear,
+      opacity 0.15s Linear, transform 0.15s Linear;
+    margin: 1rem 1rem 0 1rem;
+    padding-bottom: 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ebebeb87;
+    }
+    &:active,
+    &:focus,
+    &:active .features-icon__label,
+    &:focus .features-icon__label {
+      color: $color-accent;
+      text-decoration: none;
+    }
+    @media (min-width: $mobile-size-land) {
+      min-height: 76px;
+      box-shadow: $shadow-small-white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 0;
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+      &:active,
+      &:focus {
+        color: $color-black;
+        background-color: $color-hover;
+        text-decoration: none;
+      }
+
+      &:active .features-icon__label,
+      &:focus .features-icon__label {
+        color: $color-black;
+        opacity: 0.8;
+      }
+    }
+
+    @media (min-width: $tablet-size-land) {
+      padding: 0.5rem;
+      &:hover {
+        background-color: $color-hover;
+        text-decoration: none;
+        box-shadow: $shadow-medium-white;
+        transform: translateY(-2px);
+      }
+    }
+
+    @media (min-width: $desktop-size-small) {
+      padding: 0.75rem;
+    }
+  }
+
+  &__image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 1rem;
+    @media (min-width: $mobile-size-land) {
+      width: 40px;
+      height: 40px;
+    }
+    @media (min-width: $tablet-size-land) {
+      margin-right: 0.5rem;
+    }
+    @media (min-width: $desktop-size-small) {
+      margin-right: 0.75rem;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $color-black;
+    margin-bottom: 0;
+    font-weight: 500;
+    transition: opacity 0.15s;
+    line-height: 1.2;
+
+    @media (min-width: $mobile-size-land) {
+      color: $color-black;
+    }
+  }
+}

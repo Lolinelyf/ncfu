@@ -1,0 +1,23 @@
+.leader {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+
+  &__photo-container {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  &__contact {
+    flex: 1;
+    padding-left: 1rem;
+  }
+}

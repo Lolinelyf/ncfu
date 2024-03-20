@@ -1,0 +1,79 @@
+.modal {
+  padding: 1rem 2rem;
+  position: fixed;
+  background-color: white;
+  top: -150%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+  border-radius: 6px;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.4s;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: $tablet-size-port) {
+    width: 70%;
+    height: 90vh;
+  }
+
+  @media (min-width: $tablet-size-port) {
+    width: 55%;
+  }
+
+  &_active {
+    z-index: 151;
+    opacity: 1;
+    height: 80vh;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transition-delay: 0.4s;
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+    margin-right: -2rem;
+    padding-right: 1rem;
+  }
+
+  &__close {
+    display: block;
+    width: 50px;
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: -34px;
+    margin-top: -12px;
+    background-color: transparent;
+    border: none;
+    color: #6e6e6e;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+    }
+
+    &:focus {
+      outline: none;
+      color: #000;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $tertiary-color;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #6e6e6e;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}

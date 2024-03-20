@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a></li>
+      <li class="breadcrumbs__item">Список сотрудников для проверки</li>
+    </ul>
+
+    <h1 class="title">Список сотрудников для проверки</h1>
+
+    <template id="js-item-template">
+      <p class="mb-0 js-item"></p>
+    </template>
+
+    <div class="js-inst-info-container">
+
+      <template id="js-inst-info-template">
+
+        <div class="js-inst-info-item">
+          <p class="js-inst-name" style="font-weight: bold; margin-bottom: 0;"></p>
+
+          <details>
+            <summary style="font-size: 0.9rem; cursor: pointer;">
+              открыть список
+            </summary>
+              <div class="js-list-container">
+
+              </div>
+
+          </details>
+        </div>
+
+      </template>
+
+    </div>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function (event) {
+
+        const inst = [
+          {
+            name: 'Факультет математики и компьютерных наук',
+            id: '337'
+          },
+          {
+            name: 'Гуманитарный институт',
+            id: '344'
+          },
+          {
+            name: 'Инженерный институт ',
+            id: '346'
+          },
+          {
+            name: 'Институт цифрового развития',
+            id: '338'
+          },
+          {
+            name: 'Юридический институт',
+            id: '349'
+          },
+          {
+            name: 'Факультет физической культуры',
+            id: '340'
+          },
+          {
+            name: 'Физико-технический факультет',
+            id: '343'
+          },
+          {
+            name: 'Химико-фармацевтический факультет',
+            id: '345'
+          },
+          {
+            name: 'Медико-биологический факультет',
+            id: '341'
+          },
+          {
+            name: 'Психолого-педагогический факультет',
+            id: '348'
+          },
+          {
+            name: 'Институт пищевой инженерии',
+            id: '342'
+          },
+          {
+            name: 'Институт наук о Земле',
+            id: '347'
+          },
+          {
+            name: 'Институт экономики ',
+            id: '339'
+          }
+        ]
+
+        function htmlDecode(input) {
+          const doc = new DOMParser().parseFromString(input, "text/html");
+          return doc.documentElement.textContent;
+        }
+
+        // контейнер для вставки информации об институте
+        const jsInstInfoContainer = document.querySelector('.js-inst-info-container');
+
+        // шаблон  института
+        const itemInstTemplate = document.querySelector("#js-inst-info-template").content.querySelector(".js-inst-info-item");
+        // шаблон  фио
+        const itemTemplate = document.querySelector("#js-item-template").content.querySelector(".js-item");
+
+        for (let k = 0; k < inst.length; k++) {
+          let curInst = inst[k];
+
+
+          fetch('https://webadm.ncfu.ru/api/sotr/list-by-id.php?inst=' + curInst.id)
+            .then(response => response.json())
+            .then(data => {
+
+              let newInstItem = itemInstTemplate.cloneNode(true);
+              let instNameEl = newInstItem.querySelector('.js-inst-name')
+              instNameEl.textContent = curInst.name + '. ВСЕГО: ' + data.length;
+
+              jsInstInfoContainer.appendChild(newInstItem);
+
+              // контейнер для вставки значения списка
+              const jsListContainer = newInstItem.querySelector('.js-list-container');
+
+              for (let i = 0; i < data.length; i++) {
+                 let newItem = itemTemplate.cloneNode(true);
+
+                 newItem.textContent = data[i].name;
+                 jsListContainer.appendChild(newItem);
+              }
+
+            });
+
+        }
+      })
+
+    </script>
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

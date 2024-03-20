@@ -1,0 +1,42 @@
+.abit {
+  background-color: #eaeff6;
+  background: url(../img/gradient-bg.jpg) no-repeat;
+  background-size: 100% 130%;
+
+  &__grid {
+    @media (min-width: $tablet-size-land) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__grid-icons-container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media (min-width: $tablet-size-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 63%;
+      max-width: 63%;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__grid-photo-container {
+    overflow: hidden;
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 33%;
+      max-width: 33%;
+    }
+  }
+}

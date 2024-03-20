@@ -1,0 +1,119 @@
+.person {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: $tablet-size-land) {
+    flex-direction: row;
+  }
+
+  &_square {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+
+    @media (min-width: $tablet-size-land) {
+      flex-direction: row;
+    }
+  }
+
+  &__main {
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 62%;
+      max-width: 62%;
+    }
+  }
+
+  &__info {
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    &_sm {
+      @media (min-width: $tablet-size-land) {
+        flex: 0 0 37%;
+        max-width: 37%;
+      }
+    }
+  }
+
+  &__info-social {
+    justify-content: flex-start;
+  }
+
+  &__info-text {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: $tablet-size-land) {
+      flex-direction: column;
+      padding-left: 2rem;
+    }
+
+    &_no-padding {
+      padding: 0;
+    }
+  }
+
+  &__photo-container {
+    margin-bottom: 2rem;
+  }
+
+  &__photo {
+    display: block;
+    width: 300px!important;
+    height: 300px!important;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid #eee;
+
+    @media (min-width: $tablet-size-land) {
+      margin: 0;
+    }
+
+    &_square {
+      max-width: 100%;
+      height: auto!important;
+      object-fit: initial;
+      border-radius: initial;
+      margin: 0;
+
+      @media (min-width: $tablet-size-land) {
+        width: 200px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+
+    @media (min-width: $tablet-size-land) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__subtitle {
+    font-style: italic;
+  }
+
+  &__caption {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+
+  &__value {
+    padding-left: 1rem;
+    margin: 0;
+  }
+
+  &__text {
+    ul {
+      margin-top: 0;
+    }
+  }
+}

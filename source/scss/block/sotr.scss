@@ -1,0 +1,48 @@
+.sotr {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__list {
+    @media (min-width: $tablet-size-land) {
+      columns: 2;
+    }
+  }
+
+  &__item {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+
+    &-exit {
+      opacity: 1;
+    }
+
+    &-exit-active {
+      opacity: 0;
+      transition: opacity 500ms ease-out;
+    }
+
+    &-enter {
+      opacity: 0;
+    }
+
+    &-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-out;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $secondary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__letter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}

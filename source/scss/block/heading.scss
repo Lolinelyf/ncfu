@@ -1,0 +1,38 @@
+.heading23 {
+  background-color: $tertiary-color;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    color: $white-color !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+
+    @media (min-width: $tablet-size-land) {
+      font-size: 1rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $white-color;
+    font-size: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-weight: 600;
+
+    @media (min-width: $tablet-size-land) {
+      font-size: 2rem;
+    }
+  }
+}

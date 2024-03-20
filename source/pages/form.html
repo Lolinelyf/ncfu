@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bvi.min.css" rel="stylesheet" type="text/css">
+  <link href="css/other.css" rel="stylesheet" type="text/css">
+  <script src="js/single/bvi.js"></script>
+  <title>Северо-Кавказский федеральный университет - список новостей</title>
+</head>
+
+<body class="page">
+
+@@include('partials/header.html')
+
+@@include('partials/navigation.html')
+
+<main class="page__main">
+
+  <div class="container">
+
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Университет</a> </li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Противодействие коррупции</a> </li>
+      <li class="breadcrumbs__item">Форма обращения</li>
+    </ul>
+
+    <h1 class="title">Форма обращения</h1>
+
+    <div class="user-content">
+      <form class="form">
+        <div class="form__item form__item_inline">
+          <label class="form__label form__label_full mr-05" for="where">Кому отправляется письмо</label>
+          <input class="form__input form__input_size_30" id="where" autocomplete="off" type="text" placeholder="Ректору" disabled>
+        </div>
+
+        <div class="form__item">
+          <label class="form__label form__label_full" for="fio">ФИО</label>
+          <input class="form__input form__input_size_30" id="fio" autocomplete="off" type="text" placeholder="Введите ваше ФИО" required>
+        </div>
+
+        <div class="form__item">
+          <label class="form__label form__label_full" for="email">Электронная почта</label>
+          <input class="form__input form__input_size_30" id="email" autocomplete="off" type="email" placeholder="Введите адрес электронной почты" required>
+        </div>
+
+        <div class="form__item">
+          <label class="form__label form__label_full" for="message">Текст сообщения</label>
+          <textarea class="form__input form__input_text-area form__input_size_50" rows="8" cols="30" required id="message" placeholder="Изложите суть предложения, заявления или жалобы"></textarea>
+        </div>
+
+        <div class="form__item mb-2">
+          <label class="form__label form__label_full" for="file">Добавить вложение</label>
+          <input id="file" type="file" >
+        </div>
+
+        <div class="form__item form__item_inline">
+          <input class="form__checkbox visually-hidden js-checkbox-agree" type="checkbox" required id="agreement" >
+          <label class="form__label form__label_checkbox" for="agreement">Согласие на обработку персональных данных</label>
+        </div>
+
+        <div class="mb-2">
+          <p>Отправляя настоящее обращение, свободно, своей волей и в своем интересе даю свое согласие Федеральному
+            государственному автономному образовательному учреждению высшего образования «Северо-Кавказский федеральный
+            университет» 355017, г. Ставрополь, ул. Пушкина, 1, на автоматизированную и неавтоматизированную обработку
+            моих персональных данных, направляемых мной в составе обращения, включая сбор, запись, систематизацию,
+            накопление, хранение, уточнение (обновление, изменение), извлечение, использование, предоставление, доступ,
+            обезличивание, блокирование, удаление, уничтожение, в целях формирования наиболее полного ответа на
+            направленное обращение, без включения в общедоступные источники персональных данными без передачи третьей
+            стороне.
+          </p>
+
+          <p>Настоящим подтверждаю, что сведения, направляемые мной в составе обращения, не содержат специальных
+            категорий персональных данных, касающихся расовой, национальной принадлежности, политических взглядов,
+            религиозных или философских убеждений, состояния здоровья, интимной жизни.</p>
+        </div>
+
+        <input class="button button_type_primary js-btn-submit" type="submit" disabled>
+
+      </form>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          const checkboxAgreeEl = document.querySelector('.js-checkbox-agree');
+          const btnSubmit = document.querySelector('.js-btn-submit');
+
+          checkboxAgreeEl.addEventListener('click', function () {
+            btnSubmit.disabled = !btnSubmit.disabled;
+          });
+
+        })
+      </script>
+
+    </div>
+
+  </div>
+
+</main>
+
+@@include('partials/footer.html')
+
+
+<script src="js/bundle.js"></script>
+
+</body>
+
+</html>

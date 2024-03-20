@@ -1,0 +1,52 @@
+.add-info {
+  border: 3px solid $primary-color;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+
+  &__title {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__text {
+    padding: 0.8rem;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      a {
+        //padding: 0.3rem 0.8rem;
+        
+        padding: 0.4rem 0;
+        display: block;
+      }
+
+      &.active {
+        background-color: #6097c0;
+        margin-left: -0.8rem;
+        margin-right: -0.8rem;
+
+        a {
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          color: $white-color;
+        }
+      }
+    }
+
+    &.user-content {
+      margin-bottom: 0;
+    }
+  }
+
+  &_sticky {
+    position: sticky;
+    top: 50px;
+  }
+}

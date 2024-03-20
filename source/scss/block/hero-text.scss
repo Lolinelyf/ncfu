@@ -1,0 +1,37 @@
+.hero-text {
+
+  &__content {
+    font-size: 1.2rem;
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      position: relative;
+      list-style-type: none;
+      padding-left: 1rem;
+      margin-bottom: 1.4rem;
+      margin-left: 30px;
+      
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -30px;
+        width: 40px;
+        height: 40px;
+        
+        background-image: url('../img/icons/check-circle.png');
+        background-position: center;
+        background-size: contain;
+      }
+
+
+    }
+
+  }
+
+}  

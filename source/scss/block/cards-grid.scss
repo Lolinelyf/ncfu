@@ -1,0 +1,37 @@
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+
+  @media (min-width: $mobile-size-land) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $tablet-size-port) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $tablet-size-land) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-size-small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &_two-col {
+
+    @media (min-width: $tablet-size-land) {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    @media (min-width: $desktop-size-small) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-size-average) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+  }
+}
