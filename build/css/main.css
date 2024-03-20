@@ -2378,7 +2378,7 @@ input[type=radio].visually-hidden {
   }
 }
 .unity__title {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #0128d2;
   margin-bottom: 1rem;
 }
@@ -2701,13 +2701,8 @@ input[type=radio].visually-hidden {
 }
 .calendar__month {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
-}
-@media (min-width: 576px) {
-  .calendar__month {
-    font-size: 1rem;
-  }
 }
 .calendar__button {
   display: block;
@@ -2748,18 +2743,17 @@ input[type=radio].visually-hidden {
   overflow: hidden;
   text-align: center;
   width: 50px;
-  height: 32px;
+  height: 34px;
   padding: 0;
   border: 1px solid #ebeefb;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (min-width: 576px) {
   .calendar__body td {
     width: 50px;
     height: 36px;
     border: 2px solid #ebeefb;
-    font-size: 14px;
   }
 }
 @media (min-width: 1200px) {
@@ -2771,7 +2765,7 @@ input[type=radio].visually-hidden {
 .calendar__body th {
   text-align: center;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (min-width: 576px) {
   .calendar__body th {

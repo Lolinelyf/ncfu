@@ -29,11 +29,8 @@
 
   &__month {
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
-    @media (min-width: $mobile-size-land) {
-      font-size: 1rem;
-    }
   }
 
   &__button {
@@ -78,16 +75,15 @@
       overflow: hidden;
       text-align: center;
       width: 50px;
-      height: 32px;
+      height: 34px;
       padding: 0;
       border: 1px solid $color-hover;
       font-weight: 500;
-      font-size: 12px;
+      font-size: 14px;
       @media (min-width: $mobile-size-land) {
         width: 50px;
         height: 36px;
         border: 2px solid $color-hover;
-        font-size: 14px;
       }
 
       @media (min-width: $desktop-size-small) {
@@ -99,7 +95,7 @@
     th {
       text-align: center;
       font-weight: 500;
-      font-size: 12px;
+      font-size: 14px;
       @media (min-width: $mobile-size-land) {
         font-size: 1rem;
       }
