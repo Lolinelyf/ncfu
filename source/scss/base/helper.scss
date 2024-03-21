@@ -183,7 +183,7 @@
   background-color: $color-overlay;
   opacity: 0;
   z-index: -1;
-  transition: z-index 0s, opacity linear 0.3s;
+  transition: z-index 0s, opacity linear 2s;
 
   &.active {
     z-index: 102;
@@ -204,7 +204,7 @@
 // }
 
 .title {
-  font-family: 'Noah', sans-serif;
+  font-family: "Noah", sans-serif;
   font-size: 18px;
   color: $color-accent;
   margin-bottom: 1rem;

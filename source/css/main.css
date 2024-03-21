@@ -774,23 +774,17 @@ input[type=radio].visually-hidden {
   }
 }
 .page__header {
-  order: 2;
-}
-@media (min-width: 1024px) {
-  .page__header {
-    order: 1;
-    margin-bottom: 2rem;
-  }
+  order: 1;
 }
 .page__navigation {
   position: sticky;
-  top: 0;
+  top: 0.5rem;
   z-index: 100;
-  order: 1;
+  order: 2;
 }
 @media (min-width: 1024px) {
   .page__navigation {
-    order: 2;
+    z-index: 50;
   }
 }
 .page__main {
@@ -871,17 +865,17 @@ input[type=radio].visually-hidden {
   left: 0;
   min-height: 61px;
   width: 100%;
+  z-index: 100;
 }
 @media (min-width: 1024px) {
   .navigation {
     position: static;
+    margin-bottom: 2rem;
+    z-index: 0;
   }
 }
 .navigation.open {
-  transition: background-color 0.5s;
-}
-.navigation.open .navigation__logo svg {
-  fill: rgba(1, 40, 210, 0.631372549);
+  height: 100dvh;
 }
 .navigation.open .navigation__overlay {
   position: absolute;
@@ -896,12 +890,11 @@ input[type=radio].visually-hidden {
   position: relative;
   opacity: 1;
   height: 100vh;
-  transition: opacity linear 0.35s;
   background-color: rgba(255, 255, 255, 0);
 }
 .navigation.open .navigation__list {
   position: absolute;
-  z-index: 105;
+  z-index: 100;
   height: auto;
   width: 100vw;
   bottom: 3.5rem;
@@ -921,6 +914,11 @@ input[type=radio].visually-hidden {
   background-color: #b7bcc6;
   top: 0.75rem;
   left: calc(50% - 15px);
+}
+@media (min-width: 1024px) {
+  .navigation.open .navigation__list {
+    z-index: 50;
+  }
 }
 .navigation.open .navigation__menu {
   overflow: visible;
@@ -943,7 +941,6 @@ input[type=radio].visually-hidden {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  transition: 0.5s;
 }
 @media (min-width: 576px) {
   .navigation__row {
@@ -951,7 +948,6 @@ input[type=radio].visually-hidden {
   }
 }
 .navigation__row.scrolled {
-  transition: 0.5s;
   background-color: #ffffff;
   color: #0028d2;
   padding-top: 4px;
@@ -973,8 +969,9 @@ input[type=radio].visually-hidden {
   height: 0;
   overflow: hidden;
   background-color: #fff;
-  transition: opacity Linear 0.5s;
+  transition: opacity ease-out 0.25s;
   border-radius: 1rem 1rem 0 0;
+  z-index: 100;
 }
 @media (min-width: 1024px) {
   .navigation__menu {
@@ -987,11 +984,12 @@ input[type=radio].visually-hidden {
     margin-left: 0;
     margin-right: 0;
     opacity: 1;
+    z-index: 50;
   }
 }
 .navigation__list {
   transform: translateY(100%);
-  transition: 0.35s 0.05s;
+  transition: transform ease-out 0.25s 0.05s;
 }
 @media (min-width: 1024px) {
   .navigation__list {
@@ -1008,7 +1006,7 @@ input[type=radio].visually-hidden {
   height: -moz-min-content;
   height: min-content;
   opacity: 0;
-  transition: 0.5s;
+  transition: opacity Linear 0.5s;
   pointer-events: none;
 }
 .navigation__logo-link.active {
@@ -1038,9 +1036,8 @@ input[type=radio].visually-hidden {
 .navigation__item:hover .navigation__dropdown {
   opacity: 1;
   visibility: visible;
-  z-index: 102;
+  z-index: 100;
   transform: translateY(0);
-  transition: opacity 0.45s, transform 0.45s, visibility 0.45s;
 }
 .navigation__link {
   text-decoration: none;
@@ -1051,7 +1048,7 @@ input[type=radio].visually-hidden {
   font-weight: 500;
   color: #3a3f4a;
   cursor: pointer;
-  transition: 0.5s;
+  transition: color ease-in 0.25s, background-color ease-in 0.25s;
 }
 @media (min-width: 1024px) {
   .navigation__link {
@@ -1080,7 +1077,6 @@ input[type=radio].visually-hidden {
 }
 .navigation__icon {
   position: absolute;
-  transition: 0.5s;
   top: 22%;
   left: 16px;
   width: 19px;
@@ -1112,7 +1108,7 @@ input[type=radio].visually-hidden {
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: opacity 0.35s, transform 0.45s, visibility 0.45s;
+    transition: opacity ease-in-out 0.25s, transform ease-in 0.25s, visibility Linear 0.25s;
   }
   .navigation__dropdown--column-three {
     width: 992px;
@@ -1163,7 +1159,7 @@ input[type=radio].visually-hidden {
   font-weight: 400;
   padding-left: 0.5rem;
   border-left: 2px solid #ebeefb;
-  transition: border-color 0.35s, color 0.25s, opacity 0.1s;
+  transition: border-color ease-in 0.25s, color ease-in 0.25s, opacity ease-in 0.1s;
 }
 .navigation__dropdown-link:active {
   border-color: #0128d2;
@@ -1232,9 +1228,6 @@ input[type=radio].visually-hidden {
   top: 20px;
   left: 6px;
 }
-.hamburger.open .hamburger__inner span {
-  background-color: rgba(1, 40, 210, 0.631372549);
-}
 .hamburger.scrolled, .hamburger.shown {
   box-shadow: none;
 }
@@ -1284,6 +1277,14 @@ input[type=radio].visually-hidden {
 .top__options-item:active, .top__options-item:focus {
   box-shadow: 2px -1px 4px 0 rgba(71, 90, 105, 0.1), -2px 6px 4px 0 rgba(71, 90, 105, 0.1);
 }
+.top__options-item--blind {
+  display: none;
+}
+@media (min-width: 576px) {
+  .top__options-item--blind {
+    display: block;
+  }
+}
 @media (min-width: 576px) {
   .top__options-item {
     background-color: #ffffff;
@@ -1309,7 +1310,7 @@ input[type=radio].visually-hidden {
   background-image: url("../img/icons/search.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 22px;
+  background-size: 26px;
 }
 .top__search:active, .top__search:focus {
   background-color: #ebeefb;
@@ -1481,8 +1482,8 @@ input[type=radio].visually-hidden {
   border-radius: 0.5rem;
   margin-right: 0.5rem;
   transition: 0.15s;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
   background-color: transparent;
   border: none;
   outline: none;
@@ -1491,6 +1492,8 @@ input[type=radio].visually-hidden {
   .dropdown__button {
     background-color: #ffffff;
     box-shadow: 2px -1px 3px 0 rgba(71, 90, 105, 0.05), -2px 6px 3px 0 rgba(71, 90, 105, 0.05);
+    font-weight: 400;
+    font-size: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -1514,7 +1517,7 @@ input[type=radio].visually-hidden {
   background-image: url("../img/icons/faq.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 18px;
+  background-size: 22px;
 }
 @media (min-width: 1024px) {
   .dropdown__button--faq {
@@ -1524,11 +1527,11 @@ input[type=radio].visually-hidden {
 .dropdown__button--geo {
   width: -moz-max-content;
   width: max-content;
-  padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   background-image: url("../img/icons/geo.svg");
-  background-position: center left 5px;
+  background-position: center left 4px;
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 24px;
 }
 .dropdown__button--geo > svg:first-child {
   margin-right: 0.5rem;
@@ -1542,7 +1545,7 @@ input[type=radio].visually-hidden {
   background-image: url("../img/icons/lang.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 22px;
+  background-size: 26px;
   filter: contrast(200%), hue-rotate(90deg), invert(75%);
 }
 .dropdown__icon.rotate {
@@ -1570,7 +1573,7 @@ input[type=radio].visually-hidden {
 }
 .dropdown__content.active {
   opacity: 1;
-  z-index: 201;
+  z-index: 100;
   transform: translateY(0);
 }
 @media (min-width: 1024px) {
@@ -1831,7 +1834,7 @@ input[type=radio].visually-hidden {
   }
 }
 .features-icon__label {
-  font-size: 15px;
+  font-size: 16px;
   color: #3a3f4a;
   margin-bottom: 0;
   font-weight: 400;
@@ -2001,7 +2004,7 @@ input[type=radio].visually-hidden {
   filter: grayscale(30%);
 }
 .news__title {
-  font-size: 1rem;
+  font-size: 18px;
   color: #3a3f4a;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -2013,7 +2016,7 @@ input[type=radio].visually-hidden {
   }
 }
 .news__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: #8b8e96;
   margin-bottom: 0;
@@ -2108,7 +2111,7 @@ input[type=radio].visually-hidden {
 }
 .card-icon__icon-image {
   display: block;
-  max-width: 32px;
+  max-width: 36px;
   height: auto;
 }
 @media (min-width: 576px) {
@@ -2122,7 +2125,7 @@ input[type=radio].visually-hidden {
   }
 }
 .card-icon__text {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   flex: 1;
   padding-left: 1rem;
@@ -2253,12 +2256,12 @@ input[type=radio].visually-hidden {
   transition: background-color linear 0.25s;
 }
 .card-image__title {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  line-height: 14px;
+  line-height: 22px;
   transition: opacity linear 0.25s;
 }
 @media (min-width: 576px) {
@@ -2277,7 +2280,7 @@ input[type=radio].visually-hidden {
   margin: 0;
   color: #ffffff;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   transition: opacity linear 0.25s;
   line-height: 1.2;
 }
@@ -2811,7 +2814,7 @@ input[type=radio].visually-hidden {
 }
 
 .card-notice {
-  height: 120px;
+  height: 130px;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -2827,6 +2830,7 @@ input[type=radio].visually-hidden {
 @media (min-width: 1024px) {
   .card-notice {
     padding: 1rem;
+    height: 120px;
   }
 }
 .card-notice:hover, .card-notice:active, .card-notice:focus {
@@ -2860,13 +2864,12 @@ input[type=radio].visually-hidden {
   display: -webkit-box;
   line-height: 1.2;
   color: #3a3f4a;
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (min-width: 1024px) {
   .card-notice__text {
     flex: 0 0 72%;
     max-width: 72%;
-    font-size: 14px;
     line-height: 1.4;
     padding: 0 0 0 1rem;
   }
@@ -2913,7 +2916,7 @@ input[type=radio].visually-hidden {
   padding: 0.5rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
-  height: 210px;
+  height: 216px;
   overflow: hidden;
   border: 2px solid #ebeefb;
 }
@@ -2926,7 +2929,7 @@ input[type=radio].visually-hidden {
 .card-sticker__title {
   font-weight: 500;
   color: #3a3f4a;
-  font-size: 15px;
+  font-size: 16px;
   border-bottom: 1px solid rgba(235, 235, 235, 0.5294117647);
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2945,7 +2948,7 @@ input[type=radio].visually-hidden {
   display: -webkit-box;
   line-height: 1.3;
   color: #8b8e96;
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (min-width: 576px) {
   .card-sticker__text {
@@ -3170,7 +3173,7 @@ div.ml-item-title {
   background-color: rgba(68, 72, 87, 0.7803921569);
   opacity: 0;
   z-index: -1;
-  transition: z-index 0s, opacity linear 0.3s;
+  transition: z-index 0s, opacity linear 2s;
 }
 .js-overlay.active {
   z-index: 102;

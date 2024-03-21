@@ -11,8 +11,8 @@
     border-radius: 0.5rem;
     margin-right: 0.5rem;
     transition: 0.15s;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     background-color: transparent;
     border: none;
     outline: none;
@@ -20,6 +20,8 @@
     @media (min-width: $mobile-size-land) {
       background-color: $color-white;
       box-shadow: $shadow-mobile-white;
+      font-weight: 400;
+      font-size: 16px;
     }
 
     @media (min-width: $tablet-size-land) {
@@ -40,10 +42,10 @@
 
     &--faq {
       display: block;
-      background-image: url('../img/icons/faq.svg');
+      background-image: url("../img/icons/faq.svg");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 18px;
+      background-size: 22px;
       @media (min-width: $tablet-size-land) {
         display: none;
       }
@@ -51,11 +53,11 @@
 
     &--geo {
       width: max-content;
-      padding: 0.5rem 0.5rem 0.5rem 1.75rem;
-      background-image: url('../img/icons/geo.svg');
-      background-position: center left 5px;
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
+      background-image: url("../img/icons/geo.svg");
+      background-position: center left 4px;
       background-repeat: no-repeat;
-      background-size: 20px;
+      background-size: 24px;
 
       & > svg:first-child {
         margin-right: 0.5rem;
@@ -68,10 +70,10 @@
 
     &--lang {
       justify-content: center;
-      background-image: url('../img/icons/lang.svg');
+      background-image: url("../img/icons/lang.svg");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 22px;
+      background-size: 26px;
       filter: contrast(200%), hue-rotate(90deg), invert(75%);
     }
   }
@@ -100,7 +102,7 @@
 
     &.active {
       opacity: 1;
-      z-index: 201;
+      z-index: 100;
       transform: translateY(0);
     }
 

@@ -1,5 +1,5 @@
 .card-notice {
-  height: 120px;
+  height: 130px;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -11,6 +11,7 @@
   max-width: 100%;
   @media (min-width: $tablet-size-land) {
     padding: 1rem;
+    height: 120px;
   }
 
   &:hover,
@@ -47,12 +48,12 @@
     display: -webkit-box;
     line-height: 1.2;
     color: $color-black;
-    font-size: 14px;
+    font-size: 15px;
 
     @media (min-width: $tablet-size-land) {
       flex: 0 0 72%;
       max-width: 72%;
-      font-size: 14px;
+      // font-size: 14px;
       line-height: 1.4;
       padding: 0 0 0 1rem;
     }

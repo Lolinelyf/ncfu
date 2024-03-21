@@ -40,7 +40,7 @@
 
   &__icon-image {
     display: block;
-    max-width: 32px;
+    max-width: 36px;
     height: auto;
     @media (min-width: $mobile-size-land) {
       max-width: 50px;
@@ -51,7 +51,7 @@
   }
 
   &__text {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     flex: 1;
     padding-left: 1rem;
