@@ -12,16 +12,22 @@
     z-index: 0;
   }
 
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #444857c7;
+    transform: translateY(-60px);
+    transition: opacity ease-out 0.25s;
+    opacity: 0;
+  }
+
   &.open {
     height: 100dvh;
     .navigation__overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #444857c7;
-      transform: translateY(-60px);
+      opacity: 1;
     }
 
     .navigation__menu {
@@ -117,7 +123,7 @@
     height: 0;
     overflow: hidden;
     background-color: $white-color;
-    transition: opacity ease-out 0.25s;
+    // transition: opacity ease-out 0.25s;
     border-radius: 1rem 1rem 0 0;
     z-index: 100;
 

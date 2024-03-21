@@ -874,10 +874,7 @@ input[type=radio].visually-hidden {
     z-index: 0;
   }
 }
-.navigation.open {
-  height: 100dvh;
-}
-.navigation.open .navigation__overlay {
+.navigation__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -885,6 +882,14 @@ input[type=radio].visually-hidden {
   height: 100vh;
   background-color: rgba(68, 72, 87, 0.7803921569);
   transform: translateY(-60px);
+  transition: opacity ease-out 0.25s;
+  opacity: 0;
+}
+.navigation.open {
+  height: 100dvh;
+}
+.navigation.open .navigation__overlay {
+  opacity: 1;
 }
 .navigation.open .navigation__menu {
   position: relative;
@@ -969,7 +974,6 @@ input[type=radio].visually-hidden {
   height: 0;
   overflow: hidden;
   background-color: #fff;
-  transition: opacity ease-out 0.25s;
   border-radius: 1rem 1rem 0 0;
   z-index: 100;
 }
