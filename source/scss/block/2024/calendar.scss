@@ -116,9 +116,11 @@
     transition: 0.3s;
     cursor: pointer;
 
-    &:hover {
-      background-color: $color-hover;
-      color: $color-accent;
+    @media (min-width: $mobile-size-land) {
+      &:hover {
+        background-color: $color-hover;
+        color: $color-accent;
+      }
     }
   }
 

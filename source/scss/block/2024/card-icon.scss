@@ -7,6 +7,11 @@
   transition: box-shadow linear 0.25s, background-color linear 0.2s,
     opacity 0.1s;
 
+  &:hover {
+    text-decoration: none;
+    color: $color-black;
+  }
+
   &:active {
     opacity: 0.6;
     text-decoration: none;

@@ -15,6 +15,11 @@
   transition: opacity 0.25s;
   line-height: 14px;
 
+  &:hover {
+    color: $color-white;
+    text-decoration: none;
+  }
+
   &:active,
   &:focus {
     opacity: 0.6;
@@ -40,6 +45,10 @@
     color: $color-accent;
     font-weight: 400;
     box-shadow: none;
+    &:hover {
+      color: $color-accent;
+      text-decoration: none;
+    }
 
     @media (min-width: $tablet-size-land) {
       text-transform: none;
@@ -56,8 +65,13 @@
   &--white {
     background-color: $color-white;
     color: $color-accent;
-    box-shadow: $shadow-small-white;
+
+    &:hover {
+      color: $color-accent;
+      text-decoration: none;
+    }
     @media (min-width: $tablet-size-land) {
+      box-shadow: $shadow-small-white;
       &:hover {
         background-color: $color-hover;
         color: $color-accent;

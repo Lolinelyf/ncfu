@@ -37,10 +37,10 @@
     transition: 0.15s;
     background-color: inherit;
 
-    &:active,
-    &:focus {
-      box-shadow: $shadow-small-hover;
-    }
+    // &:active,
+    // &:focus {
+    //   box-shadow: $shadow-small-hover;
+    // }
 
     &--blind {
       display: none;
@@ -73,7 +73,7 @@
     background-image: url("../img/icons/search.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 26px;
+    background-size: 22px;
 
     &:active,
     &:focus {

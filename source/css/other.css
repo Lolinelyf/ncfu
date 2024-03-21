@@ -4303,7 +4303,7 @@ input[type=radio].visually-hidden {
   background-color: rgba(68, 72, 87, 0.7803921569);
   opacity: 0;
   z-index: -1;
-  transition: z-index 0s, opacity linear 2s;
+  transition: z-index 0s, opacity ease-out 0.15s;
 }
 .js-overlay.active {
   z-index: 102;

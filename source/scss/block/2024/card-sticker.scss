@@ -8,6 +8,12 @@
   height: 216px;
   overflow: hidden;
   border: 2px solid $color-hover;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    // color: $color-black;
+  }
 
   @media (min-width: $tablet-size-port) {
     height: 300px;

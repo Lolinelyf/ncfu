@@ -1,43 +1,41 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // меню
-  const hamburgerBtn = document.querySelector('.js-hamburger-btn');
-  const navigationEl = document.querySelector('.js-navigation');
-  const overlay = document.querySelector('.js-menu-overlay');
+  const hamburgerBtn = document.querySelector(".js-hamburger-btn");
+  const navigationEl = document.querySelector(".js-navigation");
+  const overlay = document.querySelector(".js-menu-overlay");
 
   function toggleMenu() {
-    navigationEl.classList.toggle('open');
-    hamburgerBtn.classList.toggle('open');
-
-    if (navigationEl.classList.contains('open')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
+    if (!navigationEl.classList.contains("open")) {
+      navigationEl.classList.add("open");
+      document.documentElement.style.overflow = "hidden";
+      return;
     }
+    navigationEl.classList.remove("open");
+    document.documentElement.style.overflow = "auto";
   }
 
-  hamburgerBtn.addEventListener('click', toggleMenu);
+  hamburgerBtn.addEventListener("click", toggleMenu);
 
-  window.addEventListener('resize', function () {
-    navigationEl.classList.remove('open');
-    hamburgerBtn.classList.remove('open');
-    document.body.style.overflow = 'auto';
+  window.addEventListener("resize", () => {
+    navigationEl.classList.remove("open");
+    document.documentElement.style.overflow = "auto";
   });
 
   // закрытие меню при клике по пункту
-  const menuLinkEls = document.querySelectorAll('.navigation__link');
+  const menuLinkEls = document.querySelectorAll(".navigation__link");
   for (let i = 0; i < menuLinkEls.length; i++) {
-    menuLinkEls[i].addEventListener('click', function () {
-      navigationEl.classList.remove('open');
-      hamburgerBtn.classList.remove('open');
-      document.body.style.overflow = 'auto';
-    });
+    menuLinkEls[i].addEventListener("click", toggleMenu);
   }
 
-  window.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-      toggleMenu();
-    }
-  });
+  window.addEventListener(
+    "click",
+    (event) => {
+      if (event.target === overlay) {
+        toggleMenu();
+      }
+    },
+    true
+  );
 
   // меню
   // const hamburgerBtnEl = document.querySelector('.js-hamburger-btn');

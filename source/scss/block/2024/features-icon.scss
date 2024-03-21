@@ -29,6 +29,11 @@
       opacity 0.15s Linear, transform 0.15s Linear;
     margin: 1rem 1rem 0 1rem;
     padding-bottom: 1rem;
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid #ebebeb87;

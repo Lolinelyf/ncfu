@@ -183,7 +183,7 @@
   background-color: $color-overlay;
   opacity: 0;
   z-index: -1;
-  transition: z-index 0s, opacity linear 2s;
+  transition: z-index 0s, opacity ease-out 0.15s;
 
   &.active {
     z-index: 102;
