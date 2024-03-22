@@ -1,24 +1,96 @@
 .top {
   margin: 55px 0 0.5rem 0;
-  background-color: $color-white;
-  padding: 1rem 1rem 1rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 0;
 
   @media (min-width: $mobile-size-land) {
     margin: 70px 0 1rem 0;
-    background-color: inherit;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
   }
   @media (min-width: $tablet-size-land) {
     margin: 0.5rem 0;
   }
   &__navigation {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
+    background-color: $color-white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    @media (min-width: $mobile-size-land) {
+      flex-flow: row wrap;
+      box-shadow: $shadow-small-white;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      align-items: center;
+      border-radius: 0;
+      box-shadow: none;
+      background-color: inherit;
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    @media (min-width: $tablet-size-land) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__link {
+    display: flex;
     align-items: center;
+    color: $color-black;
+    font-weight: 500;
+    transition: 0.25s;
+    font-size: 16px;
+    padding: 0;
+    transition: opacity ease-in 0.15s, color ease-in 0.15s;
+    margin-bottom: 1rem;
+
+    &:active,
+    &:focus {
+      background-color: initial;
+      text-decoration: none;
+      color: $color-accent;
+      opacity: 0.6;
+    }
+    @media (min-width: $mobile-size-land) {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+    @media (min-width: $tablet-size-land) {
+      color: $color-grey;
+
+      font-weight: 400;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+    & > strong {
+      color: $color-accent;
+      font-weight: 400;
+      padding-left: 0.5rem;
+      @media (min-width: $tablet-size-land) {
+        color: $color-black;
+      }
+    }
+
+    &:hover {
+      background-color: initial;
+      text-decoration: none;
+      color: $color-accent;
+    }
+  }
+
+  &__link-icon {
+    display: block;
+    margin-right: 0.5rem;
+    @media (min-width: $tablet-size-land) {
+      display: none;
+    }
   }
 
   &__options {
@@ -29,29 +101,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     padding: 0.25rem;
     border-radius: 0.5rem;
     margin-right: 0.5rem;
     transition: 0.15s;
-    background-color: inherit;
-
-    // &:active,
-    // &:focus {
-    //   box-shadow: $shadow-small-hover;
-    // }
+    background-color: $color-hover;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @media (min-width: $mobile-size-land) {
+      width: 32px;
+      height: 32px;
+    }
 
     &--blind {
       display: none;
-      @media (min-width: $mobile-size-land) {
-        display: block;
+      @media (min-width: $tablet-size-land) {
+        display: flex;
       }
     }
 
     @media (min-width: $mobile-size-land) {
       background-color: $color-white;
-      box-shadow: $shadow-mobile-white;
     }
 
     @media (min-width: $tablet-size-land) {
@@ -59,7 +130,6 @@
       height: 36px;
       padding: 0.5rem;
       background-color: initial;
-      box-shadow: none;
       &:hover {
         background-color: $color-hover;
       }
@@ -73,12 +143,16 @@
     background-image: url("../img/icons/search.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 22px;
+    background-size: 20px;
 
     &:active,
     &:focus {
       background-color: $color-hover;
       opacity: 0.6;
+    }
+
+    @media (min-width: $mobile-size-land) {
+      background-size: 22px;
     }
   }
 }

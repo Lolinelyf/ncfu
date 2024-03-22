@@ -24,26 +24,25 @@
   <div class="top">
     <div class="container">
       <div class="top__navigation">
-        <div class="dropdown js-dropdown">
-          <button
-            class="dropdown__button dropdown__button--faq js-dropdown-btn"
-          ></button>
-          <div
-            class="dropdown__content dropdown__content--faq js-dropdown-content"
+        <div class="top__list">
+          <a class="top__link" href="#">
+            <svg class="top__link-icon" width="32" height="32">
+              <use xlink:href="img/svg-sprite.svg#i-invite"></use>
+            </svg>
+            Поступай в СКФУ!</a
           >
-            <a class="dropdown__link dropdown__link--faq" href="#"
-              >Поступай в СКФУ!</a
-            >
-            <a class="dropdown__link dropdown__link--faq" href="#"
-              >Приоритет 2030</a
-            >
-            <a
-              class="dropdown__link dropdown__link--faq"
-              href="tel:+78652956813"
-            >
-              Приёмная комиссия:<strong> 8 (8652) 95‑68‑13</strong>
-            </a>
-          </div>
+          <a class="top__link" href="#">
+            <svg class="top__link-icon" width="32" height="32">
+              <use xlink:href="img/svg-sprite.svg#i-prioritet"></use>
+            </svg>
+            Приоритет 2030</a
+          >
+          <a class="top__link" href="tel:+78652956813">
+            <svg class="top__link-icon" width="32" height="32">
+              <use xlink:href="img/svg-sprite.svg#i-tel"></use>
+            </svg>
+            Приёмная комиссия: <strong> 8 (8652) 95‑68‑13</strong>
+          </a>
         </div>
 
         <div class="top__options">
@@ -51,7 +50,7 @@
             <button
               class="dropdown__button dropdown__button--geo js-dropdown-btn"
             >
-              филиалы
+              <span>филиалы</span>
             </button>
             <div class="dropdown__content js-dropdown-content">
               <a class="dropdown__link" href="">г. Пятигорск</a>
@@ -663,7 +662,13 @@
       </section>
       </div>
       </div>
-      
+      <script>
+        function adjustViewportHeight() {
+          document.querySelector('.navigation, .open').style.setProperty('--viewport-height', `${window.innerHeight}px`);
+        }
+        adjustViewportHeight();
+        window.addEventListener('orientationchange', adjustViewportHeight);
+      </script>
 
     <main class="page__main">
       <div class="container">

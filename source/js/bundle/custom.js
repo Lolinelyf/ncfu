@@ -24,12 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.style.overflow = "auto";
   });
 
-  // закрытие меню при клике по пункту
-  const menuLinkEls = document.querySelectorAll(".navigation__link");
-  for (let i = 0; i < menuLinkEls.length; i++) {
-    menuLinkEls[i].addEventListener("click", toggleMenu);
-  }
-
   navigationEl.addEventListener(
     "click",
     (event) => {
