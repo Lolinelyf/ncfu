@@ -21,15 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.style.overflow = "auto";
   });
 
-  window.addEventListener(
+  navigationEl.addEventListener(
     "click",
     (event) => {
-      alert(event.target === overlay);
       if (event.target === overlay) {
         toggleMenu();
       }
     },
-    true
+    true,
   );
 
   // меню

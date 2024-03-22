@@ -29,7 +29,7 @@
       opacity: 1;
       visibility: visible;
       background-color: #444857c7;
-      transform: translateY(-60px);
+      transform: translateY(-60px) translate3d(0, 0, 0);
     }
 
     .navigation__menu {

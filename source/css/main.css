@@ -891,7 +891,7 @@ input[type=radio].visually-hidden {
   opacity: 1;
   visibility: visible;
   background-color: rgba(68, 72, 87, 0.7803921569);
-  transform: translateY(-60px);
+  transform: translateY(-60px) translate3d(0, 0, 0);
 }
 .navigation.open .navigation__menu {
   position: relative;
