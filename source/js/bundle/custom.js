@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMenu() {
     if (!navigationEl.classList.contains("open")) {
       navigationEl.classList.add("open");
+      document
+        .querySelector(".navigation, .open")
+        .style.setProperty("--viewport-height", `${window.innerHeight}px`);
       document.documentElement.style.overflow = "hidden";
       return;
     }
@@ -20,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     navigationEl.classList.remove("open");
     document.documentElement.style.overflow = "auto";
   });
+
+  // закрытие меню при клике по пункту
+  const menuLinkEls = document.querySelectorAll(".navigation__link");
+  for (let i = 0; i < menuLinkEls.length; i++) {
+    menuLinkEls[i].addEventListener("click", toggleMenu);
+  }
 
   navigationEl.addEventListener(
     "click",
