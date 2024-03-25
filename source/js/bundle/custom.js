@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleMenu();
       }
     },
-    true,
+    true
   );
 
   // меню

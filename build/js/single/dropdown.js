@@ -1,35 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const dropdowns = document.querySelectorAll('.js-dropdown');
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdowns = document.querySelectorAll(".js-dropdown");
 
-  function toggleDropdown(el) {
-    const dropdownBtn = el.querySelector('.js-dropdown-btn');
-    const dropdownContent = el.querySelector('.js-dropdown-content');
+  function closeDropdown() {
+    dropdowns.forEach((el) => {
+      const Btn = el.querySelector(".js-dropdown-btn");
+      const Content = el.querySelector(".js-dropdown-content");
 
-    dropdownContent.classList.toggle('active');
-    dropdownBtn.classList.toggle('open');
+      Btn.classList.remove("open");
+      Content.classList.remove("active");
+    });
+  }
+
+  function toggleDropdown(item) {
+    const dropdownBtn = item.querySelector(".js-dropdown-btn");
+    const dropdownContent = item.querySelector(".js-dropdown-content");
+
+    if (!dropdownBtn.classList.contains("open")) {
+      closeDropdown();
+
+      dropdownBtn.classList.add("open");
+      dropdownContent.classList.add("active");
+
+      return;
+    }
+
+    closeDropdown();
   }
 
   dropdowns.forEach((el) => {
-    el.querySelector('.js-dropdown-btn').addEventListener('click', () => {
+    el.querySelector(".js-dropdown-btn").addEventListener("click", (event) => {
+      event.stopPropagation();
       toggleDropdown(el);
     });
   });
 
-  window.addEventListener(
-    'click',
-    (event) => {
-      dropdowns.forEach((el) => {
-        const dropdownBtn = el.querySelector('.js-dropdown-btn');
-        const dropdownContent = el.querySelector('.js-dropdown-content');
-
-        if (event.target !== dropdownBtn) {
-          if (dropdownContent.classList.contains('active')) {
-            dropdownContent.classList.remove('active');
-            dropdownBtn.classList.remove('open');
-          }
-        }
-      });
-    },
-    // false,
-  );
+  window.addEventListener("click", (event) => {
+    closeDropdown();
+  });
 });

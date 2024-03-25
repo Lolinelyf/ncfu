@@ -27,7 +27,7 @@
       border-radius: 0.5rem;
       padding: 2rem;
       box-shadow: $shadow-medium-white;
-      background-image: url('../img/bg-header.png');
+      background-image: url("../img/bg-header.png");
       background-repeat: no-repeat;
       background-position: left top;
       background-size: 100%;
@@ -37,7 +37,7 @@
   &__col {
     position: relative;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid #ebebeb87;
+    border-bottom: 1px solid $color-border;
 
     &:last-child {
       padding-bottom: 0;
@@ -59,7 +59,7 @@
       &:nth-child(2) {
         margin-left: 2rem;
         padding-left: 2rem;
-        border-left: 1px solid #ebebeb87;
+        border-left: 1px solid $color-border;
       }
 
       &:last-child {
@@ -83,7 +83,7 @@
       &:not(:first-child) {
         margin-left: 1rem;
         padding-left: 1rem;
-        border-left: 1px solid #ebebeb87;
+        border-left: 1px solid $color-border;
       }
     }
   }
@@ -182,7 +182,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
     }
 
     &_next {

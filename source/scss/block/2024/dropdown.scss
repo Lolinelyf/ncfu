@@ -1,53 +1,58 @@
 .dropdown {
   width: max-content;
   position: relative;
+  margin-bottom: 1rem;
+  @media (min-width: $tablet-size-land) {
+    margin-bottom: 0;
+  }
 
   &__button {
     display: flex;
     align-items: center;
-    width: 28px;
-    height: 28px;
-    padding: 0.25rem;
+    width: 32px;
+    height: 32px;
+    padding: 0;
     border-radius: 0.5rem;
-    margin-right: 0.5rem;
-    transition: 0.15s;
+    transition: 0.25s;
     font-size: 16px;
     font-weight: 500;
-    background-color: $color-hover;
+    background-color: transparent;
     border: none;
     outline: none;
+    background-repeat: no-repeat;
+    padding: 0 0 0 3rem;
+    background-position: center left;
+    background-size: 32px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @media (min-width: $mobile-size-land) {
-      background-color: transparent;
-      font-weight: 400;
+      padding: 0 3rem 0 0;
+      background-position: center right;
     }
 
     @media (min-width: $tablet-size-land) {
-      width: 36px;
-      height: 36px;
-      padding: 0.5rem;
+      font-weight: 400;
+      padding: 0;
+      margin-right: 0.5rem;
+      filter: grayscale(200%) saturate(0);
 
       &:hover {
-        background-color: $color-hover;
+        filter: grayscale(0);
       }
     }
 
     &.open {
-      background-color: $color-hover;
+      color: $color-accent;
+      filter: grayscale(0);
     }
 
     &--geo {
+      width: max-content;
       background-image: url("../img/icons/geo.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 20px;
 
-      @media (min-width: $mobile-size-land) {
-        width: max-content;
-        padding: 0.5rem 0.5rem 0.5rem 2rem;
-        background-position: center left 6px;
-        background-size: 22px;
+      @media (min-width: $tablet-size-land) {
+        padding: 0 0 0 2.5rem;
+        background-position: center left;
       }
 
       & > svg:first-child {
@@ -57,24 +62,23 @@
         margin-left: 0.5rem;
         transition: 0.2s;
       }
-
-      & > span {
-        display: none;
-        @media (min-width: $mobile-size-land) {
-          display: block;
-        }
-      }
     }
 
     &--lang {
+      width: max-content;
       justify-content: center;
       background-image: url("../img/icons/lang.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      filter: contrast(200%), hue-rotate(90deg), invert(75%);
-      @media (min-width: $mobile-size-land) {
-        background-size: 22px;
+
+      @media (min-width: $tablet-size-land) {
+        width: 32px;
+        height: 32px;
+      }
+      & > span {
+        display: block;
+
+        @media (min-width: $tablet-size-land) {
+          display: none;
+        }
       }
     }
   }
@@ -98,7 +102,7 @@
     transform: translateY(-20px);
 
     @media (min-width: $mobile-size-land) {
-      top: 48px;
+      top: 38px;
     }
 
     &.active {
