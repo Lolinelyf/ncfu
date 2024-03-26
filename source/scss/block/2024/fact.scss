@@ -1,6 +1,6 @@
 .fact {
   &__inner {
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
 
     @media (min-width: $mobile-size-land) {
       padding: 2rem 1rem;
@@ -16,7 +16,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     height: 100%;
-    padding-top: 1rem;
+    @media (min-width: $mobile-size-land) {
+      padding-top: 1rem;
+    }
 
     @media (min-width: $tablet-size-land) {
       padding-top: 3rem;
