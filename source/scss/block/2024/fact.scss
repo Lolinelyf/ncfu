@@ -1,0 +1,49 @@
+.fact {
+  &__inner {
+    padding: 1rem 1rem 0 1rem;
+
+    @media (min-width: $mobile-size-land) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    padding-top: 1rem;
+
+    @media (min-width: $tablet-size-land) {
+      padding-top: 3rem;
+    }
+  }
+
+  &__item-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    min-height: 100px;
+    flex: 0 0 24%;
+    max-width: 24%;
+
+    @media (min-width: $mobile-size-land) {
+      min-height: 200px;
+    }
+
+    @media (min-width: $tablet-size-port) {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      flex: 0 0 190px;
+      width: 190px;
+      min-height: 260px;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+<section class="stud-life">
+  <div class="container">
+    <h2 class="title">#СТУДLIFE 360°</h2>
+  </div>
+
+  <div class="container site-section">
+    <div class="slider-life">
+      <div class="slider-life__text-container wow fadeIn" data-wow-offset="300">
+        <div class="slider-life__text-container-inner">
+          <div class="swiper slider-life__swiper js-slider-life">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">
+                    Будущих докторов наук готовят в СУНЦ СКФУ
+                  </p>
+                  <p class="card-text__desc">
+                    Специализированный учебный научный центр Северо-Кавказского
+                    федерального университета вошел в топ лучших образовательных
+                    организаций по подготовке будущих математиков.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">Своих героев нашли в ВУЦ СКФУ</p>
+                  <p class="card-text__desc">
+                    Творческий коллектив Северо-Кавказского федерального
+                    университета стал победителем конкурса документальных
+                    фильмов «Герои среди нас». Свою работу студенты снимали о
+                    преподавателях Военного учебного центра СКФУ.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">
+                    Студентам СКФУ провели мастер-класс по актерскому мастерству
+                  </p>
+                  <p class="card-text__desc">
+                    В Северо-Кавказском федеральном университете прошел
+                    мастер-класс от артиста Ставропольского академического
+                    театра драмы Георгия Серебрянского. Его посетили участники
+                    театральной студии «МЫ» СКФУ.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">
+                    СКФУ выпускает в мир послов русского языка
+                  </p>
+                  <p class="card-text__desc">
+                    Студенты Северо-Кавказского федерального университета вновь
+                    поборолись за статус послов русского языка в мире. Трое
+                    обучающихся СКФУ стали победителями заочного этапа конкурса
+                    и достойно представили вуз уже на очной площадке в
+                    Пятигорске.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-button-next slider-life__btn slider-life__btn_next js-slider-life-next-btn wow horizontalShaking"
+          data-wow-delay="1s"
+        >
+          <img
+            class="slider-life__icon slider-life__icon_next"
+            src="img/icons/arrow-right-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+        <div
+          class="swiper-button-prev slider-life__btn slider-life__btn_prev js-slider-life-prev-btn wow horizontalShaking"
+          data-wow-delay="1s"
+        >
+          <img
+            class="slider-life__icon slider-life__icon_prev"
+            src="img/icons/arrow-left-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+
+      <div class="slider-life__image-container">
+        <div class="swiper js-slider-life-image slider-life__image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic0.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic1.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic5.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic6.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    const lifeImageSwiper = new Swiper(".js-slider-life-image", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      loop: true,
+      watchSlidesProgress: true,
+      allowTouchMove: false,
+      effect: "cube",
+      speed: 1400,
+      autoplay: {
+        delay: 5000,
+      },
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+    });
+
+    const lifeSwiper = new Swiper(".js-slider-life", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".js-slider-life-next-btn",
+        prevEl: ".js-slider-life-prev-btn",
+      },
+      thumbs: {
+        swiper: lifeImageSwiper,
+      },
+    });
+
+    lifeSwiper.on("slideChange", function () {
+      let curSlideEl = lifeSwiper.slides[lifeSwiper.realIndex];
+      let linkEl = curSlideEl.querySelector(".js-slider-life-link");
+      linkEl.classList.add("card-text__link_animated");
+
+      let linkIconEl = linkEl.querySelector(".js-link-icon");
+      linkIconEl.classList.add("card-text__link-icon_animated");
+
+      linkEl.addEventListener("animationend", function () {
+        linkEl.classList.remove("card-text__link_animated");
+      });
+
+      linkIconEl.addEventListener("animationend", function () {
+        linkIconEl.classList.remove("card-text__link-icon_animated");
+      });
+    });
+  });
+</script>

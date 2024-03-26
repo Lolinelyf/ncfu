@@ -1,6 +1,5 @@
 .unity {
-  padding: 3.25rem 1rem 1rem;
-  background-color: $white-color;
+  padding: 0 1rem 1rem 1rem;
   border-radius: 0.5rem;
   @media (min-width: $mobile-size-land) {
     padding-top: 3rem;
@@ -9,11 +8,12 @@
   }
 
   &__wrapper {
-    margin-top: -2.4rem;
+    width: auto;
+    margin: 0 -1rem;
 
-    @media (min-width: $tablet-size-port) {
-      margin-top: 0;
-      margin-bottom: 0;
+    @media (min-width: $mobile-size-land) {
+      margin: auto;
+      width: 100%;
     }
   }
 
@@ -37,18 +37,22 @@
   &__col {
     position: relative;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid $color-border;
+    // border-bottom: 1px solid $color-border;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: $color-white;
+    border-radius: 0.5rem;
 
     &:last-child {
-      padding-bottom: 0;
+      // padding-bottom: 0;
       margin-bottom: 0;
       border-bottom: none;
     }
 
     @media (min-width: $mobile-size-land) {
-      padding-bottom: 0;
+      padding: 0;
       margin-bottom: 0;
       border-bottom: none;
+      background-color: transparent;
     }
 
     @media (min-width: $tablet-size-port) {

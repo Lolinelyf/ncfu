@@ -1,0 +1,259 @@
+<section class="fact">
+  <div class="fact__inner">
+    <div class="container fact__container">
+      <div
+        class="fact__row wow2 fadeIn"
+        data-wow-duration="1s"
+        data-wow-offset="350"
+      >
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f1">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts1.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-1">24111</span>
+                    </p>
+                    <p class="fact-item__caption">Студентов</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts5.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-2">165</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Направлений подготовки и специальностей
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f2">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts3.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-3">15</span>
+                    </p>
+                    <p class="fact-item__caption">Институтов и факультетов</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts4.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-4">1351</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Научно-педагогический работник
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f3">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts6.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-5">27</span>
+                    </p>
+                    <p class="fact-item__caption">Научных школ</p>
+                  </div>
+                </div>
+              </div>
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts7.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-6">45</span>
+                    </p>
+                    <p class="fact-item__caption">Базовых кафедр</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f4">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts8.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-7">33</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Научно-исследовательские лаборатории
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts9.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-8">30</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Научно-образовательных центров
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    const startChange = function () {
+      const changeIt = function (selector) {
+        const changeItemEl = document.querySelector(selector);
+        changeItemEl.classList.toggle("change2__inner_active");
+      };
+
+      const slidesArr = [
+        () => changeIt(".js-change-f1"),
+        () => changeIt(".js-change-f2"),
+        () => changeIt(".js-change-f3"),
+        () => changeIt(".js-change-f4"),
+      ];
+
+      const maxSlideCnt = 3;
+      let slideCnt = 0;
+      setInterval(function () {
+        slidesArr[slideCnt]();
+        if (slideCnt < maxSlideCnt) {
+          slideCnt++;
+        } else {
+          slideCnt = 0;
+        }
+      }, 3000);
+    };
+
+    // анимация увеличения слайдов
+    const afterReveal = function () {
+      const fact1El = document.querySelector(".js-fact-counter-1");
+      const od1 = new Odometer({
+        el: fact1El,
+        value: 0,
+        format: "",
+      });
+      fact1El.innerHTML = 24111;
+
+      const fact2El = document.querySelector(".js-fact-counter-2");
+      const od2 = new Odometer({
+        el: fact2El,
+        value: 0,
+        format: "",
+      });
+      fact2El.innerHTML = 165;
+
+      const fact3El = document.querySelector(".js-fact-counter-3");
+      const od3 = new Odometer({
+        el: fact3El,
+        value: 0,
+        format: "",
+      });
+      fact3El.innerHTML = 15;
+
+      const fact4El = document.querySelector(".js-fact-counter-4");
+      const od4 = new Odometer({
+        el: fact4El,
+        value: 0,
+        format: "",
+      });
+      fact4El.innerHTML = 1351;
+
+      const fact5El = document.querySelector(".js-fact-counter-5");
+      const od5 = new Odometer({
+        el: fact5El,
+        value: 0,
+        format: "",
+      });
+      fact5El.innerHTML = 27;
+
+      const fact6El = document.querySelector(".js-fact-counter-6");
+      const od6 = new Odometer({
+        el: fact6El,
+        value: 0,
+        format: "",
+      });
+      fact6El.innerHTML = 45;
+
+      const fact7El = document.querySelector(".js-fact-counter-7");
+      const od7 = new Odometer({
+        el: fact7El,
+        value: 0,
+        format: "",
+      });
+      fact7El.innerHTML = 33;
+
+      const fact8El = document.querySelector(".js-fact-counter-8");
+      const od8 = new Odometer({
+        el: fact8El,
+        value: 0,
+        format: "",
+      });
+      fact8El.innerHTML = 30;
+
+      startChange();
+    };
+
+    const wowCounter = new WOW({
+      mobile: false,
+      boxClass: "wow2",
+      callback: afterReveal,
+    });
+    wowCounter.init();
+  });
+</script>
+<script src="js/single/odometer.min.js"></script>

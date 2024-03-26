@@ -1,5 +1,5 @@
 .news {
-  background-color: $color-white;
+  // background-color: $color-white;
   padding: 1rem;
   border-radius: 0.5rem;
   padding-bottom: 0.5rem;
@@ -14,7 +14,7 @@
   }
   &__grid {
     display: grid;
-    width: 100%;
+    margin: 0 -1rem;
     box-sizing: content-box;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
@@ -22,7 +22,8 @@
 
     @media (min-width: $mobile-size-land) {
       grid-template-columns: repeat(2, 1fr);
-      margin-bottom: 2rem;
+      margin: 0 0 2rem 0;
+      width: 100%;
     }
     @media (min-width: $tablet-size-port) {
       grid-template-columns: repeat(3, 1fr);
@@ -37,6 +38,9 @@
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $color-border;
     transition: opacity linear 0.1s;
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: 0.5rem;
 
     &:active {
       opacity: 0.8;
@@ -52,6 +56,9 @@
     }
 
     @media (min-width: $mobile-size-land) {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
       padding-bottom: 0;
       border-bottom: none;
       &:hover {

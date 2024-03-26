@@ -1,0 +1,156 @@
+.slider-life {
+  padding: 0 0 1rem 0;
+
+  @media (min-width: $tablet-size-land) {
+    min-height: 800px;
+    position: relative;
+    height: 1px;
+  }
+
+  &__image-container {
+    padding: 1rem 2rem;
+
+    @media (min-width: $mobile-size-land) {
+      padding: 1rem 0 0 0;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      padding-top: 0;
+      position: absolute;
+      top: 35%;
+      right: 2rem;
+      width: 55%;
+      height: 400px;
+      bottom: 3%;
+    }
+
+    @media (min-width: $desktop-size-small) {
+      right: 0;
+      width: 65%;
+      height: 500px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__text-container {
+    height: 190px;
+    border-radius: 0.5rem;
+    background-color: $color-white;
+    color: $color-black;
+    padding: 1rem 2rem;
+    margin: 0 -1rem;
+    box-shadow: $shadow-small-white;
+    position: relative;
+    @media (min-width: $mobile-size-land) {
+      height: auto;
+      padding: 1rem;
+      margin: 0;
+    }
+
+    @media (min-width: $tablet-size-land) {
+      position: absolute;
+      top: 8%;
+      left: 20px;
+      width: 500px;
+      height: 300px;
+      z-index: 10;
+    }
+  }
+
+  &__text-container-inner {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__swiper {
+    height: 100%;
+    position: relative;
+  }
+
+  &__swiper-slide {
+    height: auto !important;
+  }
+
+  &__image-swiper {
+    height: 100%;
+  }
+
+  &__btn {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    &:active {
+      opacity: 0.6;
+    }
+    @media (min-width: $mobile-size-land) {
+      background-color: $color-hover;
+      box-shadow: $shadow-small-hover;
+      &:hover {
+        background-color: #dae1ff;
+      }
+    }
+
+    @media (min-width: $tablet-size-land) {
+      width: 40px !important;
+      height: 40px !important;
+    }
+
+    &_next {
+      right: 0 !important;
+      @media (min-width: $mobile-size-land) {
+        right: -13px !important;
+      }
+
+      @media (min-width: $tablet-size-land) {
+        right: -18px !important;
+      }
+    }
+
+    &_prev {
+      left: 0 !important;
+      @media (min-width: $mobile-size-land) {
+        left: -13px !important;
+      }
+
+      @media (min-width: $tablet-size-land) {
+        left: -18px !important;
+        top: 49% !important;
+      }
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    &:active {
+      background-color: #ffffff00;
+    }
+    @media (min-width: $tablet-size-land) {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  &__icon_prev {
+    margin-left: 0 !important;
+  }
+
+  &__icon_next {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+.swiper-cube-shadow {
+  background: #23223c85 !important;
+}

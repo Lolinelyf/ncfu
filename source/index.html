@@ -9,6 +9,11 @@
     <link href="css/bvi.min.css" rel="stylesheet" type="text/css" />
     <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="css/odometer-theme-default.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="js/single/bvi.js"></script>
     <script src="js/single/swiper.min.js"></script>
     <script src="js/single/wow.min.js"></script>
@@ -676,1075 +681,1504 @@
 
     <main class="page__main">
       <div class="container">
+  <div class="slider slider--main swiper js-main-slider" data-wow-duration="1s">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/slide1.jpg"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/slide2.jpg"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/slide3.jpg"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/Frame.png"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+    </div>
+    <div class="swiper-button-next slider__next-btn js-main-slider-next">
+      <img src="img/icons/arrow-right.png" alt="" />
+    </div>
+    <div class="swiper-button-prev slider__prev-btn js-main-slider-prev">
+      <img src="img/icons/arrow-left.png" alt="" />
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".js-main-slider", {
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".js-main-slider-next",
+        prevEl: ".js-main-slider-prev",
+      },
+    });
+  });
+</script>
+
+      <section class="features-icon">
+  <div class="container">
+    <div class="features-icon__row">
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/stud.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Сайт для школьников и их родителей</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/uni.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">
+          Доп образование и повышение квалификации
+        </p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/sunc.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">
+          Специализированный учебный научный центр
+        </p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/consorc.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Консорциум вузов Северного Кавказа</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/pps.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Консорциум вузов Северного Кавказа</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/ecampus.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">еКампус</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/map.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Интерактивная карта корпусов</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/office.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Студенческий офис</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/protect.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Безопасность университета</p>
+      </a>
+
+      <a href="#" class="features-icon__link">
+        <img
+          class="features-icon__image"
+          width="100"
+          height="100"
+          src="img/users.png"
+          alt="Иконка"
+        />
+        <p class="features-icon__label">Военный учебный центр</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <section class="page__news-background">
+  <div class="container">
+    <div class="news">
+      <h2 class="title">Новости</h2>
+      <div class="news__grid">
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news1.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">18 января 2023 г.</p>
+          </div>
+
+          <h2 class="news__title">
+            В России продолжается реализация программы «Пушкинская карта»
+          </h2>
+          <p class="news__text">
+            Продолжается реализация программы «Пушкинская карта». По ней
+            студенты могут потратить 5 тысяч рублей на посещение учреждений
+            культуры. Участниками программы могут стать молодые люди от 14 до 22
+            лет.
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news2.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">28 Декабря 2023</p>
+          </div>
+
+          <h2 class="news__title">
+            Представители СКФУ помогут в развитии нового Центра гуманитарной
+            помощи «Преображение»
+          </h2>
+          <p class="news__text">
+            Студентки Северо-Кавказского федерального университета кафедры
+            рекламы и связей с общественностью посетили открытие нового Центра
+            гуманитарной помощи «Преображение».
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news3.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">11 Ноября 2023</p>
+          </div>
+
+          <h2 class="news__title">Будущих докторов наук готовят в СУНЦ СКФУ</h2>
+          <p class="news__text">
+            Специализированный учебный научный центр Северо-Кавказского
+            федерального университета вошел в топ лучших образовательных
+            организаций по подготовке будущих математиков.
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news4.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">18 января 2023 г.</p>
+          </div>
+
+          <h2 class="news__title">
+            Ректор СКФУ вошел в ТОП-5 руководителей университетов России по
+            упоминаемости в СМИ
+          </h2>
+          <p class="news__text">
+            Телеграм-канал «Научно-образовательная политика» опубликовал данные
+            о медиаактивности за декабрь 2022 года. Согласно рейтингу, по
+            количеству публикаций с упоминанием своего имени ректор СКФУ Дмитрий
+            Беспалов занял пятое место, обойдя многих руководителей крупных
+            российских вузов.
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news5.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">18 января 2023 г.</p>
+          </div>
+
+          <h2 class="news__title">
+            Представители СКФУ – участники «Студенческого десанта»
+          </h2>
+          <p class="news__text">
+            В канун Дня российского студенчества МВД России проводит акцию
+            «Студенческий десант». Помощь в организации мероприятия оказала
+            заместитель председателя Общественного совета при ведомстве,
+            директор Пятигорского института (филиала) Северо-Кавказского
+            федерального университета Татьяна Шебзухова.
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news6.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">18 января 2023 г.</p>
+          </div>
+
+          <h2 class="news__title">
+            Представители СКФУ стали призерами и победителями конкурса на знание
+            русской и абхазской словесности
+          </h2>
+          <p class="news__text">
+            В Северо-Кавказском федеральном университете прошло торжественное
+            награждение победителей конкурса на знание русской и абхазской
+            словесности. Участие в нем принимали школьники и студенты вузов
+            Республики Абхазия и России.
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news7.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">18 января 2023 г.</p>
+          </div>
+
+          <h2 class="news__title">
+            Лечебное дело, информационные технологии, нефтегазовое дело: СКФУ
+            запустит партнерские проекты в Ливии
+          </h2>
+          <p class="news__text">
+            В Москве ректор Северо-Кавказского федерального университета Дмитрий
+            Беспалов провел рабочую встречу с Чрезвычайным и Полномочным Послом
+            Ливии в России Эмхемедом А.Э. Альмаграви и Чрезвычайным и
+            Полномочным Послом России в Ливии Айдаром Аганиным.
+          </p>
+        </a>
+        <a class="news__item" href="news-item.html">
+          <div class="news__image-wrapper">
+            <img
+              loading="lazy"
+              class="news__image"
+              width="310"
+              height="207"
+              src="img/news8.jpg"
+              alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
+            />
+            <p class="news__date">18 января 2023 г.</p>
+          </div>
+
+          <h2 class="news__title">Своих героев нашли в ВУЦ СКФУ</h2>
+          <p class="news__text">
+            Творческий коллектив Северо-Кавказского федерального университета
+            стал победителем конкурса документальных фильмов «Герои среди нас».
+            Свою работу студенты снимали о преподавателях Военного учебного
+            центра СКФУ.
+          </p>
+        </a>
+      </div>
+      <a href="#" class="button news__button"
+        >Все новости
+        <svg class="news__icon" width="22" height="22">
+          <use xlink:href="img/svg-sprite.svg#i-arrow-r"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+ <section class="abit">
+  <div class="container site-section wow fadeIn">
+    <h2 class="title">Абитуриенту</h2>
+
+    <div class="abit__grid">
+      <div class="abit__grid-photo-container">
         <div
-          class="slider slider--main swiper js-main-slider"
+          class="slider slider--abit swiper js-slider-sm wow fadeIn"
           data-wow-duration="1s"
         >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img
-                class="slider__image"
-                src="img/slide1.jpg"
-                alt="Заголовок слайда"
-                title="Заголовок слайда"
-              />
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/SUNC-2023/"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl1.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">
+                    Специализированный учебный научный центр
+                  </p>
+                  <p class="card-image__detail">
+                    Занимайся наукой и технологиями!
+                  </p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
             </div>
+
             <div class="swiper-slide">
-              <img
-                class="slider__image"
-                src="img/slide2.jpg"
-                alt="Заголовок слайда"
-                title="Заголовок слайда"
-              />
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/Srednee-professional_noe-obrazovanie/"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl2.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">
+                    Среднее профессиональное образование
+                  </p>
+                  <p class="card-image__detail">
+                    Получи востребованную профессию!
+                  </p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
             </div>
+
             <div class="swiper-slide">
-              <img
-                class="slider__image"
-                src="img/slide3.jpg"
-                alt="Заголовок слайда"
-                title="Заголовок слайда"
-              />
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/international-activity/inostrannym-studentam/"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl3.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">Иностранным обучающимся</p>
+                  <p class="card-image__detail">
+                    Доступно обучение на иностранных языках!
+                  </p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
             </div>
+
             <div class="swiper-slide">
-              <img
-                class="slider__image"
-                src="img/Frame.png"
-                alt="Заголовок слайда"
-                title="Заголовок слайда"
-              />
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/Ordinatura-2023/"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl4.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">Ординатура</p>
+                  <p class="card-image__detail">Учись больше!</p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/Celevoe-obuchenie-2022/#"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl5.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">Целевое обучение</p>
+                  <p class="card-image__detail">
+                    Обучайся по заявке от работодателя!
+                  </p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/Abiturientu-s-OVZ-i-invalidnost_u/"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl6.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">
+                    Абитуриенту с ОВЗ и инвалидностью
+                  </p>
+                  <p class="card-image__detail">
+                    Создаём равные условия для всех абитуриентов!
+                  </p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a
+                class="card-image"
+                href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/voennyj-uchebnyj-centr-skfu-voennaya-kafedra/#cE"
+              >
+                <img
+                  class="card-image__image"
+                  loading="lazy"
+                  src="img/sm-sl7.jpg"
+                  alt="Подпись к фотографии"
+                />
+                <div class="card-image__info">
+                  <p class="card-image__title">Военный учебный центр</p>
+                  <p class="card-image__detail">
+                    Получай военную специальность во время обучения в вузе!
+                  </p>
+                </div>
+                <p class="card-image__link">
+                  Подробнее
+                  <span class="card-image__link-icon">&#187;</span>
+                </p>
+              </a>
             </div>
           </div>
-          <div class="swiper-button-next slider__next-btn js-main-slider-next">
+
+          <div class="swiper-button-next slider__next-btn js-slider-sm-next">
             <img src="img/icons/arrow-right.png" alt="" />
           </div>
-          <div class="swiper-button-prev slider__prev-btn js-main-slider-prev">
+          <div class="swiper-button-prev slider__prev-btn js-slider-sm-prev">
             <img src="img/icons/arrow-left.png" alt="" />
           </div>
         </div>
-      </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const swiper = new Swiper(".js-main-slider", {
-            autoplay: {
-              delay: 5000,
-            },
-            navigation: {
-              nextEl: ".js-main-slider-next",
-              prevEl: ".js-main-slider-prev",
-            },
-          });
-        });
-      </script>
-      <section class="features-icon">
-        <div class="container">
-          <div class="features-icon__row">
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/stud.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">
-                Сайт для школьников и их родителей
-              </p>
-            </a>
 
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/uni.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">
-                Доп образование и повышение квалификации
-              </p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/sunc.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">
-                Специализированный учебный научный центр
-              </p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/consorc.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">
-                Консорциум вузов Северного Кавказа
-              </p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/pps.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">
-                Консорциум вузов Северного Кавказа
-              </p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/ecampus.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">еКампус</p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/map.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">Интерактивная карта корпусов</p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/office.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">Студенческий офис</p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/protect.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">Безопасность университета</p>
-            </a>
-
-            <a href="#" class="features-icon__link">
-              <img
-                class="features-icon__image"
-                width="100"
-                height="100"
-                src="img/users.png"
-                alt="Иконка"
-              />
-              <p class="features-icon__label">Военный учебный центр</p>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="page__news-background">
-        <div class="container">
-          <div class="news">
-            <h2 class="title">Новости</h2>
-            <div class="news__grid">
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news1.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">18 января 2023 г.</p>
-                </div>
-
-                <h2 class="news__title">
-                  В России продолжается реализация программы «Пушкинская карта»
-                </h2>
-                <p class="news__text">
-                  Продолжается реализация программы «Пушкинская карта». По ней
-                  студенты могут потратить 5 тысяч рублей на посещение
-                  учреждений культуры. Участниками программы могут стать молодые
-                  люди от 14 до 22 лет.
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news2.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">28 Декабря 2023</p>
-                </div>
-
-                <h2 class="news__title">
-                  Представители СКФУ помогут в развитии нового Центра
-                  гуманитарной помощи «Преображение»
-                </h2>
-                <p class="news__text">
-                  Студентки Северо-Кавказского федерального университета кафедры
-                  рекламы и связей с общественностью посетили открытие нового
-                  Центра гуманитарной помощи «Преображение».
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news3.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">11 Ноября 2023</p>
-                </div>
-
-                <h2 class="news__title">
-                  Будущих докторов наук готовят в СУНЦ СКФУ
-                </h2>
-                <p class="news__text">
-                  Специализированный учебный научный центр Северо-Кавказского
-                  федерального университета вошел в топ лучших образовательных
-                  организаций по подготовке будущих математиков.
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news4.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">18 января 2023 г.</p>
-                </div>
-
-                <h2 class="news__title">
-                  Ректор СКФУ вошел в ТОП-5 руководителей университетов России
-                  по упоминаемости в СМИ
-                </h2>
-                <p class="news__text">
-                  Телеграм-канал «Научно-образовательная политика» опубликовал
-                  данные о медиаактивности за декабрь 2022 года. Согласно
-                  рейтингу, по количеству публикаций с упоминанием своего имени
-                  ректор СКФУ Дмитрий Беспалов занял пятое место, обойдя многих
-                  руководителей крупных российских вузов.
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news5.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">18 января 2023 г.</p>
-                </div>
-
-                <h2 class="news__title">
-                  Представители СКФУ – участники «Студенческого десанта»
-                </h2>
-                <p class="news__text">
-                  В канун Дня российского студенчества МВД России проводит акцию
-                  «Студенческий десант». Помощь в организации мероприятия
-                  оказала заместитель председателя Общественного совета при
-                  ведомстве, директор Пятигорского института (филиала)
-                  Северо-Кавказского федерального университета Татьяна
-                  Шебзухова.
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news6.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">18 января 2023 г.</p>
-                </div>
-
-                <h2 class="news__title">
-                  Представители СКФУ стали призерами и победителями конкурса на
-                  знание русской и абхазской словесности
-                </h2>
-                <p class="news__text">
-                  В Северо-Кавказском федеральном университете прошло
-                  торжественное награждение победителей конкурса на знание
-                  русской и абхазской словесности. Участие в нем принимали
-                  школьники и студенты вузов Республики Абхазия и России.
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news7.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">18 января 2023 г.</p>
-                </div>
-
-                <h2 class="news__title">
-                  Лечебное дело, информационные технологии, нефтегазовое дело:
-                  СКФУ запустит партнерские проекты в Ливии
-                </h2>
-                <p class="news__text">
-                  В Москве ректор Северо-Кавказского федерального университета
-                  Дмитрий Беспалов провел рабочую встречу с Чрезвычайным и
-                  Полномочным Послом Ливии в России Эмхемедом А.Э. Альмаграви и
-                  Чрезвычайным и Полномочным Послом России в Ливии Айдаром
-                  Аганиным.
-                </p>
-              </a>
-              <a class="news__item" href="news-item.html">
-                <div class="news__image-wrapper">
-                  <img
-                    loading="lazy"
-                    class="news__image"
-                    width="310"
-                    height="207"
-                    src="img/news8.jpg"
-                    alt="Объявлен открытый конкурс на создание лучшего логотипа СКФУ"
-                  />
-                  <p class="news__date">18 января 2023 г.</p>
-                </div>
-
-                <h2 class="news__title">Своих героев нашли в ВУЦ СКФУ</h2>
-                <p class="news__text">
-                  Творческий коллектив Северо-Кавказского федерального
-                  университета стал победителем конкурса документальных фильмов
-                  «Герои среди нас». Свою работу студенты снимали о
-                  преподавателях Военного учебного центра СКФУ.
-                </p>
-              </a>
-            </div>
-            <a href="#" class="button news__button"
-              >Все новости
-              <svg class="news__icon" width="22" height="22">
-                <use xlink:href="img/svg-sprite.svg#i-arrow-r"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="abit">
-        <div class="container site-section wow fadeIn">
-          <h2 class="title">Абитуриенту</h2>
-
-          <div class="abit__grid">
-            <div class="abit__grid-photo-container">
-              <div
-                class="slider slider--abit swiper js-slider-sm wow fadeIn"
-                data-wow-duration="1s"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/SUNC-2023/"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl1.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">
-                          Специализированный учебный научный центр
-                        </p>
-                        <p class="card-image__detail">
-                          Занимайся наукой и технологиями!
-                        </p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/Srednee-professional_noe-obrazovanie/"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl2.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">
-                          Среднее профессиональное образование
-                        </p>
-                        <p class="card-image__detail">
-                          Получи востребованную профессию!
-                        </p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/international-activity/inostrannym-studentam/"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl3.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">Иностранным обучающимся</p>
-                        <p class="card-image__detail">
-                          Доступно обучение на иностранных языках!
-                        </p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/abitur/Priemnaya-kampaniya-2023/Ordinatura-2023/"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl4.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">Ординатура</p>
-                        <p class="card-image__detail">Учись больше!</p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/Celevoe-obuchenie-2022/#"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl5.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">Целевое обучение</p>
-                        <p class="card-image__detail">
-                          Обучайся по заявке от работодателя!
-                        </p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/Abiturientu-s-OVZ-i-invalidnost_u/"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl6.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">
-                          Абитуриенту с ОВЗ и инвалидностью
-                        </p>
-                        <p class="card-image__detail">
-                          Создаём равные условия для всех абитуриентов!
-                        </p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a
-                      class="card-image"
-                      href="https://www.ncfu.ru/abitur/arhiv/priemnaya-kampaniya-2022/voennyj-uchebnyj-centr-skfu-voennaya-kafedra/#cE"
-                    >
-                      <img
-                        class="card-image__image"
-                        loading="lazy"
-                        src="img/sm-sl7.jpg"
-                        alt="Подпись к фотографии"
-                      />
-                      <div class="card-image__info">
-                        <p class="card-image__title">Военный учебный центр</p>
-                        <p class="card-image__detail">
-                          Получай военную специальность во время обучения в
-                          вузе!
-                        </p>
-                      </div>
-                      <p class="card-image__link">
-                        Подробнее
-                        <span class="card-image__link-icon">&#187;</span>
-                      </p>
-                    </a>
-                  </div>
-                </div>
-
-                <div
-                  class="swiper-button-next slider__next-btn js-slider-sm-next"
-                >
-                  <img src="img/icons/arrow-right.png" alt="" />
-                </div>
-                <div
-                  class="swiper-button-prev slider__prev-btn js-slider-sm-prev"
-                >
-                  <img src="img/icons/arrow-left.png" alt="" />
-                </div>
-              </div>
-
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const swiper = new Swiper(".js-slider-sm", {
-                    autoplay: {
-                      delay: 5000,
-                    },
-                    navigation: {
-                      nextEl: ".js-slider-sm-next",
-                      prevEl: ".js-slider-sm-prev",
-                    },
-                  });
-                });
-              </script>
-            </div>
-            <div class="abit__grid-icons-container">
-              <a class="card-icon" href="#">
-                <img class="card-icon__icon-image" src="img/home.png" alt="" />
-                <p class="card-icon__text">Приёмная кампания 2024</p>
-              </a>
-
-              <a class="card-icon" href="#">
-                <img class="card-icon__icon-image" src="img/heart.png" alt="" />
-                <p class="card-icon__text">Задать вопрос о поступлении</p>
-              </a>
-
-              <a class="card-icon" href="#">
-                <img
-                  class="card-icon__icon-image"
-                  src="img/calendar.png"
-                  alt=""
-                />
-                <p class="card-icon__text">График открытых дней</p>
-              </a>
-
-              <a class="card-icon" href="#">
-                <img class="card-icon__icon-image" src="img/hat.png" alt="" />
-                <p class="card-icon__text">Бакалавриат, cпециалитет</p>
-              </a>
-
-              <a class="card-icon" href="#">
-                <img class="card-icon__icon-image" src="img/case.png" alt="" />
-                <p class="card-icon__text">Магистратура</p>
-              </a>
-
-              <a class="card-icon" href="#">
-                <img class="card-icon__icon-image" src="img/asp.png" alt="" />
-                <p class="card-icon__text">Аспирантура</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="unity">
-        <div class="container site-section unity__wrapper">
-          <div class="unity__inner">
-            <div class="unity__col">
-              <h2 class="unity__title">Анонсы</h2>
-              <div class="modal js-modal">
-                <button class="modal__close js-modal-close-btn">
-                  &#10006;
-                </button>
-                <div class="modal__content js-modal-content">
-                  <p class="modal__title js-selected-date">10 августа</p>
-
-                  <template class="js-event-item-template">
-                    <a class="event-item js-event-item" href="#">
-                      <div class="event-item__inner">
-                        <div class="event-item__image-container">
-                          <img
-                            class="event-item__image js-event-image"
-                            src="img/n-news8.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="event-item__info-container">
-                          <p class="event-item__title js-event-title">
-                            «Университетские смены» в СКФУ
-                          </p>
-                          <p class="event-item__text js-event-text">
-                            <b>10 августа</b> в Северо-Кавказском федеральном
-                            университете состоится открытие программы
-                            «Университетские смены».
-                          </p>
-                          <p class="event-item__date js-event-date"></p>
-                        </div>
-                      </div>
-                    </a>
-                  </template>
-
-                  <div class="js-current-items-container"></div>
-
-                  <div class="js-another-events-block" style="display: none">
-                    <hr class="mt-2 mb-2" />
-
-                    <p class="modal__subtitle">Другие анонсы</p>
-
-                    <div class="js-another-events-container"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="overlay js-overlay"></div>
-
-              <div class="calendar">
-                <div class="calendar__top">
-                  <div>
-                    <button class="calendar__button" id="previous">
-                      <img
-                        class="calendar__btn-icon calendar__btn-icon_prev"
-                        src="img/icons/arrow-left-accent.png"
-                        alt=""
-                        width="20"
-                        height="20"
-                      />
-                    </button>
-                  </div>
-                  <div>
-                    <p class="calendar__month" id="monthAndYear"></p>
-                  </div>
-                  <div>
-                    <button class="calendar__button" id="next">
-                      <img
-                        class="calendar__btn-icon calendar__btn-icon_next"
-                        src="img/icons/arrow-right-accent.png"
-                        alt=""
-                        width="20"
-                        height="20"
-                      />
-                    </button>
-                  </div>
-                </div>
-
-                <table class="calendar__body" id="calendar" data-lang="ru">
-                  <thead id="thead-month"></thead>
-                  <tbody id="calendar-body"></tbody>
-                </table>
-
-                <div class="calendar__footer">
-                  <label class="calendar__label" for="month">Перейти: </label>
-                  <select class="calendar__select" id="month">
-                    <option value="0">Январь</option>
-                    <option value="1">Февраль</option>
-                    <option value="2">Март</option>
-                    <option value="3">Апрель</option>
-                    <option value="4">Май</option>
-                    <option value="5">Июнь</option>
-                    <option value="6">Июль</option>
-                    <option value="7">Август</option>
-                    <option value="8">Сентябрь</option>
-                    <option value="9">Октябрь</option>
-                    <option value="10">Ноябрь</option>
-                    <option value="11">Декабрь</option>
-                  </select>
-                  <select class="calendar__select" id="year"></select>
-                </div>
-              </div>
-              <div class="unity__col-footer">
-                <a class="unity__link" href="#">Все анонсы</a>
-              </div>
-              <script src="js/single/anons.js"></script>
-            </div>
-
-            <div class="unity__col">
-              <h2 class="unity__title">Конкурсы</h2>
-
-              <div class="swiper unity__slider js-konkurs-slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">1</span
-                          >сентября
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">10</span
-                          >сентября
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        III Международный конкурс молодых ученых в сфере
-                        интеллектуальной собственности «Интеллект»
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">15</span
-                          >февраля
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">20</span
-                          >февраля
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        Конкурс работ на соискание премий Правительства
-                        Российской Федерации 2023
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">10</span
-                          >октября
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">20</span
-                          >октября
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        Всероссийский конкурс «Учитель года – 2023»
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">1</span>марта
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">31</span
-                          >декабря
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        Конкурс на лучший антикоррупционный плакат
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">1</span
-                          >сентябрь
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">10</span
-                          >сентябрь
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        «Рождество с акцентом» для студентов СКФУ
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">1</span
-                          >сентябрь
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">10</span
-                          >сентябрь
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        «Рождество с акцентом» для студентов СКФУ
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">1</span
-                          >сентябрь
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">10</span
-                          >сентябрь
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        «Рождество с акцентом» для студентов СКФУ
-                      </p>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a class="card-notice" href="#">
-                      <div class="card-notice__date-container">
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">1</span
-                          >сентябрь
-                        </p>
-                        <p class="card-notice__month-konkurs">
-                          <span class="card-notice__day-konkurs">10</span
-                          >сентябрь
-                        </p>
-                      </div>
-                      <p class="card-notice__text">
-                        «Рождество с акцентом» для студентов СКФУ
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="unity__col-footer">
-                <a class="unity__link" href="#">Все конкурсы</a>
-              </div>
-
-              <div
-                class="swiper-button-next unity__slider-btn unity__slider-btn_next js-konkurs-slider-next"
-              >
-                <img
-                  class="unity__slider-btn-icon-k rotate unity__slider-btn-icon-k_next"
-                  src="img/icons/arrow-right-accent.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </div>
-              <div
-                class="swiper-button-prev unity__slider-btn unity__slider-btn_prev js-konkurs-slider-prev"
-              >
-                <img
-                  class="unity__slider-btn-icon-k rotate unity__slider-btn-icon-k_prev"
-                  src="img/icons/arrow-left-accent.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </div>
-            </div>
-
-            <div class="unity__col">
-              <h2 class="unity__title">Объявления</h2>
-              <div
-                class="swiper unity__slider unity__slider--post js-ob-slider"
-              >
-                <div class="swiper-wrapper unity__grid">
-                  <div class="swiper-slide">
-                    <a class="card-sticker" href="#">
-                      <div class="card-sticker__text">
-                        <p class="card-sticker__title">
-                          Противодействие незаконному обороту наркотиков
-                        </p>
-                        <p class="card-sticker__desc">
-                          В целях повышения эффективности деятельности по
-                          профилактике наркомании и противодействию незаконному
-                          обороту наркотиков аппаратом антинаркотической
-                          комиссии в Ставропольском крае организована работа
-                          телеграм-канала.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a class="card-sticker" href="#">
-                      <div class="card-sticker__text">
-                        <p class="card-sticker__title">
-                          Рекомендации по мерам предупреждения распространения
-                          новой коронавирусной инфекции
-                        </p>
-                        <p class="card-sticker__desc">
-                          Департамент координации деятельности образовательных
-                          организаций Минобрнауки России сообщает о
-                          необходимости доведения до обучающихся и сотрудников
-                          об обязательности соблюдения мер по предупреждению
-                          завоза и распространения новой коронавирусной инфекции
-                          в соответствии с приложением.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a class="card-sticker" href="#">
-                      <div class="card-sticker__text">
-                        <p class="card-sticker__title">
-                          Противодействие незаконному обороту наркотиков
-                        </p>
-                        <p class="card-sticker__desc">
-                          В целях повышения эффективности деятельности по
-                          профилактике наркомании и противодействию незаконному
-                          обороту наркотиков аппаратом антинаркотической
-                          комиссии в Ставропольском крае организована работа
-                          телеграм-канала.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <a class="card-sticker" href="#">
-                      <div class="card-sticker__text">
-                        <p class="card-sticker__title">
-                          Противодействие незаконному обороту наркотиков
-                        </p>
-                        <p class="card-sticker__desc">
-                          В целях повышения эффективности деятельности по
-                          профилактике наркомании и противодействию незаконному
-                          обороту наркотиков аппаратом антинаркотической
-                          комиссии в Ставропольском крае организована работа
-                          телеграм-канала.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="unity__col-footer">
-                <a class="unity__link" href="#">Все объявления</a>
-              </div>
-
-              <div
-                class="swiper-button-next unity__slider-btn unity__slider-btn_next js-ob-slider-next"
-              >
-                <img
-                  class="unity__slider-btn-icon-n unity__slider-btn-icon-n__next"
-                  src="img/icons/arrow-right-accent.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </div>
-              <div
-                class="swiper-button-prev unity__slider-btn unity__slider-btn_prev js-ob-slider-prev"
-              >
-                <img
-                  class="unity__slider-btn-icon-n unity__slider-btn-icon-n__prev"
-                  src="img/icons/arrow-left-accent.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const swiperKonkurs = new Swiper(".js-konkurs-slider", {
-            slidesPerView: 1.05,
-            spaceBetween: 10,
-            loop: false,
-            autoHeight: true,
-            direction: "horizontal",
-            breakpoints: {
-              768: {
-                slidesPerView: 2.3,
-                direction: "vertical",
-              },
-            },
-            navigation: {
-              nextEl: ".js-konkurs-slider-next",
-              prevEl: ".js-konkurs-slider-prev",
-            },
-          });
-
-          let swiperOb;
-          const swiperInit = function () {
-            swiperOb = new Swiper(".js-ob-slider", {
-              slidesPerView: 1.05,
-              spaceBetween: 10,
-              loop: false,
-              autoHeight: true,
-              direction: "horizontal",
-              breakpoints: {
-                768: {
-                  slidesPerView: 1.2,
-                  direction: "horizontal",
-                },
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".js-slider-sm", {
+              autoplay: {
+                delay: 5000,
               },
               navigation: {
-                nextEl: ".js-ob-slider-next",
-                prevEl: ".js-ob-slider-prev",
+                nextEl: ".js-slider-sm-next",
+                prevEl: ".js-slider-sm-prev",
               },
             });
-          };
-          swiperInit();
-        });
-      </script>
+          });
+        </script>
+      </div>
+      <div class="abit__grid-icons-container">
+        <a class="card-icon" href="#">
+          <img class="card-icon__icon-image" src="img/home.png" alt="" />
+          <p class="card-icon__text">Приёмная кампания 2024</p>
+        </a>
+
+        <a class="card-icon" href="#">
+          <img class="card-icon__icon-image" src="img/heart.png" alt="" />
+          <p class="card-icon__text">Задать вопрос о поступлении</p>
+        </a>
+
+        <a class="card-icon" href="#">
+          <img class="card-icon__icon-image" src="img/calendar.png" alt="" />
+          <p class="card-icon__text">График открытых дней</p>
+        </a>
+
+        <a class="card-icon" href="#">
+          <img class="card-icon__icon-image" src="img/hat.png" alt="" />
+          <p class="card-icon__text">Бакалавриат, cпециалитет</p>
+        </a>
+
+        <a class="card-icon" href="#">
+          <img class="card-icon__icon-image" src="img/case.png" alt="" />
+          <p class="card-icon__text">Магистратура</p>
+        </a>
+
+        <a class="card-icon" href="#">
+          <img class="card-icon__icon-image" src="img/asp.png" alt="" />
+          <p class="card-icon__text">Аспирантура</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="unity">
+  <div class="container site-section unity__wrapper">
+    <div class="unity__inner">
+      <div class="unity__col">
+        <h2 class="unity__title">Анонсы</h2>
+        <div class="modal js-modal">
+          <button class="modal__close js-modal-close-btn">&#10006;</button>
+          <div class="modal__content js-modal-content">
+            <p class="modal__title js-selected-date">10 августа</p>
+
+            <template class="js-event-item-template">
+              <a class="event-item js-event-item" href="#">
+                <div class="event-item__inner">
+                  <div class="event-item__image-container">
+                    <img
+                      class="event-item__image js-event-image"
+                      src="img/n-news8.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="event-item__info-container">
+                    <p class="event-item__title js-event-title">
+                      «Университетские смены» в СКФУ
+                    </p>
+                    <p class="event-item__text js-event-text">
+                      <b>10 августа</b> в Северо-Кавказском федеральном
+                      университете состоится открытие программы «Университетские
+                      смены».
+                    </p>
+                    <p class="event-item__date js-event-date"></p>
+                  </div>
+                </div>
+              </a>
+            </template>
+
+            <div class="js-current-items-container"></div>
+
+            <div class="js-another-events-block" style="display: none">
+              <hr class="mt-2 mb-2" />
+
+              <p class="modal__subtitle">Другие анонсы</p>
+
+              <div class="js-another-events-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay js-overlay"></div>
+
+        <div class="calendar">
+          <div class="calendar__top">
+            <div>
+              <button class="calendar__button" id="previous">
+                <img
+                  class="calendar__btn-icon calendar__btn-icon_prev"
+                  src="img/icons/arrow-left-accent.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </button>
+            </div>
+            <div>
+              <p class="calendar__month" id="monthAndYear"></p>
+            </div>
+            <div>
+              <button class="calendar__button" id="next">
+                <img
+                  class="calendar__btn-icon calendar__btn-icon_next"
+                  src="img/icons/arrow-right-accent.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+              </button>
+            </div>
+          </div>
+
+          <table class="calendar__body" id="calendar" data-lang="ru">
+            <thead id="thead-month"></thead>
+            <tbody id="calendar-body"></tbody>
+          </table>
+
+          <div class="calendar__footer">
+            <label class="calendar__label" for="month">Перейти: </label>
+            <select class="calendar__select" id="month">
+              <option value="0">Январь</option>
+              <option value="1">Февраль</option>
+              <option value="2">Март</option>
+              <option value="3">Апрель</option>
+              <option value="4">Май</option>
+              <option value="5">Июнь</option>
+              <option value="6">Июль</option>
+              <option value="7">Август</option>
+              <option value="8">Сентябрь</option>
+              <option value="9">Октябрь</option>
+              <option value="10">Ноябрь</option>
+              <option value="11">Декабрь</option>
+            </select>
+            <select class="calendar__select" id="year"></select>
+          </div>
+        </div>
+        <div class="unity__col-footer">
+          <a class="unity__link" href="#">Все анонсы</a>
+        </div>
+        <script src="js/single/anons.js"></script>
+      </div>
+
+      <div class="unity__col">
+        <h2 class="unity__title">Конкурсы</h2>
+
+        <div class="swiper unity__slider js-konkurs-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">1</span>сентября
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">10</span>сентября
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  III Международный конкурс молодых ученых в сфере
+                  интеллектуальной собственности «Интеллект»
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">15</span>февраля
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">20</span>февраля
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  Конкурс работ на соискание премий Правительства Российской
+                  Федерации 2023
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">10</span>октября
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">20</span>октября
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  Всероссийский конкурс «Учитель года – 2023»
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">1</span>марта
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">31</span>декабря
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  Конкурс на лучший антикоррупционный плакат
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">1</span>сентябрь
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">10</span>сентябрь
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  «Рождество с акцентом» для студентов СКФУ
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">1</span>сентябрь
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">10</span>сентябрь
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  «Рождество с акцентом» для студентов СКФУ
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">1</span>сентябрь
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">10</span>сентябрь
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  «Рождество с акцентом» для студентов СКФУ
+                </p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="card-notice" href="#">
+                <div class="card-notice__date-container">
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">1</span>сентябрь
+                  </p>
+                  <p class="card-notice__month-konkurs">
+                    <span class="card-notice__day-konkurs">10</span>сентябрь
+                  </p>
+                </div>
+                <p class="card-notice__text">
+                  «Рождество с акцентом» для студентов СКФУ
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="unity__col-footer">
+          <a class="unity__link" href="#">Все конкурсы</a>
+        </div>
+
+        <div
+          class="swiper-button-next unity__slider-btn unity__slider-btn_next js-konkurs-slider-next"
+        >
+          <img
+            class="unity__slider-btn-icon-k rotate unity__slider-btn-icon-k_next"
+            src="img/icons/arrow-right-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+        <div
+          class="swiper-button-prev unity__slider-btn unity__slider-btn_prev js-konkurs-slider-prev"
+        >
+          <img
+            class="unity__slider-btn-icon-k rotate unity__slider-btn-icon-k_prev"
+            src="img/icons/arrow-left-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+
+      <div class="unity__col">
+        <h2 class="unity__title">Объявления</h2>
+        <div class="swiper unity__slider unity__slider--post js-ob-slider">
+          <div class="swiper-wrapper unity__grid">
+            <div class="swiper-slide">
+              <a class="card-sticker" href="#">
+                <div class="card-sticker__text">
+                  <p class="card-sticker__title">
+                    Противодействие незаконному обороту наркотиков
+                  </p>
+                  <p class="card-sticker__desc">
+                    В целях повышения эффективности деятельности по профилактике
+                    наркомании и противодействию незаконному обороту наркотиков
+                    аппаратом антинаркотической комиссии в Ставропольском крае
+                    организована работа телеграм-канала.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card-sticker" href="#">
+                <div class="card-sticker__text">
+                  <p class="card-sticker__title">
+                    Рекомендации по мерам предупреждения распространения новой
+                    коронавирусной инфекции
+                  </p>
+                  <p class="card-sticker__desc">
+                    Департамент координации деятельности образовательных
+                    организаций Минобрнауки России сообщает о необходимости
+                    доведения до обучающихся и сотрудников об обязательности
+                    соблюдения мер по предупреждению завоза и распространения
+                    новой коронавирусной инфекции в соответствии с приложением.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card-sticker" href="#">
+                <div class="card-sticker__text">
+                  <p class="card-sticker__title">
+                    Противодействие незаконному обороту наркотиков
+                  </p>
+                  <p class="card-sticker__desc">
+                    В целях повышения эффективности деятельности по профилактике
+                    наркомании и противодействию незаконному обороту наркотиков
+                    аппаратом антинаркотической комиссии в Ставропольском крае
+                    организована работа телеграм-канала.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a class="card-sticker" href="#">
+                <div class="card-sticker__text">
+                  <p class="card-sticker__title">
+                    Противодействие незаконному обороту наркотиков
+                  </p>
+                  <p class="card-sticker__desc">
+                    В целях повышения эффективности деятельности по профилактике
+                    наркомании и противодействию незаконному обороту наркотиков
+                    аппаратом антинаркотической комиссии в Ставропольском крае
+                    организована работа телеграм-канала.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="unity__col-footer">
+          <a class="unity__link" href="#">Все объявления</a>
+        </div>
+
+        <div
+          class="swiper-button-next unity__slider-btn unity__slider-btn_next js-ob-slider-next"
+        >
+          <img
+            class="unity__slider-btn-icon-n unity__slider-btn-icon-n__next"
+            src="img/icons/arrow-right-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+        <div
+          class="swiper-button-prev unity__slider-btn unity__slider-btn_prev js-ob-slider-prev"
+        >
+          <img
+            class="unity__slider-btn-icon-n unity__slider-btn-icon-n__prev"
+            src="img/icons/arrow-left-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiperKonkurs = new Swiper(".js-konkurs-slider", {
+      slidesPerView: 1.05,
+      spaceBetween: 10,
+      loop: false,
+      autoHeight: true,
+      direction: "horizontal",
+      breakpoints: {
+        768: {
+          slidesPerView: 2.3,
+          direction: "vertical",
+        },
+      },
+      navigation: {
+        nextEl: ".js-konkurs-slider-next",
+        prevEl: ".js-konkurs-slider-prev",
+      },
+    });
+
+    let swiperOb;
+    const swiperInit = function () {
+      swiperOb = new Swiper(".js-ob-slider", {
+        slidesPerView: 1.05,
+        spaceBetween: 10,
+        loop: false,
+        autoHeight: true,
+        direction: "horizontal",
+        breakpoints: {
+          768: {
+            slidesPerView: 1.2,
+            direction: "horizontal",
+          },
+        },
+        navigation: {
+          nextEl: ".js-ob-slider-next",
+          prevEl: ".js-ob-slider-prev",
+        },
+      });
+    };
+    swiperInit();
+  });
+</script>
+ <section class="fact">
+  <div class="fact__inner">
+    <div class="container fact__container">
+      <div
+        class="fact__row wow2 fadeIn"
+        data-wow-duration="1s"
+        data-wow-offset="350"
+      >
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f1">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts1.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-1">24111</span>
+                    </p>
+                    <p class="fact-item__caption">Студентов</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts5.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-2">165</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Направлений подготовки и специальностей
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f2">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts3.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-3">15</span>
+                    </p>
+                    <p class="fact-item__caption">Институтов и факультетов</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts4.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-4">1351</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Научно-педагогический работник
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f3">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts6.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-5">27</span>
+                    </p>
+                    <p class="fact-item__caption">Научных школ</p>
+                  </div>
+                </div>
+              </div>
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts7.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-6">45</span>
+                    </p>
+                    <p class="fact-item__caption">Базовых кафедр</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact__item-container">
+          <div class="change2">
+            <div class="change2__inner js-change-f4">
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts8.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-7">33</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Научно-исследовательские лаборатории
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="change2__item">
+                <div class="fact-item">
+                  <div class="fact-item__image-container">
+                    <img class="fact-item__image" src="img/facts9.png" alt="" />
+                  </div>
+                  <div class="fact-item__text-container">
+                    <p class="fact-item__title">
+                      <span class="js-fact-counter-8">30</span>
+                    </p>
+                    <p class="fact-item__caption">
+                      Научно-образовательных центров
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    const startChange = function () {
+      const changeIt = function (selector) {
+        const changeItemEl = document.querySelector(selector);
+        changeItemEl.classList.toggle("change2__inner_active");
+      };
+
+      const slidesArr = [
+        () => changeIt(".js-change-f1"),
+        () => changeIt(".js-change-f2"),
+        () => changeIt(".js-change-f3"),
+        () => changeIt(".js-change-f4"),
+      ];
+
+      const maxSlideCnt = 3;
+      let slideCnt = 0;
+      setInterval(function () {
+        slidesArr[slideCnt]();
+        if (slideCnt < maxSlideCnt) {
+          slideCnt++;
+        } else {
+          slideCnt = 0;
+        }
+      }, 3000);
+    };
+
+    // анимация увеличения слайдов
+    const afterReveal = function () {
+      const fact1El = document.querySelector(".js-fact-counter-1");
+      const od1 = new Odometer({
+        el: fact1El,
+        value: 0,
+        format: "",
+      });
+      fact1El.innerHTML = 24111;
+
+      const fact2El = document.querySelector(".js-fact-counter-2");
+      const od2 = new Odometer({
+        el: fact2El,
+        value: 0,
+        format: "",
+      });
+      fact2El.innerHTML = 165;
+
+      const fact3El = document.querySelector(".js-fact-counter-3");
+      const od3 = new Odometer({
+        el: fact3El,
+        value: 0,
+        format: "",
+      });
+      fact3El.innerHTML = 15;
+
+      const fact4El = document.querySelector(".js-fact-counter-4");
+      const od4 = new Odometer({
+        el: fact4El,
+        value: 0,
+        format: "",
+      });
+      fact4El.innerHTML = 1351;
+
+      const fact5El = document.querySelector(".js-fact-counter-5");
+      const od5 = new Odometer({
+        el: fact5El,
+        value: 0,
+        format: "",
+      });
+      fact5El.innerHTML = 27;
+
+      const fact6El = document.querySelector(".js-fact-counter-6");
+      const od6 = new Odometer({
+        el: fact6El,
+        value: 0,
+        format: "",
+      });
+      fact6El.innerHTML = 45;
+
+      const fact7El = document.querySelector(".js-fact-counter-7");
+      const od7 = new Odometer({
+        el: fact7El,
+        value: 0,
+        format: "",
+      });
+      fact7El.innerHTML = 33;
+
+      const fact8El = document.querySelector(".js-fact-counter-8");
+      const od8 = new Odometer({
+        el: fact8El,
+        value: 0,
+        format: "",
+      });
+      fact8El.innerHTML = 30;
+
+      startChange();
+    };
+
+    const wowCounter = new WOW({
+      mobile: false,
+      boxClass: "wow2",
+      callback: afterReveal,
+    });
+    wowCounter.init();
+  });
+</script>
+<script src="js/single/odometer.min.js"></script>
+
+      <section class="stud-life">
+  <div class="container">
+    <h2 class="title">#СТУДLIFE 360°</h2>
+  </div>
+
+  <div class="container site-section">
+    <div class="slider-life">
+      <div class="slider-life__text-container wow fadeIn" data-wow-offset="300">
+        <div class="slider-life__text-container-inner">
+          <div class="swiper slider-life__swiper js-slider-life">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">
+                    Будущих докторов наук готовят в СУНЦ СКФУ
+                  </p>
+                  <p class="card-text__desc">
+                    Специализированный учебный научный центр Северо-Кавказского
+                    федерального университета вошел в топ лучших образовательных
+                    организаций по подготовке будущих математиков.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">Своих героев нашли в ВУЦ СКФУ</p>
+                  <p class="card-text__desc">
+                    Творческий коллектив Северо-Кавказского федерального
+                    университета стал победителем конкурса документальных
+                    фильмов «Герои среди нас». Свою работу студенты снимали о
+                    преподавателях Военного учебного центра СКФУ.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">
+                    Студентам СКФУ провели мастер-класс по актерскому мастерству
+                  </p>
+                  <p class="card-text__desc">
+                    В Северо-Кавказском федеральном университете прошел
+                    мастер-класс от артиста Ставропольского академического
+                    театра драмы Георгия Серебрянского. Его посетили участники
+                    театральной студии «МЫ» СКФУ.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide slider-life__swiper-slide">
+                <div class="card-text">
+                  <p class="card-text__title">
+                    СКФУ выпускает в мир послов русского языка
+                  </p>
+                  <p class="card-text__desc">
+                    Студенты Северо-Кавказского федерального университета вновь
+                    поборолись за статус послов русского языка в мире. Трое
+                    обучающихся СКФУ стали победителями заочного этапа конкурса
+                    и достойно представили вуз уже на очной площадке в
+                    Пятигорске.
+                  </p>
+                  <a class="card-text__link js-slider-life-link" href="#"
+                    >Подробнее
+                    <span class="card-text__link-icon js-link-icon"
+                      >&#187;</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-button-next slider-life__btn slider-life__btn_next js-slider-life-next-btn wow horizontalShaking"
+          data-wow-delay="1s"
+        >
+          <img
+            class="slider-life__icon slider-life__icon_next"
+            src="img/icons/arrow-right-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+        <div
+          class="swiper-button-prev slider-life__btn slider-life__btn_prev js-slider-life-prev-btn wow horizontalShaking"
+          data-wow-delay="1s"
+        >
+          <img
+            class="slider-life__icon slider-life__icon_prev"
+            src="img/icons/arrow-left-accent.png"
+            alt=""
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+
+      <div class="slider-life__image-container">
+        <div class="swiper js-slider-life-image slider-life__image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic0.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic1.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic5.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="slider-life__image"
+                src="img/pic6.jpg"
+                alt="Заголовок слайда"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    const lifeImageSwiper = new Swiper(".js-slider-life-image", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      loop: true,
+      watchSlidesProgress: true,
+      allowTouchMove: false,
+      effect: "cube",
+      speed: 1400,
+      autoplay: {
+        delay: 5000,
+      },
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+    });
+
+    const lifeSwiper = new Swiper(".js-slider-life", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".js-slider-life-next-btn",
+        prevEl: ".js-slider-life-prev-btn",
+      },
+      thumbs: {
+        swiper: lifeImageSwiper,
+      },
+    });
+
+    lifeSwiper.on("slideChange", function () {
+      let curSlideEl = lifeSwiper.slides[lifeSwiper.realIndex];
+      let linkEl = curSlideEl.querySelector(".js-slider-life-link");
+      linkEl.classList.add("card-text__link_animated");
+
+      let linkIconEl = linkEl.querySelector(".js-link-icon");
+      linkIconEl.classList.add("card-text__link-icon_animated");
+
+      linkEl.addEventListener("animationend", function () {
+        linkEl.classList.remove("card-text__link_animated");
+      });
+
+      linkIconEl.addEventListener("animationend", function () {
+        linkIconEl.classList.remove("card-text__link-icon_animated");
+      });
+    });
+  });
+</script>
+
     </main>
 
     <footer class="footer page__footer"></footer>

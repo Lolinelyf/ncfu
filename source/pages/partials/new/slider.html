@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="slider slider--main swiper js-main-slider" data-wow-duration="1s">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/slide1.jpg"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/slide2.jpg"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/slide3.jpg"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="slider__image"
+          src="img/Frame.png"
+          alt="Заголовок слайда"
+          title="Заголовок слайда"
+        />
+      </div>
+    </div>
+    <div class="swiper-button-next slider__next-btn js-main-slider-next">
+      <img src="img/icons/arrow-right.png" alt="" />
+    </div>
+    <div class="swiper-button-prev slider__prev-btn js-main-slider-prev">
+      <img src="img/icons/arrow-left.png" alt="" />
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".js-main-slider", {
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".js-main-slider-next",
+        prevEl: ".js-main-slider-prev",
+      },
+    });
+  });
+</script>
