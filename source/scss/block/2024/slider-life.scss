@@ -46,12 +46,13 @@
     color: $color-black;
     padding: 1rem 2rem;
     margin: 0 -1rem;
-    box-shadow: $shadow-small-white;
     position: relative;
+
     @media (min-width: $mobile-size-land) {
       height: auto;
       padding: 1rem;
       margin: 0;
+      box-shadow: $shadow-small-white;
     }
 
     @media (min-width: $tablet-size-land) {
