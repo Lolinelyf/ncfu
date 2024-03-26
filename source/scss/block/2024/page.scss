@@ -6,7 +6,6 @@
   font-family: "Noah", sans-serif;
   font-weight: 400;
   line-height: 1.4;
-  box-sizing: border-box;
   background: linear-gradient(180deg, #ffffff 0 67px, #ebeefb 80px 100%);
   max-width: $max-page-width;
   margin: 0 auto;
@@ -21,10 +20,6 @@
 
   &__header {
     order: 1;
-
-    //   @media (min-width: $tablet-size-land) {
-    //     order: 1;
-    //   }
   }
 
   &__navigation {
