@@ -761,6 +761,7 @@ input[type=radio].visually-hidden {
   font-weight: 400;
   line-height: 1.4;
   background: linear-gradient(180deg, #ffffff 0 67px, #ebeefb 80px 100%);
+  background-color: #fff;
   max-width: 2100px;
   margin: 0 auto;
 }
@@ -790,12 +791,6 @@ input[type=radio].visually-hidden {
 .page__main {
   order: 3;
   flex: 1 0 auto;
-  background: linear-gradient(180deg, #ffffff 0 67px, #ebeefb 80px 100%);
-}
-@media (min-width: 576px) {
-  .page__main {
-    background-color: transparent;
-  }
 }
 .page__main_home {
   overflow-x: hidden;
@@ -1625,7 +1620,7 @@ input[type=radio].visually-hidden {
   height: 32px;
   padding: 0;
   border-radius: 0.5rem;
-  transition: 0.25s;
+  transition: 0.15s;
   font-size: 16px;
   font-weight: 500;
   background-color: transparent;
@@ -3119,7 +3114,7 @@ input[type=radio].visually-hidden {
 }
 
 .fact__inner {
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
 }
 @media (min-width: 576px) {
   .fact__inner {
@@ -3134,7 +3129,11 @@ input[type=radio].visually-hidden {
   justify-content: space-between;
   flex-wrap: wrap;
   height: 100%;
-  padding-top: 1rem;
+}
+@media (min-width: 576px) {
+  .fact__row {
+    padding-top: 1rem;
+  }
 }
 @media (min-width: 1024px) {
   .fact__row {
@@ -3212,7 +3211,7 @@ input[type=radio].visually-hidden {
 .fact-item__image {
   display: block;
   max-width: 100%;
-  height: 36px;
+  height: 40px;
 }
 @media (min-width: 576px) {
   .fact-item__image {
@@ -3231,7 +3230,7 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 600;
   margin-bottom: 0;
@@ -3256,13 +3255,18 @@ input[type=radio].visually-hidden {
 .fact-item__title::before {
   content: ">";
   display: block;
-  padding-right: 0.5rem;
+  padding-right: 0.25rem;
+}
+@media (min-width: 576px) {
+  .fact-item__title::before {
+    padding-right: 0.5rem;
+  }
 }
 .fact-item__caption {
   font-size: 10px;
   margin-bottom: 0;
   text-align: center;
-  line-height: 12px;
+  line-height: 10px;
 }
 @media (min-width: 576px) {
   .fact-item__caption {
@@ -3278,7 +3282,7 @@ input[type=radio].visually-hidden {
 }
 
 .stud-life {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 @media (min-width: 1024px) {
   .stud-life {

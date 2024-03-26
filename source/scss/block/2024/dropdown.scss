@@ -13,20 +13,20 @@
     height: 32px;
     padding: 0;
     border-radius: 0.5rem;
-    transition: 0.25s;
+    transition: 0.15s;
     font-size: 16px;
     font-weight: 500;
     background-color: transparent;
     border: none;
     outline: none;
     background-repeat: no-repeat;
-    padding: 0 0 0 3rem;
+    padding: 0 0 0 2.5rem;
     background-position: center left;
     background-size: 32px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @media (min-width: $mobile-size-land) {
-      padding: 0 3rem 0 0;
+      padding: 0 2.5rem 0 0;
       background-position: center right;
     }
 

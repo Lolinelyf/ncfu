@@ -103,7 +103,7 @@
 
   &__link-icon {
     display: block;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     @media (min-width: $tablet-size-land) {
       display: none;
     }
@@ -161,11 +161,11 @@
     background-image: url("../img/icons/search.svg");
     background-position: center left;
     background-size: 32px;
-    padding: 0 0 0 3rem;
+    padding: 0 0 0 2.5rem;
     background-repeat: no-repeat;
     font-weight: 500;
     @media (min-width: $mobile-size-land) {
-      padding: 0 3rem 0 0;
+      padding: 0 2.5rem 0 0;
       background-position: center right;
     }
     @media (min-width: $tablet-size-land) {
