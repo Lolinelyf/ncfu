@@ -2058,13 +2058,18 @@ input[type=radio].visually-hidden {
   opacity: 1;
 }
 
+.detail {
+  height: 14px;
+}
 .detail__btn {
   outline: none;
   background-color: transparent;
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 0;
   text-decoration: underline;
+  font-size: 12px;
+  line-height: 10px;
 }
 .detail__btn:hover {
   cursor: pointer;

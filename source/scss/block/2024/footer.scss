@@ -1,0 +1,104 @@
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: $color-footer;
+
+  &__flex {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: max-content 300px max-content;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ebebeb14;
+  }
+
+  &__col {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 32px;
+    color: $color-white;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__logo {
+    height: 100px;
+    width: max-content;
+    object-fit: contain;
+    justify-self: flex-start;
+    margin-top: auto;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &__name {
+    flex: 0 0 60%;
+    width: 60%;
+    font-size: 12px;
+    color: $color-grey;
+    line-height: 14px;
+    font-weight: 500;
+
+    & > p {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__university {
+    color: #e6e6e6;
+    margin-bottom: 4px;
+    line-height: 12px;
+    font-weight: 600;
+  }
+
+  &__social {
+    display: flex;
+    flex-flow: row nowrap;
+    & > a {
+      display: block;
+      width: 32px;
+      height: 32px;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  // & a[href$=".pdf"]::before {
+  //   height: 0;
+  //   width: 0;
+  //   background-image: none;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+
+  // & a[href$=".doc"]::before {
+  //   height: 0;
+  //   width: 0;
+  //   background-image: none;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+
+  // & a[href$=".zip"]::before {
+  //   height: 0;
+  //   width: 0;
+  //   background-image: none;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+}

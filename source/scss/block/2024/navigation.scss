@@ -268,9 +268,9 @@
       padding-top: 1.75rem;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(10px);
-      transition: opacity ease-in-out 0.25s, transform ease-in 0.25s,
-        visibility Linear 0.25s;
+      transform: translateY(8px);
+      transition: opacity ease-out 0.2s, transform ease-out 0.2s,
+        visibility ease-out 0.2s;
 
       &--column-three {
         width: 992px;

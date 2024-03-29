@@ -1,14 +1,11 @@
 .detail {
-  height: 14px;
   &__btn {
     outline: none;
     background-color: transparent;
     border: none;
-    color: $color-white;
+    color: #e6e6e6;
     padding: 0;
     text-decoration: underline;
-    font-size: 12px;
-    line-height: 10px;
 
     &:hover {
       cursor: pointer;

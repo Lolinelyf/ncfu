@@ -1,0 +1,56 @@
+.footer-contacts {
+  display: flex;
+  flex-flow: column wrap;
+
+  &__item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-flow: column wrap;
+    color: $color-white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 15px;
+  }
+
+  &__address {
+    color: $color-grey;
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 2px;
+  }
+
+  &__tel {
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-tel-main;
+    padding-top: 2px;
+
+    &--light {
+      color: $color-tel;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #99a3cc;
+    font-weight: 600;
+    line-height: 16px;
+    width: calc(100% - 40px);
+  }
+}
