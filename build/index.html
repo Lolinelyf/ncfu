@@ -2444,28 +2444,29 @@
       </div>
     </div>
   </div>
-  <script>
-    const accordionEls = document.querySelectorAll(".accordion");
-    function openAccordion(el) {
-      let contentEl = el.nextElementSibling;
-
-      el.classList.toggle("active");
-      if (!contentEl.style.maxHeight) {
-        contentEl.style.maxHeight = `calc(${
-          contentEl.scrollHeight + "px"
-        } + ${"1rem"})`;
-        contentEl.style.paddingBottom = "1rem";
-        return;
-      }
-      contentEl.style.maxHeight = null;
-      contentEl.style.paddingBottom = null;
-    }
-
-    accordionEls.forEach((el) => {
-      el.addEventListener("click", (el) => openAccordion(el));
-    });
-  </script>
 </footer>
+
+<script>
+  const accordionEls = document.querySelectorAll(".accordion");
+  function openAccordion(el) {
+    let contentEl = el.nextElementSibling;
+
+    el.classList.toggle("active");
+    if (!contentEl.style.maxHeight) {
+      contentEl.style.maxHeight = `calc(${
+        contentEl.scrollHeight + "px"
+      } + ${"1rem"})`;
+      contentEl.style.paddingBottom = "1rem";
+      return;
+    }
+    contentEl.style.maxHeight = null;
+    contentEl.style.paddingBottom = null;
+  }
+
+  accordionEls.forEach((el) => {
+    el.addEventListener("click", () => openAccordion(el));
+  });
+</script>
 
 <div class="cookie-notice cookie-notice_hidden js-cookie-notice">
   <p class="m-0 p-0">
