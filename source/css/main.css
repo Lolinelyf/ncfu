@@ -3569,7 +3569,7 @@ input[type=radio].visually-hidden {
 }
 .footer {
   background-color: #171c2d;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 @media (min-width: 576px) {
   .footer {
@@ -3642,7 +3642,7 @@ input[type=radio].visually-hidden {
 }
 .footer__bottom {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column-reverse nowrap;
   justify-content: space-between;
 }
 @media (min-width: 768px) {
@@ -3657,12 +3657,11 @@ input[type=radio].visually-hidden {
   color: #8b8e96;
   line-height: 14px;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .footer__name {
     flex: 0 0 60%;
-    margin-bottom: 0;
   }
 }
 .footer__name > p {
@@ -3677,20 +3676,20 @@ input[type=radio].visually-hidden {
 .footer__social {
   display: flex;
   flex-flow: row nowrap;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__social {
+    margin-bottom: 0;
+  }
 }
 .footer__social > a {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 }
 .footer__social > a:not(:last-child) {
   margin-right: 0.5rem;
-}
-@media (min-width: 768px) {
-  .footer__social > a {
-    width: 32px;
-    height: 32px;
-  }
 }
 .footer__social > a > svg {
   width: 100%;
@@ -3836,8 +3835,9 @@ input[type=radio].visually-hidden {
   outline: none;
   text-align: left;
   padding: 0 0 0.5rem 0;
-  transition: margin-bottom 0.1s ease;
+  transition: margin-bottom 0.1s ease, border-bottom 0.25s 0.1s ease;
   border-bottom: 1px solid rgba(235, 235, 235, 0.0784313725);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 @media (min-width: 1024px) {
   .accordion {
@@ -3850,9 +3850,10 @@ input[type=radio].visually-hidden {
 .accordion:after {
   content: "+";
   color: #8b8e96;
-  font-weight: bold;
   float: right;
   margin-left: 5px;
+  font-size: 2rem;
+  font-weight: 400;
 }
 @media (min-width: 1024px) {
   .accordion:after {
@@ -3861,6 +3862,7 @@ input[type=radio].visually-hidden {
 }
 .accordion.active {
   margin-bottom: 0.5rem;
+  border-bottom: none;
 }
 .accordion.active:after {
   content: "−";
@@ -3872,7 +3874,7 @@ input[type=radio].visually-hidden {
   max-height: 0;
   height: 100%;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.1s ease-out, padding-top 0.1s ease-out;
   border-bottom: 1px solid rgba(235, 235, 235, 0.0784313725);
 }
 @media (min-width: 1024px) {
