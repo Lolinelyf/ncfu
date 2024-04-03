@@ -2373,42 +2373,7 @@
           </div>
         </div>
       </div>
-      <script>
-        const accordionEls = document.querySelectorAll(".accordion");
-        function openAccordion(el) {
-          let contentEl = el.nextElementSibling;
-          console.log(contentEl);
 
-          el.addEventListener("click", () => {
-            el.classList.toggle("active");
-            if (!contentEl.style.maxHeight) {
-              contentEl.style.maxHeight = `calc(${
-                contentEl.scrollHeight + "px"
-              } + ${"1rem"})`;
-              contentEl.style.paddingBottom = "1rem";
-              return;
-            }
-            contentEl.style.maxHeight = null;
-            contentEl.style.paddingBottom = null;
-          });
-        }
-
-        accordionEls.forEach((el) => {
-          openAccordion(el);
-        });
-
-        // for (let i = 0; i < acc.length; i++) {
-        //   acc[i].addEventListener("click", function () {
-        //     this.classList.toggle("active");
-        //     let panel = this.nextElementSibling;
-        //     if (panel.style.maxHeight) {
-        //       panel.style.maxHeight = null;
-        //     } else {
-        //       panel.style.maxHeight = panel.scrollHeight + "px";
-        //     }
-        //   });
-        // }
-      </script>
       <div class="footer__bottom">
         <div class="footer__name">
           <p class="footer__university">
@@ -2479,6 +2444,27 @@
       </div>
     </div>
   </div>
+  <script>
+    const accordionEls = document.querySelectorAll(".accordion");
+    function openAccordion(el) {
+      let contentEl = el.nextElementSibling;
+
+      el.classList.toggle("active");
+      if (!contentEl.style.maxHeight) {
+        contentEl.style.maxHeight = `calc(${
+          contentEl.scrollHeight + "px"
+        } + ${"1rem"})`;
+        contentEl.style.paddingBottom = "1rem";
+        return;
+      }
+      contentEl.style.maxHeight = null;
+      contentEl.style.paddingBottom = null;
+    }
+
+    accordionEls.forEach((el) => {
+      el.addEventListener("click", (el) => openAccordion(el));
+    });
+  </script>
 </footer>
 
 <div class="cookie-notice cookie-notice_hidden js-cookie-notice">
@@ -2489,6 +2475,7 @@
   </p>
   <button class="button button_type_outline js-btn-accept">Принять</button>
 </div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
     const detailBtnEl = document.querySelector(".js-detail-btn");
