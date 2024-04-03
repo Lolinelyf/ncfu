@@ -1,0 +1,56 @@
+.accordion {
+  width: 100%;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 0 0 0.5rem 0;
+  transition: margin-bottom 0.1s ease;
+  border-bottom: 1px solid #ebebeb14;
+
+  @media (min-width: $tablet-size-land) {
+    pointer-events: none;
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &:after {
+    content: "\002B";
+    color: $color-grey;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    @media (min-width: $tablet-size-land) {
+      display: none;
+    }
+  }
+
+  &.active {
+    margin-bottom: 0.5rem;
+
+    &:after {
+      content: "\2212";
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid #ebebeb14;
+
+    @media (min-width: $tablet-size-land) {
+      flex-flow: column wrap;
+      justify-content: space-between;
+      max-height: 100%;
+      overflow: visible;
+      height: calc(100% - 50px);
+      border-bottom: none;
+    }
+  }
+}
