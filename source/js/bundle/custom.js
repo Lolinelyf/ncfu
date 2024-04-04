@@ -11,12 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelector(".navigation, .open")
         .style.setProperty("--viewport-height", `${window.innerHeight}px`);
       document.documentElement.style.overflow = "hidden";
-      document.documentElement.style.paddingRight = "15px";
+      if (window.innerWidth > 576) {
+        document.documentElement.style.paddingRight = "17px";
+      }
       return;
     }
     navigationEl.classList.remove("open");
     document.documentElement.style.overflow = "auto";
-    document.documentElement.style.paddingRight = "";
+    if (window.innerWidth > 576) {
+      document.documentElement.style.paddingRight = "";
+    }
   }
 
   hamburgerBtn.addEventListener("click", toggleMenu);
@@ -24,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", () => {
     navigationEl.classList.remove("open");
     document.documentElement.style.overflow = "auto";
-    document.documentElement.style.paddingRight = "";
+    if (window.innerWidth > 576) {
+      document.documentElement.style.paddingRight = "";
+    }
   });
 
   navigationEl.addEventListener(
@@ -34,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleMenu();
       }
     },
-    true
+    true,
   );
 
   // меню
