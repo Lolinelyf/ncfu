@@ -3635,7 +3635,11 @@ input[type=radio].visually-hidden {
 }
 .footer__col {
   margin-bottom: 1rem;
-  width: calc(100vw - 2rem);
+}
+@media (min-width: 576px) {
+  .footer__col {
+    width: calc(100vw - (2rem + 17px));
+  }
 }
 @media (min-width: 1024px) {
   .footer__col {
